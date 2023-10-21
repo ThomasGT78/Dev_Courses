@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width">
+        <title>CatalogueMySQL.ejs</title>
+    </head>
+
+    <body>
+        <div>
+            <h3>Catalogue (MySQL)</h3>
+            <p>
+            Nombre de produits au catalogue :
+            <%= produits.length %>
+            </p>
+
+            <ul>
+                <% produits.forEach(function(produit) { %>
+                <!-- <li>[<a href='/select/<%= produit.id_produit %>'><%= produit.id_produit %></a>] <%= produit.designation %> au prix de <%= produit.prix %> &euro;</li> -->
+                <li><a href='/select/<%= produit.id_produit %>'><%= produit.designation %></a> au prix de <%= produit.prix %> &euro;</li>
+               
+				<% }); %>
+            </ul>
+			<p><%=message %></p>
+			<p><a href="/">Accueil</a></p>
+        </div>
+    </body>
+</html>

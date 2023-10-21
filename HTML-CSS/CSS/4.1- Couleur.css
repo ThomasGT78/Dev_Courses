@@ -1,0 +1,50 @@
+			----		COULEUR		----
+
+(Calculateur Couleur)
+https://htmlcolorcodes.com/fr/selecteur-de-couleur/
+https://www.hexcolortool.com/?_ga=2.187018792.120076308.1588330208-225111060.1588330208
+https://www.webfx.com/web-design/color-picker/
+
+(Liste de Couleur)
+https://www.w3.org/TR/css-color-3/#svg-color
+https://developer.mozilla.org/en-US/docs/Web/CSS/color_value
+
+color: 				(Couleur d'écriture)
+background-color: 	(Couleur d'arrière plan)
+opacity:	0 to 1	(0= transparent / 1 = opaque)
+
+
+Colors in CSS can be described in three different ways;
+
+Named colors: English words describe colors (147 Keyword Colors);
+color: blue,red, black, white, transparent, etc..;
+
+RGB : Red, Green, Blue (décimal ou Hexadécimal)
+
+Decimal values
+rgb(23, 45, 23)				(rouge; vert; bleu)
+rgba(234, 45, 98, 0.33)		(rouge; vert; bleu; indice de transparence)
+
+Hexadecimal: 
+#683C2C
+
+HSL(A): Valeur numérique: Hue, Saturation, Lightness, Alpha (Teinte; Saturation; Luminosité; Opacité)
+hsl(120, 60%, 70%)			(Teinte; Saturation; Luminosité)
+hsla(34, 100%, 50%, 0.1)	(Teinte; Saturation; Luminosité; indice de transparence)
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+

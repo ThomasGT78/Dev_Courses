@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html>
+ 
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <style>
+        h1 {
+            font-family: 'Courier New', Courier, monospace;
+            font-size: 40px;
+        }
+ 
+        #yin {
+            /* Position absolute = placement de l'image suivant des coordonnées absolues et non suivant son emplacement dans le code HTML de la page */
+            position: absolute;
+            /* Position de l'objet (haut de l'image) par rapport au bord supérieur du navigateur en pixel(s) */
+            top: 0;
+            padding: 150px;
+        }
+ 
+        #yin2 {
+            position: absolute;
+            /* Position de l'objet (gauche de l'image) par rapport au bord gauche du navigateur en pixel(s) */
+            left: 0;
+            padding: 150px;
+        }
+    </style>
+    <title>Deplacement.html</title>
+</head>
+ 
+<body>
+    <h1>Déplacement d'une photo<br>verticalement et horizontalement</h1>
+    <!-- Chargement des objets/photos dans la page HTML -->
+    <img src="../images/yinYang.png" alt="yin" id="yin" width="150" />
+    <img src="../images/yinYang.png" alt="yin2" id="yin2" width="150" />
+    <script>
+        // Variables globales
+        // x est la position initiale de l'objet yin lors du chargement de la page
+        var x = 0;
+        // y est la position initiale de l'objet yin2 lors du chargement de la page
+        var y = 0;
+ 
+        var intervalle;
+ 
+        function init() {
+            // Récupération des éléments id yin et yin2 pour l'initialisation
+            yin = document.getElementById("yin");
+            yin2 = document.getElementById("yin2");
+            console.log("init");
+            // Appel de la fonction deplacer, par intervalle de 10 ms
+            //var objetIntervalle = window.setInterval(nomDeFonction, intervalle en millièmes de secondes)
+            intervalle = window.setInterval(deplacer, 10);
+        }
+        function deplacer() {
+            console.log("deplacer");
+            // Incrémentation +1 de la position x du haut vers le bas
+            x++;
+            // Appel de la position initiale de la variable x
+            yin.style.top = x + "px";
+            // Incrémentation +1 de la position y vers la droite
+            y++;
+            // Appel de la position initiale de la variable y
+            yin2.style.left = y + "px";
+ 
+            if (x > 200) {
+                window.clearInterval(intervalle);
+            }
+        }
+        // Initialisation de la page lors de son chargement
+        window.onload = init();
+    </script>
+</body>
+ 
+</html>

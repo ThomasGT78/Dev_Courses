@@ -1,0 +1,16 @@
+boucler dans le tableau des produits
+récupérer la table des produits et sorir un tableau
+
+
+TP
+
+transformer une DB en CSV avec NodeJS
+L'exporter dans un fichier
+et inversement
+
+transformer une DB en Json avec NodeJS
+L'exporter dans un fichier
+et inversement
+
+Faire une app web permettant de CRUD dans une table
++ convertion auto (comme PHPmyAdmin)

@@ -1,0 +1,53 @@
+			<!-----------------------
+			*	 LE BOUTON D'ENVOI	*
+			------------------------>
+	
+Lorsque vous cliquez sur le bouton « Envoyer », le formulaire vous amène alors à la page indiquée dans l'attribut action
+On peut changer le texte affiché à l'intérieur des boutons avec l'attribut value
+<input type="submit" value="Envoyer" />
+
+(BOUTON D'ENVOI)
+Bouton d'envoi de formulaire. Le visiteur sera conduit à la page indiquée dans l'attribut action  du formulaire
+<input type="submit" value="Soumettre"/>
+<button type="submit">Soumettre</button>
+<input type="button" value="Soumettre" onClick="this.form.submit();" />
+
+(BOUTON D'ENVOI GRAPHIQUE)
+Équivalent du bouton submit, sous forme d'image. Rajoutez l'attribut src  pour indiquer l'URL de l'image
+<input type="image" />	
+<input type="image" id="image" alt="Login" src="/media/examples/login-button.png">
+
+			<!-----------------------
+			*	 LE BOUTON RESET	*
+			------------------------>
+(RESET)
+Remise à zéro du formulaire
+<input type="reset" value="Reset"/>	
+<button type="button">Reset</button>
+<input type="button" value="Reset" onClick="this.form.reset();" />
+
+			<!---------------------------
+			*	 BOUTTON MULTI USAGE	*
+			---------------------------->
+
+(BOUTTON MULTI USAGE)
+Bouton générique, qui n'aura par défaut aucun effet. Souvent géré en JavaScript pour exécuter des actions sur la page.
+<input type="button" value="Boutton"/>	
+<button type="button">Boutton</button>
+
+			<!---------------------------
+			*	 submit() et reset()	*
+			---------------------------->
+			
+ on peut faire que n'importe quel input Reset ou Submit un formulaire.
+ 
+ <form action="myservlet.do" method="POST">
+    <select name="myselect" id="myselect" onchange="this.form.submit()">
+        <option value="1">One</option>
+        <option value="2">Two</option>
+    </select>
+</form>
+
+<form action="" name="PostName" id="IdName">
+	<select onchange="PostName.submit()">	<!-- by Name -->
+	<select onchange="IdName.submit()">		<!-- by Id -->

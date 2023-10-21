@@ -1,0 +1,61 @@
+CREATE A FORM
+<form action="/example.html" method="POST">
+</form>
+
+Create an input field + Type + Name + Value
+<input type="text" name="username" value="Thomas">
+
+Adding a Label
+<label for="exemple">Text</label>
+<br>
+<input type="text" id="exemple" name="name">
+
+Password Input(with Label)
+<input type="password" id="exemple" name="name">
+
+Number Input(with Label)
+<input type="number" id="exemple" step="1" name="name">
+
+Range Input(with Label)
+<input type="range" id="exemple"  name="name" 
+min="0" max="5" step="0.5">
+
+Checkbox Input(with Label)
+(il faut mettre un label pour chacque checkbox)
+<input type="checkbox" id="exemple"
+name="name" value="cheese">
+
+Radio Button Input(with Label)
+(Only one choice among a group with the same name)
+<input type="radio" id="exemple" 
+name="name" value="exemple">
+
+Dropdown list(with Label)
+<select id="exemple" name="name">
+  <option value="option1">Option1</option>
+  <option value="option2">Option2</option>
+
+Datalist Input(with Label)
+<input type="text" list="cities" id="city" name="city">
+  <datalist id="cities">
+    <option value="Paris"></option>
+    <option value="Tokyo"></option>
+	
+Textarea element(with Label)
+<textarea id="exemple" name="name" rows="5" cols="30">
+Adding default text</textarea>
+
+Submit Form (with Label)
+<input type="submit" value="Submit">
+
+Requiring an Input (with Label)
+<input type="number" name="name" id="exemple" required>
+
+Set a Minimum and Maximum (with Label)
+<input type="number" min="1" max="10">
+
+Checking Text Length
+minlength="5" maxlength="250">
+
+Matching a Pattern
+pattern="[a-zA-Z0-9]+"{14,16}"

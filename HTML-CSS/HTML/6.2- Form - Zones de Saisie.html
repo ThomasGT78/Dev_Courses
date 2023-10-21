@@ -1,0 +1,42 @@
+			<!-------------------------------
+			*	 ZONE DE TEXTE MONOLIGNE	*
+			-------------------------------->
+	
+https://developer.mozilla.org/fr/docs/Web/HTML/Element/input/text#format
+
+<input type="text" />					On ne peut y écrire qu'une seule ligne. Elle sert à saisir des textes courts
+<input type="text" name="username"/>		Il faut donner un Nom à la zone de texte pour identifier les informations
+
+(Ajouter un Libellé)
+<label for="exemple">Texte</label>		Pour lier le label au champs, l'attribut «for» à la même valeur que l'«id» du champs
+<input type="text" id="exemple" name="name"/>
+
+(Propriétés de la balise input)
+size		="50"					Donne la taille du champ (en nombre de caractères)
+maxlength	="30"					Limite le nombre de caractères que l'on peut saisir
+value		="Joueur 1"				Préremplis le champ avec une valeur par défaut
+placeholder	="Entrez votre Nom"		Donne une indication sur le contenu du champ. Disparaîtra dès que le visiteur aura cliqué à l'intérieur du champ
+
+<input type="text" name="pseudo" id="pseudo" placeholder="Entrez votre Nom" size="30" maxlength="20" />
+
+(PLACEHOLDER)
+Représente le texte de substitution d'un élément, il s'efface dès qu'on tape du texte.
+
+(VALUE)
+Affiche une valeur par défaut à un élément pour remplir une zone de texte, un bouton, un label, etc...
+
+			<!-------------------------------
+			*	 ZONE DE TEXTE MULTILIGNE	*
+			-------------------------------->
+	
+<textarea name="commentaire" name="commentaire"></textarea>
+
+(Modifier la taille)
+En CSS : 				Appliquer les propriétés CSS «width» et «height»
+Avec des attributs : 	Ajouter les attributs «rows» et «cols»
+
+<textarea id="exemple" name="name" rows="5" cols="30" wrap="soft" >On peut ajouter un texte par défaut ici</textarea>
+rows			hauteur de la zone de texte (en nombre de ligne)
+cols			largeur de la zone de texte (en nombre de caractères)
+wrap=	"soft"	retour à la ligne sans saut de ligne
+		"hard"	retour à la ligne avec saut de ligne

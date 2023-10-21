@@ -1,0 +1,152 @@
+GRID
+(Grid can be used to lay out entire web pages)
+"https://travishorn.com/responsive-grid-in-2-minutes-with-css-grid-layout-4842a41420fe"
+
+display:
+	grid		(block-level grid)
+	inline-grid	(inline grid)
+
+/* GRID TEMPLATE AREAS */	(name sections of your web page)
+grid-template-areas: "head head"
+                     "nav nav" 
+                     "info services"
+                     "footer footer";
+(to set in each class)
+header{grid-area: header;}
+nav{grid-area: nav;}
+info{grid-area: info;}
+services{grid-area: services;}
+footer{grid-area: footer;}
+
+/* GRID TEMPLATE */		
+grid-template-columns:	(define number and width of columns)
+grid-template-rows:		(define number and height of rows)
+	100px 200px 50px	(size in pixels)
+	20% 50% 			(percentage of the entire grid’s width)
+	1fr 2fr 1fr			(fraction of the available space)
+	100px 20% 1fr		(units can be mixed)
+	repeat(3, 100px)	(nb of rows/columns, size)(=3x100px)
+	repeat(5, 1fr)		(=6 rows/columns of the same size)
+	repeat(2, 20px 50px) (=2x20px+50px=4rows)
+	minmax(100px, 500px) (allow the grid have a variable width)
+	
+grid-template:			(mix creation of rows and columns)
+	200px 300px / 20% 10% 70%	(rows / columns)
+	repeat(3, 1fr) / 3fr 50% 1fr
+	100px minmax(100px, 500px) 100px
+
+/*GRID AUTO*/
+(placement of elements when there are more than fit into the 
+grid specified by the CSS)
+grid-auto-rows:
+grid-auto-columns:
+	px, %, fr, Repeat()
+
+/*GRID AUTO FLOW*/
+(specifies if new elements should be added to rows or columns)
+grid-auto-flow
+	row		(default)(new elements create new rows filled from Left to Right)
+	column	(new elements create new columns filled from Top to Bottom)
+	dense	(attempts to fill holes earlier in the grid layout 
+			if smaller elements are added)
+	row dense(can be paired)
+	column dense
+	
+	
+/* GRID GAP */
+grid-gap: (put blank space between row and column in the grid)
+	10px 20px	(rows / columns)
+	20px 		(rows+columns)
+grid-row-gap: 10px
+grid-column-gap: 20px
+
+/* GRID ROWS */			(Set the span of item into rows)
+grid-row: 1 / 3;	 	(Takes rows 1 and 2)
+grid-row: 1 / span 2
+or
+grid-row-start: 1
+grid-row-end: 3
+or
+grid-row-start: span 2
+grid-row-end: 3
+or
+grid-row-start: 1
+grid-row-end: span 2
+
+/* GRID COLUMNS */		(Set the span of item into columns)
+grid-column: 2 / 7;		(Takes rows 2 to 6)
+or
+grid-column: 4 / span 5
+or
+grid-column-start: span 5
+grid-column-end: 7
+or
+grid-column-start: 2
+grid-column-end: span 5
+
+/* GRID AREA */
+grid-area: 2 / 3 / 4 / span 5; 	(Set rows and columns)
+grid-area: 2 / 3 / span 2 / 8;
+	1- row-start
+	2- column-start
+	3- row-end
+	4- column-end
+
+/*OVERLAPPING ELEMENTS*/ 	(Using the Z-Index property)
+z-index: 5;
+
+
+/*JUSTIFY ITEMS and ALIGN ITEMS*/
+(positions Grid Items in the Grid Area)
+(HORIZONTALLY: Left to Right)or(VERTICALLY: Top to Bottom)
+
+justify-items:	(HORIZONTALLY) (along the inline/row axis)
+align-items:	(VERTICALLY) (along the block/column axis)
+	start	(aligns to the LEFT/TOP)
+	end		(aligns to the RIGHT/BOTTOM)
+	center	(aligns to the CENTER)
+	stretch	(STRETCH to fill the Grid Area)
+
+(justify-items: More Values)
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout#Justifying_Items_on_the_Inline_or_Row_Axis
+https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items#Values
+
+(align-items: More Values)
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout#Aligning_items_on_the_block_or_column_Axis
+https://developer.mozilla.org/en-US/docs/Web/CSS/justify-items#Values
+
+
+/*JUSTIFY CONTENTS and ALIGN CONTENTS*/
+(position the complete Grid (Column/Row);in the grid container)
+(HORIZONTALLY: Left to Right)or(VERTICALLY: Top to Bottom)
+justify-content:	(HORIZONTALLY)  (along the Row axis)
+align-content:	(VERTICALLY)  (along the Block axis)
+	start	(aligns to the LEFT/TOP)
+	end		(aligns to the RIGHT/BOTTOM)
+	center	(aligns to the CENTER)
+	stretch	(STRETCH to expand across Grid Container)
+	space-around	(equal space each side of a grid, resulting in double the space)
+	space-between	(equal space between grids, no space at extremities)
+	space-evenly	(even space between grids and at extremities)
+
+(justify-content: More Values)
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout#Aligning_the_grid_tracks_on_the_block_or_column_axis
+https://developer.mozilla.org/en-US/docs/Web/CSS/justify-content#Values
+
+(align-content: More Values)
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout#Aligning_the_grid_tracks_on_the_block_or_column_axis
+https://developer.mozilla.org/en-US/docs/Web/CSS/align-content#Values
+
+/*JUSTIFY SELF and ALIGN SELF*/
+(specifies the position Horizontal/Vertical in the Grid Area)
+
+justify-self:
+align-self:
+	start	(aligns to the LEFT/TOP)
+	end		(aligns to the RIGHT/BOTTOM)
+	center	(aligns to the CENTER)
+	stretch	(STRETCH  to fill the Grid Area)(Default)
+	
+(More Values)
+https://developer.mozilla.org/en-US/docs/Web/CSS/CSS_Grid_Layout/Box_Alignment_in_CSS_Grid_Layout#Aligning_the_grid_tracks_on_the_block_or_column_axis
+https://developer.mozilla.org/en-US/docs/Web/CSS/align-self#Values

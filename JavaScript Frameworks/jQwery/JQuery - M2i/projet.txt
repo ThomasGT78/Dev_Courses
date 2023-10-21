@@ -1,0 +1,9 @@
+PROJET
+click sur croix = ferme la pub
+la bup se déplace de droite à gauche 
+
+
+
+RANGEMENT
+
+REGEX => inscription à filtrer

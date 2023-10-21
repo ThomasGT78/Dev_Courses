@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>event.html</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link type="text/css" rel="stylesheet" href="style.css" />
+</head>
+
+<body>
+
+    <h1>Events Formulaire</h1>
+    <form action="javascript:alert('Hello there, I am being submitted');" method="get" name="myForm" id="idForm">
+        <p>
+            <label for="inputPseudo" id="lblPseudo">Pseudo :</label><br>
+            <input type="text" id="inputPseudo" name="inputPseudo" placeholder="Entrez votre Nom" minlength="5" value="Thomas" />
+            <span id="msgPseudo"></span><br>
+            <span id="pPseudo" class="hidden">Le pseudo doit commencer par une majuscule et contenir entre 6 et 16 caractères</span>
+        </p>
+        <p>
+            <label for="inputEmail" id="lblEmail">Email :</label><br>
+            <input type="email" id="inputEmail" name="inputEmail" placeholder="Entrez votre Email" value="thomas.gd@gmail.com" />
+            <span id="msgEmail" ></span><br>
+            <span id="pEmail" class="hidden">Le format doit être celui d'un email avec « @ » et « .xx(x) »</span>
+        </p>
+        <p>
+            <label for="inputEmail2" id="lblEmail2">Confirmez votre Email :</label><br>
+            <input type="email" id="inputEmail2" name="inputEmail2" placeholder="Entrez votre Email" value="thomas.gd@gmail.com" />
+            <span id="msgEmail2"></span>
+        </p>
+        <p>
+            <label for="inputMdp" id="lblMdp">Mot de Passe :</label><br>
+            <input type="password" id="inputMdp" name="inputMdp" placeholder="Entrez votre Mot de Passe" minlength="6"  maxlength="25" value="thomas"/>
+            <input type="checkbox" id="checkMdpVisible" name="checkMdpVisible" />
+            <label for="checkMdpVisible" id="lblMdpVisible">Afficher le mot de passe</label>
+            <br><span id="msgMdp"></span><br>
+            <span id="pMdp" class="hidden">Le mot de passe peut contenir entre 6 et 25 de n'importe quel caractère</span>
+        </p>
+        <p>
+            <label for="inputMdp2" id="lblMdp2">Confirmez Mot de Passe :</label><br>
+            <input type="password" id="inputMdp2" name="inputMdp2" placeholder="Entrez votre Mot de Passe" minlength="6" maxlength="25" value="thomas"/>
+            <span id="msgMdp2"></span>
+        </p>
+        <p>
+            <input type="button" id="btValider" name="btValider" value="Valider" />
+            <input type="button" id="btReset" name="btReset" value="Reset" />
+        </p>
+        <p id="errorMessage" class="hidden">Un des champs n'est pas correct</p>
+    </form>
+
+    <script defer src="events.js"></script>
+</body>
+
+</html>

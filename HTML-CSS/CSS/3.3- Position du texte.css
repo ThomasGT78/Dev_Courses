@@ -1,0 +1,73 @@
+POSITION DU TEXTE
+
+		----		ALIGNEMENT		----
+		
+(Impossible de modifier l'alignement du texte d'une balise inline, seulement des balise de type Block )
+
+text-align : 	left	(texte aligné à gauche,c'est le réglage par défaut)
+				center	(texte centré)
+				right	(texte aligné à droite)
+				justify	(texte « justifié »)
+
+(Centrer dans un Select):
+text-align-last: center;
+
+/***	Aligner Verticalement	***/
+
+vertical-align: 	(ne s'applique qu'aux cellules de tableaux et aux éléments «inline»)
+=>
+	container {
+		display: table
+	} 
+	container element {
+		display: table-cell;
+		vertical-align: middle;
+	}
+
+(si le contenue tien sur 1 ligne)
+line-height: (= height)
+display: block;
+
+/***	Autre	***/
+
+text-justify:	none				(Le texte ne sera pas justifié)
+				auto				(Le navigateur choisis la meilleure justification pour la situation - par défaut)
+				inter-word			(texte est justifié en ajustant les espaces entre les mots)
+				inter-character		(texte est justifié en ajustant les espaces entre les caractères)
+				distribute			(Même effet que inter-character ; cette valeur sert uniquement à de fins de compatibilité)
+
+
+
+(Définit si les lignes d'un texte sont écrites horizontalement ou verticalement et la direction selon laquelle le bloc grandit)
+writing-mode:	horizontal-tb	(Le contenu coule horizontalement de gauche à droite puis de haut en bas)
+				vertical-rl		(Le contenu coule verticalement de haut en bas puis horizontalement de droite à gauche)
+				vertical-lr		(Le contenu coule verticalement de haut en bas puis horizontalement de gauche à droite)
+				sideways-rl		(Le contenu coule verticalement du haut vers le bas et tous les glyphes sont tournés sur le côté, vers la droite.)
+				sideways-lr		(Le contenu coule verticalement du haut vers le bas et tous les glyphes sont tournés sur le côté, vers la gauche)
+
+(Définit l'orientation du texte sur une ligne; Cette propriété n'a d'effet qu'en mode vertical)
+text-orientation	mixed	(tourne les caractères de 90° dans le sens des aiguilles d'une montre, les scripts verticaux sont affichés normalement)
+					upright	(affiche les caractères des scripts horizontaux normalement et d'afficher les glyphes des scripts verticaux « debout »)
+					sideways-right
+					sideways-left
+					sideways
+					use-glyph-orientation
+
+
+		----		FLOTTANT		----
+
+(permet de faire flotter un élément autour du texte. On dit aussi qu'on fait un « habillage »)
+(l'élément flottant doit être en premier dans le code HTML; Si vous placez l'image après le paragraphe l'effet ne fonctionnera pas)
+
+float:	left	(Déplace l'immage ou la boîte à gauche)
+		right	(Déplace l'immage ou la boîte à droite)
+
+clear : left	(déplace le texte de manière à ce qu'il n'ai aucun élément à sa gauche)
+		right	(déplace le texte de manière à ce qu'il n'ai aucun élément à sa droite)
+		both	(déplace le texte de manière à ce qu'il n'ai aucun élément sur ses côtés)
+
+
+(Hide content)
+visibility: hidden visible	(laisse l'espace vide)
+display: none;				(supprime l'espace vide)
+

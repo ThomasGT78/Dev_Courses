@@ -1,0 +1,115 @@
+UNITÉS DE MESURES CSS
+http://stylescss.free.fr/v2-references/units.php#size
+
+		----	UNITÉS DE DIMENSIONS ABSOLUES	----
+Ces unités sont utilisables pour tout ce qui traduit une dimension : largeur et hauteur d'un bloc, marges, taille des caractères, etc...
+Ce sont des unités absolues en ce sens que la valeur n'est pas calculée par rapport à une autre dimension.
+
+(px : pixel)
+1 pixel vaut environ 1/96ème de pouce mais cela peut être variable d'un écran à l'autre.
+Sur les mobiles et certains écrans haute définition, un pixel peut correspondre à plusieurs points physiques de écran.
+
+(pt : point)
+1 point = 1/72ème de pouce.
+
+(pc : pica)
+1 pica = 1/6ème de pouce, soit 12 points.
+
+(in : pouce)
+1 pouce = 2,54 cm.
+
+(cm : centimètre)
+(mm : millimètre)
+
+		----	UNITÉS DE DIMENSIONS RELATIVES	----
+
+Ces unités provoquent un calcul à partir d'une autre dimension. Par exemple, une marge de 25% mesure le quart de la dimension de l'élément.
+Les unités relatives sont de plus en plus employées pour créer des mises en page qui s'adaptent à des tailles d'écran de plus en plus diverses. Le terme "responsive" désigne une mise en page parfaitement adaptable à la taille de l'écran.
+
+(% : pourcentage)
+Les pourcentages sont calculés par rapport à une autre dimension, soit de l'élément lui-même soit de l'élément parent. Suivant la propriété, cette autre dimension peut être la largeur, la hauteur de ligne, etc.
+
+(em)
+Unité relative à la taille des caractères de l'élément parent.
+2em signifie donc des caractères deux fois plus gros que ceux de l'élément parent.
+
+(rem)
+Unité relative à la taille courante des caractères de la racine.
+Définir toutes les tailles de caractères en rem est une bonne solution pour changer dynamiquement la taille des caractères (fonction loupe) car il suffit alors de changer la taille des caractères de l'élément racine.
+L'élément racine peut être désigné soit par le sélecteur html soit par la pseudo-classe :root.
+
+(ch : largeur du zéro)
+Unité relative à la largeur du caractère zéro (0).
+Cette unité peut être utilisée par exemple pour définir la largeur d'une zone de texte.
+
+(ex : hauteur du caractère x minuscule)
+Unité relative à la hauteur d'un x minuscule.
+
+(lh : hauteur de la ligne de texte)(abréviation de line-height)
+Unité égale à la hauteur d'une ligne de texte.
+
+(vw : largeur du viewport)
+(vh : hauteur du viewport)
+Unités relatives aux dimensions du viewport. Le viewport est la fenêtre d'affichage, qui possède donc une largeur et une hauteur. C'est la taille de la fenêtre du navigateur, après avoir retiré l'espace occupé par la bordure, les barres de défilement et par les fenêtres périphériques éventuelles.
+1vw = 1/100 de la largeur du viewport.
+1vh = 1/100 de la hauteur du viewport.
+
+
+(vmin : plus petite des dimensions du viewport)
+(vmax : plus grande des dimensions du viewport)
+Unités relatives à la plus petite ou la plus grande des dimensions du viewport (largeur ou hauteur).
+1vmin = 1/100 de la plus petite des dimensions du viewport.
+1vmax = 1/100 de la plus grande des dimensions du viewport.
+
+(fr : fraction)
+Abréviation pour "fraction de". Cette unité peut être utilisée pour dimensionner la largeur des colonnes ou la hauteur des lignes d'une grille. C'est une unité relative à la place restante. Les éléments dimensionnés en fr se répartissent la place restante en fonction de leur nombre de fr.
+
+
+		----	UNITÉS D'ANGLES		----
+		
+Les unités d'angles sont surtout utilisées pour les transformations géométriques, mais quelques autres propriétés acceptent des valeurs angulaires (font-style...).
+
+(Exemple)
+transform: rotate(5deg);
+
+(deg : degré)
+90deg est un angle droit.
+360deg est un tour complet.
+
+(rad : radian)
+1.57rad est un angle droit (pi / 2).
+6.28rad est un tour complet.
+
+(grad : grade)
+100grad est un angle droit.
+400grad est un tour complet.
+
+(turn : tour)
+0.25turn est un angle droit.
+1turn est un tour complet.
+
+		----	UNITÉS DE RÉSOLUTION	----
+		
+Ces unités de résolution sont utilisées par les media-queries. Reportez vous à la directive @media , pour plus de précisions.
+
+(dpi : dot per inch)
+Dot Per Inch ou points par pouce.
+
+(dpcm : dot per centimeter)
+Points par centimètre.
+
+(dppx : dot per pixel)
+Points par pixel. 1dppx = 96dpi.
+
+		----	UNITÉS DE TEMPS		----
+		
+Ces unités sont surtout utilisées pour définir la durée des animations ou des transitions.
+
+(s : seconde)
+(ms : milliseconde)
+
+		----	UNITÉS DE FRÉQUENCE		----
+Unités utilisées pour la restitution sonore. Cette partie de CSS n'étant plus standardisée, ces unités sont maintenant inutiles.
+
+(hz : hertez)
+(khz : kilo-hertz)

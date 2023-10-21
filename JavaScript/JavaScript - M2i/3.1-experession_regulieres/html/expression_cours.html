@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>js_regexp_1.html</title>
+    <script>
+        var cp, tel, email, msg;
+        // ---------- INIT
+        function init() {
+            cp = document.getElementById("it_cp");
+            tel = document.getElementById("it_tel");
+            email = document.getElementById("it_email");
+            msg = document.getElementById("sp_msg");
+
+		// ---------- TEST 
+            cp.onblur = function () {
+                msg.innerHTML = isCP(cp.value);
+            };
+            tel.onblur = function () {
+                msg.innerHTML = isTel(tel.value);
+            };
+            email.onblur = function () {
+                msg.innerHTML = isEmail(email.value);
+            };
+        }
+        // ---------- DÉFINI L'EXPRESSION
+        function isCP(cp) {
+            var er = new RegExp("^\\d{5}$");
+            return er.test(cp);
+        }
+        // ----------- 
+        function isTel(tel) {
+            var er = new RegExp("^0[1-9](-[0-9]{2}){4}$");
+            return er.test(tel);
+        }
+        // ------------- 
+        function isEmail(email) {
+            var er = new RegExp("^[0-9a-z._-]+@[0-9a-z._-]{2,}[.][a-z]{2,5}$", "i");
+            return er.test(email);
+        } 
+    </script>
+</head>
+
+<body>
+    CP <input id="it_cp" type="text" value="75012" />
+    Tél <input id="it_tel" type="text" value="08-12-13-14-15" />
+    E-Mail <input id="it_email" type="text" value="p.b@free.fr" />
+    <span id="sp_msg"></span>
+
+    <script>
+        window.onload = init; 
+    </script>
+</body>
+
+</html>

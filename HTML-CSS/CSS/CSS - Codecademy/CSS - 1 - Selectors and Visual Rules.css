@@ -1,0 +1,44 @@
+Changer plusieurs format d'un élément dans HTML
+<p style="color: red; font-size: 20px;">I'm learning to code!</p>
+
+<style></style>
+
+<link href="style.css" type="text/css" rel="stylesheet">
+href - must be the address, or path, to the "CSS file"
+type - type of document linked to, set to "text/css"
+rel - relation between the HTML and CSS, set to "stylesheet"
+
+Sélectionner un Élément
+ p {
+  font-family: Arial;
+}
+
+Sélectionner une Classe
+.class {	}
+
+Sélectionner un ID
+#id {	}
+
+IDs are the most specific selector in CSS, 
+followed by classes, and finally, tags.
+
+Important (The one thing that is even more specific than IDs)
+!important
+p {color: blue !important;}
+
+Chaining Selectors (combining multiple selectors)
+h1.special {	}
+
+Chaining Nested Elements
+.main-list li {	}
+.description h5{ }
+
+Multiple Selectors
+h1, 
+.menu { }
+
+Resetting Defaults to the whole HTML
+* {
+  margin: 0;
+  padding: 0;
+}

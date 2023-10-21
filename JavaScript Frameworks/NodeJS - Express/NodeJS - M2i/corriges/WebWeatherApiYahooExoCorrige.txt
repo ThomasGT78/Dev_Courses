@@ -1,0 +1,115 @@
+// ApiYahooWeatherWebExo.js
+// Chargements ...
+const express = require("express");
+const bodyParser = require("body-parser");
+// Chargement de oauth
+const oAuth = require('oauth');
+
+const app = express();
+
+// for parsing application/json
+//app.use(bodyParser.json());
+// for parsing application/x-www-form-urlencoded
+app.use(bodyParser.urlencoded({extended: true}));
+
+// Le dossier des ressources statiques
+app.use(express.static(__dirname + "/public"));
+
+/*
+ GET
+ */
+app.get("/", (req, res) => {
+    res.setHeader("Content-Type", "text/html; charset=utf-8");
+    res.render("ApiYahooWeatherWebExo.ejs", {temperature: "", etatDuCiel: "", "image": "no-image.png"});
+}); /// Racine
+
+
+/*
+ POST
+ */
+app.post("/valider", (req, res) => {
+    res.setHeader("Content-Type", "text/html; charset=utf-8");
+
+    const ville = req.body.ville;
+    const pays = req.body.pays;
+
+    console.log("Ville saisie : " + ville);
+    console.log("Pays saisi : " + pays);
+
+    // Chargement de oauth
+    //const oAuth = require('oauth');
+
+    // En-tête HTTP
+    const header = {
+        // Application Name
+        "X-Yahoo-App-Id": "pbAppWeather"
+    };
+
+    // Authentification
+    const request = new oAuth.OAuth(
+        null,
+        null,
+        // Consumer Key (Client ID)
+        'xxx',
+        // Consumer Secret (Client Secret)
+        'xxx',
+        '1.0',
+        null,
+        'HMAC-SHA1',
+        null,
+        header
+        );
+
+    // Requête
+    request.get(
+        'https://weather-ydn-yql.media.yahoo.com/forecastrss?location=' + ville + ',' + pays + '&format=json',
+        null,
+        null,
+        function (err, data, result) {
+            if (err) {
+                console.log(err);
+            } else {
+                // La String reçue est transformée en objet JSON
+                const object = JSON.parse(data);
+                // Affichages
+                // Ville, pays, day, état du ciel, ...
+                console.log("Ville : " + object.location.city);
+                console.log("Pays : " + object.location.country);
+
+                // La date
+                console.log("Date (timestamp) : " + object.forecasts[0].date);
+                const ts = object.forecasts[0].date;
+                const d = new Date(ts * 1000);
+                console.log("Date : " + d.getDate() + "/" + (d.getMonth() + 1) + "/" + d.getFullYear());
+                // Le jour en français
+                console.log("Day of week : " + object.forecasts[0].day);
+                const jours = {"Mon": "Lundi", "Tue": "Mardi", "Wed": "Mercredi", "Thu": "Jeudi", "Fri": "Vendredi", "Sat": "Samedi", "Sun": "Dimanche"};
+                console.log("Jour de la semaine : " + jours[object.forecasts[0].day]);
+
+                // Température en degrés Celsius
+                // Pour convertir en degrés Celsius une température donnée en degrés Fahrenheit, il suffit de soustraire 32 et de diviser par 1,8 (9/5 = 1,8) le nombre ainsi obtenu. Pour 50 °F , on obtient : 50 − 32 = 18, puis 18/1,8 = 10 ;
+                console.log("Température (F): " + object.current_observation.condition.temperature);
+                const fahrenheit = object.current_observation.condition.temperature;
+                var celsius = fahrenheit - 32;
+                celsius = celsius / 1.8;
+                celsius = Math.round(celsius);
+                console.log("Température (C): " + celsius);
+
+                // L'état du ciel en français
+                console.log("State of sky : " + object.forecasts[0].text);
+                // Rainy ? Orageux ? Neigeux ? ...
+                const etats = {"Sunny": "Ensoleillé", "Cloudy": "Nuageux", "Partly Cloudy": "Partiellement nuageux", "Mostly Cloudy": "Très nuageux", "Mostly Sunny": "Très ensoleillé", "Rainy": "Pluvieux", "Mostly Rainy": "Très pluvieux", "Scattered Showers": "Averses éparses", "Rain":"Pluie"};
+                const images = {"Sunny": "ensoleille.jpg", "Cloudy": "nuageux.jpg", "Partly Cloudy": "partiellement_nuageux.jpg", "Mostly Cloudy": "tres_nuageux.jpg", "Mostly Sunny": "tres_ensoleille.jpg", "Rainy": "pluvieux.jpg", "Mostly Rainy": "tres_pluvieux.jpg", "Scattered Showers": "averses_parses.jpg", "Rain":"pluie.jpg"};
+
+                console.log("Etat du ciel : " + etats[object.forecasts[0].text]);
+                //console.log(result);
+                res.render("ApiYahooWeatherWebExo.ejs", {temperature: celsius + " °C" , etatDuCiel: etats[object.forecasts[0].text], "image": images[object.forecasts[0].text]});
+            }
+        }
+    );
+}); /// /valider
+
+
+app.listen(8081);
+
+console.log("Le serveur tourne sur http://localhost:8081");

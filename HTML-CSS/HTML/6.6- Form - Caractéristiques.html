@@ -1,0 +1,48 @@
+			<!--------------------------------------
+			*	  CARACTÉRISTIQUES DU FORMULAIRE	*
+			---------------------------------------->
+
+(PLACEHOLDER)
+Représente le texte de substitution d'un élément, il s'efface dès qu'on tape du texte.
+
+(VALUE)
+Affiche une valeur par défaut à un élément pour remplir une zone de texte, un bouton, un label, etc...
+
+(AUTOFOCUS - SÉLECTIONNER AUTOMATIQUEMENT UN CHAMP)
+Placer automatiquement le curseur dans l'un des champs de votre formulaire avec l'attribut «autofocus»
+<input type="text" name="prenom" id="prenom" autofocus />
+
+(REQUIRED - RENDRE UN CHAMP OBLIGATOIRE)
+Avec l'attribut «required», fonctionne avec n'importe quel attribut
+<input type="text" name="prenom" id="prenom" required />
+
+(DÉFINIR LE NOMBRE DE CARACTÈRES)
+minlength="5" maxlength="250">
+<input type="text" id="name" name="name" minlength="4" maxlength="12">
+
+(PATTERN - EXPRESSION RATIONNELLE À RESPECTER)
+Permet de définir le type de 
+pattern="[a-zA-Z0-9]+"{14,16}"
+<input type="text" id="uname" name="name" pattern="[a-z]{4,8}">
+
+(CHECKED)
+Permet de cocher/décocher une case par défaut
+<input type="checkbox" name="checkme" checked>Check Me</input>
+
+(DISABLED)
+Désactiver et activer un input <!-- Fonctionne sur tous les types d'INPUT -->
+<input type="button" value="Je suis désactivé" disabled>
+
+(READONLY)
+Indique que l'utilisateur ne devrait pas pouvoir éditer la valeur du champ
+<input type="text" id="uname" name="name" value="Ne peut pas être modifié" readonly>
+
+(TABINDEX - navigue avec la touche Tab)
+<button tabindex="1">Un bouton</button>
+<textarea tabindex="0">Saisir un texte</textarea>		<!-- Parcouru dans l'ordre croissant -->
+
+(RACCOURCIS CLAVIER)
+<input type="button" value="Démarrer la machine" accesskey="s">
+
+Liste des valeurs de «Pattern»
+https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire

@@ -1,0 +1,30 @@
+<!-- ApiYahooWeatherWeb.ejs -->
+<html>
+    <head>
+        <title>Accueil Yahoo Weather</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+
+    <body>
+        <div>
+            <h3>Accueil Yahoo Weather</h3>
+            <form method="post" action="/valider">
+                <!-- <p><label for="ville">Ville : </label></p> -->
+                <p><input type="text" name="ville" id="ville" value="Paris" placeholder="City ?" /></p>
+                <!-- <p><label for="pays">Pays : </label></p> -->
+                <p><input type="text" name="pays" id="pays" value="France" placeholder="Country ?" /></p>
+                <p><input type="submit" value="Valider" /></p>
+            </form>
+            <p>
+                <%=temperature %>
+            </p>
+            <p>
+                <%=etatDuCiel %>
+            </p>
+            <p>
+                <img src="images/<%=image %>" alt="Etat du ciel"/>
+            </p>
+        </div>
+    </body>
+</html>

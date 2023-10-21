@@ -1,0 +1,34 @@
+					<!--*************************
+					*	 CRÉER UN FORMULAIRE	*
+					S*************************-->
+
+<form></form>		(Balise du formulaire qui en indique le début et la fin)
+					(il faut obligatoirement mettre des balises de type block (comme <p> </p>) à l'intérieur pour y faire figurer du texte)
+
+(Envoyer le texte saisi)
+method="get"		(Limitée à 255 caractères. Les informations seront envoyées dans l'adresse de la page (http://…  ))
+method="post"		(Permet d'envoyer un grand nombre d'informations. Les données saisies ne transitent pas par la barre d'adresse)
+
+action="http://…"		(url où envoyer les données, c'est l'adresse de la page ou du programme qui va traiter les informations)
+
+<form action="/example.html" method="POST">
+</form>
+
+					<!--*************************
+					*	 REGROUPER LES CHAMPS	*
+					S*************************-->	
+
+<fieldset>
+	<legend>Vos coordonnées</legend> <!-- Titre du fieldset --> 
+
+	<label for="nom">Quel est votre nom ?</label>
+	<input type="text" name="nom" id="nom" />
+
+	<label for="prenom">Quel est votre prénom ?</label>
+	<input type="text" name="prenom" id="prenom" />
+</fieldset>
+
+
+
+
+

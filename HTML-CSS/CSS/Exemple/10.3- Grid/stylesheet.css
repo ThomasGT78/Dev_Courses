@@ -1,0 +1,47 @@
+.grille {
+	display: grid;
+	grid-template-columns: repeeat (3 1fr);
+	grid-template-rows: 40px 50px 60px 5em;
+	grid-template-areas:
+		"a b c" 
+		"a d e"
+		"f g h"
+		"i i j"				 	
+	;
+}
+
+div{
+	border: 1px solid black;
+}
+.block1{
+	grid-area: a;
+}
+.block2{
+	grid-area: b;
+}
+.block3{
+	grid-area: c;
+}
+.block4{
+	grid-area: d;
+}
+.block5{
+	grid-area: e;
+}
+.block6{
+	grid-area: f;
+}
+.block7{
+	grid-area: g;
+}
+.block8{
+	grid-area: h;
+}
+.block9{
+	grid-area: i;
+}
+.block10{
+	grid-area: j;
+}
+
+

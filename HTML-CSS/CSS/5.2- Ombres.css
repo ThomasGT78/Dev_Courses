@@ -1,0 +1,15 @@
+	CRÉER UNE OMBRE
+
+		----	Définir une bordure en utilisant les 3 paramètres  d'un coup	----
+
+(Les ombres des boîtes)
+box-shadow : 6px 6px 10px black;
+
+	1- Le décalage horizontal de l'ombre.
+	2- Le décalage vertical de l'ombre.
+	3- L'adoucissement du dégradé.
+	4- La couleur de l'ombre.
+
+
+(Les ombres du texte)
+text-shadow : 2px 2px 4px black;

@@ -1,0 +1,88 @@
+STRUCTURE et BALISES HTML
+
+https://developer.mozilla.org/en-US/docs/Web/HTML/Element
+
+		----	STRUCTURE	----
+
+<!DOCTYPE html>
+<html lang="fr">
+	<head>
+		<meta charset="UTF-8" />
+		<title>Titre</title>
+		<link type="text/css" rel="stylesheet" href="stylesheet.css" />
+	</head>
+	<body>
+		<h1>Titre le plus gros</h1>
+		<h6>Titre le plus petit</h6>
+		<div style="color:red">
+			<p>Ceci est un paragraphe</p>
+			<p>On y trouve le contenu des paragraphes</p>
+			<p>Et peut être organisé dans des blocs pour faciliter la mise en page</p>
+		</div>
+		<p>On peut aussi sélectionner un groupe de mot pour donner de <span style = "font-family: Impact">l'impact</span> à votre texte</p>
+		<ul>
+			<li>Ceci est un liste à puce</li>
+			<li>Elle est dite: "Non Ordonnée"</li>
+		</ul>
+		<ol>
+			<li>1- Ceci est un liste à Numérotée</li>
+			<li>2- Elle est dite: "Ordonnée"</li>
+		</ol>
+		<figure>
+			<img src="images/blocnotes.png" alt="Bloc-Notes" />
+			<figcaption>Le logiciel Bloc-Notes</figcaption>
+		</figure>
+	</body>
+</html>
+
+		----	BALISES	----
+
+<!--Ceci est un COMMENTAIRE-->
+
+<> </> 		Opening and closing Tag
+colon (:). A semicolon (;)
+
+<html></html>		Balise encadrant la totalité du code html de la page
+<head></head>		Contient le Nom de la page, ses propriétés, les liens vers CSS et JS (non-visible par l'utilisateur)
+<body></body>		Corps du Texte (tout ce qui est affiché)
+
+<div></div>			Divise la page en plusieurs blocs
+<!-- Les Balises suivantes ont la même fonction que <div> mais on l'avantage d'être plus spécifique sur leur utilisation et leur lecture-->
+<header></header>	En-tête de la page web
+<main></main>		Corps Principal du texte
+<footer></footer>	Pied de page
+<nav></nav>			Contient généralement les liens de navigation
+<section></section>	Délimite les parties thématiques d'un site (peut avoir elle-même un header ou un footer)
+<article></article>	Présente du contenu
+<aside></aside>		Présente des informations additionnelles
+
+<span></span>		(Séprarer éléments d'une ligne)
+<em></em>			Emphasis: Accuentue une partie du texte (par défaut en Italique)
+<strong></strong>	Marque un élément important (par défaut en Gras)
+
+<code></code>		Permet de représenter une lignes de code (inline)
+<pre></pre>			Permet de représenter plusieurs lignes de code (block), les espaces utilisés dans le document HTML seront retranscrits
+
+<ul></ul>			Unorder list: Liste à puces
+<ol></ol>			Order List: Liste numéroté
+<li></li>			List Item: ëlément de la liste
+
+<br>				(Break paragraphe (aller à la ligne)
+
+<!-- Balises des Médias-->
+
+<figure></figure>	(encadre différents types de médias ou tout ce qui vient illustrer le texte)
+					(a un rôle sémantique, elle indique que l'image est importante pour la compréhension du texte, utile au référencement)
+<figcaption></figcaption>	(Légende de la <figure></figure>)
+
+<audio></audio>		(encadre les audios)
+<video></video>
+<embed src="download.gif"/>				Peut insérer différent type de médias ou file
+<source src="lien" type="audio/mp3">	Peut insérer différent type de médias
+
+<audio controls autoplay loop></audio>
+	controls	play/pause, volume, fullscreen option
+	autoplay	automatically playing
+	loop		continuously playing on repeat
+
+

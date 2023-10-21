@@ -1,0 +1,23 @@
+LISTES
+
+(Le Style des Listes)
+http://stylescss.free.fr/v2-properties/list-style.php
+
+list-style:		(Définit l'ensemble des paramètres de présentation des listes)
+list-style-type: 
+	disc	(Puce circulaire noire. Valeur par défaut)
+	circle	(Puce circulaire blanche)
+	square	(Puce carrée noire)
+	"=>"	(Utilise la chaine de charactère entre "")
+	none	(Enlève les puces)
+	decimal	(Numérotation décimale classique en chiffres)
+	decimal-leading-zero	(Affiche toujours deux digits, les nombres de 1 à 9 étant précédés d'un zéro)
+
+list-style-position:	(Définit la position des puces ou des numéros dans une liste)
+	outside		(Se positionnent dans la marge gauche du paragraphe en retrait. valeur par défaut)
+	inside		(Se positionnent dans le paragraphe, en repoussant la première ligne de texte)
+
+list-style-image:	(remplace les puces ou la numérotation des listes par une image)
+					Veillez à ce que les dimensions de l'image soient compatibles avec la taille des caractères
+		none					(La puce ou le numéro sont affichés conformément à la propriété list-style-type. Valeur par défaut)
+		url('chemin/fichier')	(L'image spécifiée par la fonction url() remplace les puces ou les numéros)

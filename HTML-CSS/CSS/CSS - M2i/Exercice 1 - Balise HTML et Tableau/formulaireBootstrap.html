@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Titre</title>
+    <link type="text/css" rel="stylesheet" href="bootstrap-4.5.3-dist/css/bootstrap.min.css" />
+</head>
+
+<body>
+    <header>
+        <h1>
+            Formulaire d'inscription
+        </h1>
+    </header>
+
+    <nav>
+        <ul>
+            <li><a href="1-home.html">Page d'acceuil</a></li>
+            <li><a href="2-tableau.html" target="autrePage">Page 2 - Tableau</a></li>
+        </ul>
+    </nav>
+
+    <form method="post">
+        <fieldset>
+            <legend>Vos informations Personnelles</legend>
+            <div class="form-group">
+                <label for="prenom">Prénom</label>
+                <input class="form-control" type="text" name="prenom" id="prenom" placeholder="votre Prénom" required
+                    autofocus />
+            </div>
+            <div class="form-group">
+                <label for="nom">Nom</label>
+                <input class="form-control" type="text" name="nom" id="nom" placeholder="votre Nom" required />
+            </div>
+            <br>
+            <div class="form-check">
+                <input class="form-check-input" type="radio" name="genre" id="homme" value="homme" /><label for="homme"
+                    class="form-check-label">Homme</label>
+                <input class="form-check-input" type="radio" name="genre" id="femme" value="femme" /><label for="femme"
+                    class="form-check-label">Femme</label>
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="dateBirth">Date de Naissance</label>
+                <input class="form-control" type="date" name="dateBirth" id="dateBirth" required
+                    placeholder="2010-12-31" min="1900-01-01" max="2010-12-31" />
+            </div>
+            <div class="form-group" class="form-group">
+                <label for="age">Age</label>
+                <input class="form-control" type="text" name="age" id="age" min="10" max="130" />
+            </div>
+            <br>
+            <div class="form-group">
+                <label for="email">Email</label>
+                <input class="form-control" type="email" name="email" id="email" required />
+            </div>
+            <div class="form-group">
+                <label for="tel">N° de téléphone</label>
+                <input class="form-control" type="tel" name="tel" id="tel" required size="15" minlength="10"
+                    maxlength="15" />
+            </div>
+        </fieldset>
+        <fieldset>
+            <legend>Vos identifiants</legend>
+            <div class="form-group">
+                <label for="pseudo">Pseudo</label><br />
+                <input class="form-control" type="texte" name="pseudo" id="pseudo" required minlength="6"
+                    maxlength="14" />
+            </div>
+            <div class="form-group">
+                <label for="password">Password</label><br />
+                <input class="form-control" type="password" name="password" id="password" required
+                    pattern="[a-zA-Z0-9]+{6,18}" minlength="6" maxlength="16" />
+            </div>
+        </fieldset>
+        <div class="form-check">
+            <input class="form-check-label" type="checkbox" id="cgv" required />
+            <label for="cgv">J'accepte les conditions générales de vente</label>
+        </div>
+        <br />
+        <br />
+        <div>
+            <button type="submit" class="btn btn-primary">Envoyer</button>
+        </div>
+    </form>
+</body>
+
+</html>

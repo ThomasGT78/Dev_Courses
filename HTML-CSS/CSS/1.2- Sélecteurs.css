@@ -1,0 +1,74 @@
+SÉLECTEURS
+http://stylescss.free.fr/index.php
+
+		----   ORDRE DE SPÉCIFICATION   ----
+
+Appliquer des styles CSS à tous les éléments de la page (permet un Reset de la page entière)
+* {
+    border: 2px solid black;
+	margin: 0;
+	padding: 0;
+}
+
+p {	}					1 seul sélecteur
+
+div p { }				2 sélecteurs sont plus spécifique
+
+.class { }				Sélectionner une Classe
+
+#id { }					Sélectionner un ID (le + spécifique)
+
+Important (The one thing that is even more specific than IDs)
+!important
+p {color: blue !important;}
+
+;Assigner les CLASS
+/*HTML*/
+‹h1 class="NomDeLaClass"›‹/h1›    
+‹p class="NomDeLaClass"›‹/p›
+/*CSS*/
+.NomDeLaClass { }
+
+;Assigner un ID
+/*HTML*/
+‹h1 id="NomIdUnique"›‹/h1›
+/*CSS*/
+#NomIdUnique { }
+
+;L'ID est prioritaire sur la Class
+/*HTML*/
+<div class="ami" id="meilleur_ami">Romain</div>
+
+/*CSS*/
+.ami {
+	border: 2px dashed #008000;
+}
+
+#meilleur_ami {			/*celui qui sera pris en compte*/
+	border: 4px solid #cc0000;
+}
+
+
+		----   PSEUDO-CLASS   ----
+/*Un sélecteur de pseudo-classe est un moyen d'accéder à un élément HTML qui se trouve dans un état particulier*/
+
+sélecteur:pseudo-classe {
+        propriété: valeur;
+    }
+
+Liste des Pseudo-Class:
+a:link {}: 			un lien non cliqué
+a:visited {}: 		un lien qui a été cliqué
+a:hover {}: 		un lien survolé par la souris et non cliqué
+p:first-child {}	appliquer un style uniquement aux éléments qui sont le premier enfant de leur parent
+:nth-child(x){}	sélectionner n'importe quel enfant d'un élément parent (x=place de l'enfant dans la descendance)
+p:nth-child(x){} sélectionne les p "x"ème enfant d'un élément parent
+
+
+
+
+
+
+
+
+

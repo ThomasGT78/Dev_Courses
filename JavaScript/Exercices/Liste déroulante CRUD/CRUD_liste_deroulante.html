@@ -1,0 +1,106 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>DOMSelectCRUD</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <style type="text/css">
+        input[type="text"] {
+            width: 196px;
+        }
+
+        input[type="button"] {
+            width: 98px;
+        }
+
+        select {
+            width: 200px;
+        }
+    </style>
+</head>
+
+<body>
+    <h1>DOMSelectCRUD</h1>
+    <div>
+        <label>Saisissez le nom d'une ville à ajouter ou à supprimer</label>
+        <br>
+        <input id="nom" type="text" value="" />
+        <br>
+        <select id="liste" size="3"></select>
+        <br>
+        <input type="button" value="Ajouter" id="btAjouter" />
+        <input type="button" value="Supprimer" id="btSupprimer" />
+    </div>
+    <script>
+        var nom, liste;
+        var villes = new Array("Paris", "Lyon", "Marseille");
+
+        /**
+         *
+         * @returns {undefined}
+         */
+        function select2Input() {
+            // On affecte à l'input text la valeur sélectionnée dans la liste
+            console.log(liste);
+            //                console.log(liste.getAttribute("value"));
+            //                nom.setAttribute("value", liste.getAttribute("value")); // KO !!! ???
+            //nom.setAttribute("value", liste.value);
+            nom.value = liste.value;
+        } /// select2Input
+
+        /**
+         *
+         * @returns {undefined}
+         */
+        function init() {
+            nom = document.getElementById("nom");
+            liste = document.getElementById("liste");
+
+            // --- Enregistrer les Villes du tableau  dans la Liste
+            for (var i = 0; i < villes.length; i++) {           // Boucle sur les élément du tableau
+                var textNode = document.createTextNode(villes[i]);// création d'un Nœud Texte avec les Villes récupérée dans la boucle
+                var option = document.createElement("option");  // création de l'élément Option
+                option.setAttribute("value", villes[i]);        // ajoute l'attribut "value" à la balise option
+                option.appendChild(textNode);                   // ajoute le texte qui s'affiche dans l'option
+                liste.appendChild(option);                      // ajoute l'option dans la Liste select
+            }
+
+            liste.onchange = function () {
+                select2Input();
+            };
+
+            // --- AJOUTER une ville à la liste
+            document.getElementById("btAjouter").onclick = function () {    
+                //var valeur = nom.getAttribute("value"); // KO ??? !!!
+                var valeur = nom.value;                         // récupère la valeur inscrite dans le champs
+                console.log("Saisie : " + valeur);
+                var option = document.createElement("option");  // création de l'élément Option
+                var textNode = document.createTextNode(valeur); // création d'un Nœud Texte avec la valeur récupéré du champs
+                option.setAttribute("value", valeur);           // ajoute l'attribut "value" à l'élément option
+                option.appendChild(textNode);                   // ajoute le Nœud Texte qui à afficher dans l'Option
+                liste.appendChild(option);                      // ajoute l'élément Option dans la Liste select
+            };
+
+            // --- SUPPRESSION D'UNE OPTION en fonction d'une saisie du TEXT
+            document.getElementById("btSupprimer").onclick = function () {
+                
+                var nOptions = liste.childNodes.length;     // mesure la longueur du Nœud Texte d'une option
+                var valeur = nom.value;                     // récupère la valeur écrite dans le champs
+
+                for (var i = nOptions - 1; i >= 0; i--) {   // boucle sur les caractères du Nœeud Texte
+                    if (liste.childNodes[i].nodeName === "OPTION" && liste.childNodes[i].text === valeur) {
+                        liste.removeChild(liste.childNodes[i]);
+                    }   
+                }
+            };
+        } /// init
+
+        /**
+         * MAIN
+         */
+        window.onload = init;
+    </script>
+</body>
+
+</html>

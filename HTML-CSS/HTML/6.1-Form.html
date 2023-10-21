@@ -1,0 +1,221 @@
+					<!--*************************
+					*	 CRÉER UN FORMULAIRE	*
+					S**************************-->
+
+<form></form>		(Balise du formulaire qui en indique le début et la fin)
+					(il faut obligatoirement mettre des balises de type block (comme <p> </p>) à l'intérieur pour y faire figurer du texte)
+
+(Envoyer le texte saisi)
+method="get"		(Limitée à 255 caractères. Les informations seront envoyées dans l'adresse de la page (http://…  ))
+method="post"		(Permet d'envoyer un grand nombre d'informations. Les données saisies ne transitent pas par la barre d'adresse)
+
+action="http://…"		(url où envoyer les données, c'est l'adresse de la page ou du programme qui va traiter les informations)
+
+<form action="/example.html" method="POST">
+</form>
+
+			<!-------------------------------
+			*	 ZONE DE TEXTE MONOLIGNE	*
+			-------------------------------->
+	
+https://developer.mozilla.org/fr/docs/Web/HTML/Element/input/text#format
+
+<input type="text" />					On ne peut y écrire qu'une seule ligne. Elle sert à saisir des textes courts
+<input type="text" name="username"/>		Il faut donner un Nom à la zone de texte pour identifier les informations
+
+(Ajouter un Libellé)
+<label for="exemple">Texte</label>		Pour lier le label au champs, l'attribut «for» à la même valeur que l'«id» du champs
+<input type="text" id="exemple" name="name"/>
+
+(Propriétés de la balise input)
+size		="50"					Donne la taille du champ (en nombre de caractères)
+maxlength	="30"					Limite le nombre de caractères que l'on peut saisir
+value		="Joueur 1"				Préremplis le champ avec une valeur par défaut
+placeholder	="Entrez votre Nom"		Donne une indication sur le contenu du champ. Disparaîtra dès que le visiteur aura cliqué à l'intérieur du champ
+
+<input type="text" name="pseudo" id="pseudo" placeholder="Entrez votre Nom" size="30" maxlength="20" />
+
+(Zone de Mot de Passe)
+<input type="password">
+
+			<!-------------------------------
+			*	 ZONE DE TEXTE MULTILIGNE	*
+			-------------------------------->
+	
+<textarea name="commentaire" name="commentaire"></textarea>
+
+(Modifier la taille)
+En CSS : 				Appliquer les propriétés CSS «width» et «height»
+Avec des attributs : 	Ajouter les attributs «rows» et «cols»
+
+<textarea id="exemple" name="name" rows="5" cols="30" wrap="soft" >On peut ajouter un texte par défaut ici</textarea>
+rows			hauteur de la zone de texte (en nombre de ligne)
+cols			largeur de la zone de texte (en nombre de caractères)
+wrap=	"soft"	retour à la ligne sans saut de ligne
+		"hard"	retour à la ligne avec saut de ligne
+
+			<!-------------------------------
+			*	ZONES DE SAISIE ENRICHIES	*
+			-------------------------------->
+
+(NOMBRE)
+<input type="number" />
+
+Vous pouvez personnaliser le fonctionnement du champ:
+min		valeur minimale autorisée
+max		valeur maximale autorisée
+step	c'est le « pas » de déplacement. Si vous indiquez un pas de 2, le champ n'acceptera que des valeurs de 2 en 2 (par exemple 0, 2, 4, 6…)
+<input type="number" id="nombre" step="3" min="9" max="90" name="nombre">
+
+(E-Mail)
+<input type="email" />
+
+(N° DE TÉLÉPHONE)
+<input type="tel" />
+
+(URL)
+<input type="url" />
+
+(DATE)
+<input type="date" />
+Différents types de champs de sélection de date existent :
+date			pour la date (05/08/1985 par exemple)
+time			pour l'heure (13:37 par exemple)
+week			pour la semaine			<!--	Peu reconnu par les navigateurs actuellement, les suivant également	-->
+month			pour le mois
+datetime		pour la date et l'heure (avec gestion du décalage horaire)
+datetime-local	pour la date et l'heure (sans gestion du décalage horaire)
+
+(RECHERCHE)
+<input type="search" />
+
+(COULEUR)
+<input type="color" />
+
+(CURSEUR)
+<input type="range" />
+On peut utiliser là aussi les attributs «min» , «max» et «step» pour restreindre les valeurs disponible
+<input type="range" id="note" step="0.5" min="0" max="10" name="note">
+
+
+			<!---------------------------
+			*	LES ÉLÉMENTS D'OPTIONS	*
+			---------------------------->
+
+(CHECKBOX INPUT - LES CASES À COCHER)	
+<input type="checkbox" name="choix" />s
+
+Il faut mettre un label pour chaque checkbox et un «id» pour les lier avec «for»
+<input type="checkbox" name="Choix1" id="Choix1" /> <label for="Choix1">Choix 1</label><br />
+<input type="checkbox" name="Choix2" id="Choix2" /> <label for="Choix2">Choix 2</label><br />
+<input type="checkbox" name="Choix3" id="Choix3" /> <label for="Choix3">Choix 3</label>
+
+Cocher une case par défaut, avec l'attribut «checked»
+<input type="checkbox" name="choix" checked />
+
+(RADIO BUTTON INPUT - LES ZONES D'OPTIONS)
+Permet de faire un seul choix parmi une liste d'un même groupe (avec le même nom)
+<input type="radio" name="name" value="exemple" id="exemple">
+
+Le nom «name» doit être le même pour chaque option du groupe mais la valeur doit être différente
+<input type="radio" name="groupe" value="choix1" id="choix1" /> <label for="choix1">Choix n°1</label>
+<input type="radio" name="groupe" value="choix2" id="choix2" /> <label for="choix2">Choix n°2</label>
+<input type="radio" name="groupe" value="choix3" id="choix3" /> <label for="choix3">Choix n°3</label>
+
+Cocher une case par défaut, avec l'attribut «checked»
+<input type="radio" name="name" value="exemple" id="exemple" checked>
+
+(DROPDOWN LIST - LES LISTES DÉROULANTES)
+<select id="exemple" name="name">
+	<option value="option1">Option1</option>
+	<option value="option2">Option2</option>
+</select>
+
+Pour qu'une option soit sélectionnée par défaut, utilisez l'attribut «selected»
+<option value="option1" selected>Canada</option>
+
+Grouper vos options avec la balise «optgroup»
+<select name="pays" id="pays">
+	<optgroup label="Europe">
+		<option value="france">France</option>
+		<option value="espagne">Espagne</option>
+	</optgroup>
+	<optgroup label="Asie">
+		<option value="chine">Chine</option>
+		<option value="japon">Japon</option>
+	</optgroup>
+</select>
+
+(DATALIST - ZONE DE TEXTE À OPTIONS)
+Contient un ensemble d'éléments «option» qui représentent les valeurs possibles
+<input type="text" list="cities" id="city" name="city"/>
+  <datalist id="cities">
+    <option value="Paris"></option>
+    <option value="Tokyo"></option>
+  </datalist>
+
+
+	<!--	FINALISER LES CARACTÉRISTIQUES DU FORMULAIRE	-->
+	
+(REGROUPER LES CHAMPS)	
+
+<fieldset>
+	<legend>Vos coordonnées</legend> <!-- Titre du fieldset --> 
+
+	<label for="nom">Quel est votre nom ?</label>
+	<input type="text" name="nom" id="nom" />
+
+	<label for="prenom">Quel est votre prénom ?</label>
+	<input type="text" name="prenom" id="prenom" />
+</fieldset>
+
+(AUTOFOCUS - SÉLECTIONNER AUTOMATIQUEMENT UN CHAMP)
+Placer automatiquement le curseur dans l'un des champs de votre formulaire avec l'attribut «autofocus»
+<input type="text" name="prenom" id="prenom" autofocus />
+
+(REQUIRED - RENDRE UN CHAMP OBLIGATOIRE)
+Avec l'attribut «required», fonctionne avec n'importe quel attribut
+<input type="text" name="prenom" id="prenom" required />
+
+(DÉFINIR LE NOMBRE DE CARACTÈRES)
+minlength="5" maxlength="250">
+<input type="text" id="name" name="name" minlength="4" maxlength="12">
+
+(PATTERN - EXPRESSION RATIONNELLE À RESPECTER)
+Permet de définir le type de 
+pattern="[a-zA-Z0-9]+"{14,16}"
+<input type="text" id="uname" name="name" pattern="[a-z]{4,8}">
+
+PLACEHOLDER
+
+Liste des valeurs de «Pattern»
+https://developer.mozilla.org/fr/docs/Web/Guide/HTML/Formulaires/Validation_donnees_formulaire
+
+	<!--	LE BOUTON D'ENVOI	-->
+	
+Lorsque vous cliquez sur le bouton « Envoyer », le formulaire vous amène alors à la page indiquée dans l'attribut action
+On peut changer le texte affiché à l'intérieur des boutons avec l'attribut value
+<input type="submit" value="Envoyer" />
+
+(BOUTON D'ENVOI)
+Bouton d'envoi de formulaire. Le visiteur sera conduit à la page indiquée dans l'attribut action  du formulaire
+<input type="submit" value="Soumettre"/>
+<button type="submit">Soumettre</button>
+
+(BOUTON D'ENVOI GRAPHIQUE)
+Équivalent du bouton submit, sous forme d'image. Rajoutez l'attribut src  pour indiquer l'URL de l'image
+<input type="image" />	
+<input type="image" id="image" alt="Login" src="/media/examples/login-button.png">
+
+(RESET)
+Remise à zéro du formulaire
+<input type="reset" value="Reset"/>	
+<button type="button">Reset</button>
+
+(BOUTTON MULTI USAGE)
+Bouton générique, qui n'aura par défaut aucun effet. Souvent géré en JavaScript pour exécuter des actions sur la page.
+<input type="button" value="Boutton"/>	
+<button type="button">Boutton</button>
+
+
+	<!--		-->

@@ -1,0 +1,62 @@
+BOX MODEL
+
+Border-style:
+https://developer.mozilla.org/en-US/docs/Web/CSS/border-style#Values
+
+		----		CRÉATION D'UN CONTENEUR		----
+(Le Conteneur est une balise HTML et les Éléments sont d'autres balises HTML à l'intérieur)
+	--	HTML  --
+<div id="conteneur">
+    <div class="element 1">Element </div>
+    <div class="element 2">Element </div>
+    <div class="element 3">Element </div>
+</div>
+
+	--	CSS  --
+#conteneur
+{
+    display: flex;
+	overflow: auto;
+	word-wrap: break-word;
+	clear: both;
+}
+
+		----		MODIFIER LES PARAMÈTRES D'UNE BOÎTE		----
+		
+height:		(hauteur du bloc; en px ou %)
+width:		(largeur du bloc; en px ou %)
+
+(définir des dimensions «limites» pour s'adapter aux différentes résolutions d'écran)
+min-height: / max-height:
+min-width: / max-width:		
+
+(Marge Intérieur => en px)(par defaut à 0)
+padding: 6px 11px 4px 9px;	(top  right  bottom  left)
+padding: 6px 11px; 			(top/bottom  left/right)
+padding-top: (-top / -right / -bottom / -left)
+
+(Marge Extérieur => en px)(valeur par défaut dépend du type de block)
+margin: 6px 11px 4px 9px;	(top  right  bottom  left)
+margin: 6px 11px; 			(top/bottom  left/right)
+margin-top: (-top / -right / -bottom / -left)
+
+(Centrer un block)
+Il faut d'aboord donner une largeur au block;
+width: 50%;
+margin: auto;	(permet de centrer automatiquement le block en fonction de la taille du block et la résolution de la page)
+
+(Couper un block)
+overflow: 		(scroll hidden visible)
+	visible		(le contenue qui dépasse de l'élément sera afficher en dehors de la limite - default value)
+	hidden		(si le texte dépasse les limites il sera coupé; On ne pourra pas voir tout le texte)
+	scroll		(le texte sera coupé s'il dépasse les limites; Mais avec une barres de défilement pour lire l'ensemble du texte)
+	auto		(le navigateur décide de mettre une barre de défilement en cas de besoin)
+
+(Couper les mots trop long pour les faire aller à la ligne)
+word-wrap: break-word;
+
+box-sizing: (controls the type of box model)
+	content-box 	(Set by default: The dimensions change depending on the margin+padding+content's size)
+	border-box 		(Inclus les «Border» et le «Padding» dans le calcul de «width»)
+
+

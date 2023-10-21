@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="UTF-8">
+    <title>Conditionner la soumission d'un formulaire</title>
+    <style>
+        .vert {background-color: rgb(109, 236, 158);}
+        .rouge {background-color: rgb(243, 95, 95);}
+    </style>
+</head>
+
+<body>
+    <div>
+        <h1>CONDITIONNER LA SOUMISSION D'UN FORMULAIRE</h1>
+        <form action="../php/FormulaireSoumission.php" method="GET" id="formSaisie">
+            <label>ID : </label>
+            <input type="text" name="id" id="id" value="" />
+            <label>Nom : </label>
+            <input type="text" name="nom" id="nom" value="Tournesol" />
+            <input type="submit" id="btSubmit" />
+        </form>
+        <span id="spMessage"></span>
+    </div>
+
+    <script src="../jquery/jquery-3.5.1.js"></script>
+    <script src="../js/control_soumission_formulaire.js"></script>
+</body>
+
+</html>

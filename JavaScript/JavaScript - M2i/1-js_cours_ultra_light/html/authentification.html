@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>authentification.html</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+    <link type="text/css" rel="stylesheet" href="../css/authentification.css" />
+</head>
+
+<body>
+    <div>
+        <h1 id ="titre">Authentification</h1>
+        <figure>
+            <img alt="drapeau français" id="france" src="../image/drapeau_france.PNG" />
+            <img alt="drapeau espagnol" id="espagne"  src="../image/drapeau_espagne.PNG" />
+        </figure>
+        <form>
+            <label id="lblPseudo" for="pseudo">Pseudo : </label>
+            <br>
+            <input type="text" name="pseudo" id="pseudo" value="p" />
+            <br>
+            <label id="lblMdp" for="mdp">MDP : </label>
+            <br>
+            <input type="password" name="mdp" id="mdp" value="b" />
+            <br>
+            <input type="checkbox" name="checkbox" id="checkbox" />
+            <label id="lblCheckbox">Afficher le mot de passe</label>
+            <br>
+            <input type="button" value="Valider" name="btValider" id="btValider" />
+            <br>
+            <label id="lblMessage">Message</label>
+        </form>
+    </div>
+    <script src="../js/authentification.js"></script>
+</body>
+
+</html>

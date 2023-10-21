@@ -1,0 +1,66 @@
+DISPLAY
+
+
+(Hide content)
+visibility: hidden visible	(laisse l'espace vide)
+display: none;				(supprime l'espace vide);
+
+/*<display-outside> */
+display: block;
+(Boîte de bloc avec passages à la ligne avant et après l'élément dans le flux normal)
+display: inline;
+(une ou plusieurs boîtes en lignes qui n'ajoutent pas de passages à la ligne avant ou après dans un flux normal)
+display: run-in;
+
+/* <display-inside> */
+display: flow;
+display: flow-root;
+display: table;
+display: flex;
+display: grid;
+display: ruby;
+
+/* Combinaison de valeurs */
+/* <display-outside> et <display-inside> */
+display: block flow;
+display: inline table;
+display: flex run-in;
+
+/* Valeurs de type <display-listitem> */
+display: list-item;
+display: list-item block;
+display: list-item inline;
+display: list-item flow;
+display: list-item flow-root;
+display: list-item block flow;
+display: list-item block flow-root;
+display: flow list-item block;
+
+/* Valeurs de type <display-internal> */
+display: table-row-group;
+display: table-header-group;
+display: table-footer-group;
+display: table-row;
+display: table-cell;
+display: table-column-group;
+display: table-column;
+display: table-caption;
+display: ruby-base;
+display: ruby-text;
+display: ruby-base-container;
+display: ruby-text-container;
+
+/* Valeurs de type <display-box> */
+display: contents;
+display: none;
+
+/* Valeurs de type <display-legacy> */
+display: inline-block;
+display: inline-table;
+display: inline-flex;
+display: inline-grid;
+
+/* Valeurs globales */
+display: inherit;
+display: initial;
+display: unset;

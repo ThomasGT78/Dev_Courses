@@ -1,0 +1,14 @@
+npm init -y --save
+
+npm install express --save
+npm install ejs --save
+
+npm install body-parse --save
+
+npm install mysql --save
+
+npm install mongodb --save
+npm install mongoose --save
+npm install jshint --save
+
+npm install oauth --save

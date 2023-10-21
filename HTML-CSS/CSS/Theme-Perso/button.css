@@ -1,0 +1,58 @@
+
+
+.btn {
+    border: rgb(248, 242, 231) solid 2px;
+    border-radius: 4px;
+    margin: 3px;
+    padding: 7px;
+}
+
+.btn-delete {
+    background-color: crimson;
+    color: white;
+}
+
+.btn-validate {
+    background-color: rgb(13, 165, 38);
+    color: white;
+}
+
+.btn-update {
+    background-color: rgb(13, 165, 38);
+    color: white;
+}
+        /*******    BIG BUTTON   ********/
+		
+.btn-big { /* ul */
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    justify-content: space-around;
+
+    padding: 6px 0 0 1px ;
+    margin: 5px 1px 5px 1px;
+    list-style-type: none;
+}
+
+.btn-link-big { /* ul li */
+    min-width: 140px;
+    width: 20%;
+    height: 70px;
+    margin: 10px;
+    text-align: center;
+
+    border: solid black 1px;
+    border-radius: 2px;
+    box-shadow: -2px -2px 5px 0px black;
+    background-color: rgb(233, 233, 233);
+}
+
+.btn-link-big a{ /* ul li a */
+    display: block;
+    line-height: 70px;
+    padding: 0;
+    width: 100%;
+    text-decoration : none;
+    color: crimson;
+    font-weight: 600;
+}

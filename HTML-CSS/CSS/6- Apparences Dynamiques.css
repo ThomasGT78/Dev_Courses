@@ -1,0 +1,27 @@
+APPARENCES DYNAMIQUES
+
+(Pour modifier l'apparence en fonction de l'action effectué)
+
+
+		----	SURVOL	----
+:hover		(quand l'élément est survolé)
+(Utile pour les liens / les formulaire / bouttons mais peut être utiliser sur n'importe quel élément)
+a:hover
+h1:hover
+h1 p:hover
+#id:hover
+
+		----	CLIC	----
+:active		(au moment du clic, cesse après avoir relâcher le boutton de la souris)	
+(Surtout utiliser sur les liens)
+a:active
+
+		----	FOCUS	----
+:focus		(lorsque l'élément est sélectionné)			
+(Utiliser surtout pour les formulaires)
+.form:focus
+	
+		----	LIEN CONSULTÉ	----
+:visited	(lorsque le lien a été visité)
+(Utiliser sur les liens; il n'y a que la couleur modifiée en pratique)
+a:visited

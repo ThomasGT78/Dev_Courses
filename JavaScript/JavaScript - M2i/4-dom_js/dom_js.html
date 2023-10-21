@@ -1,0 +1,54 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>ByName</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <div>
+        <fieldset>
+            <legend>S&eacute;lectionnez</legend>
+            <input name="rbCours" type="radio" value="java" />
+            <label>Java </label>
+            <br>
+            <input name="rbCours" type="radio" value="javascript" />
+            <label>JavaScript </label>
+            <br>
+            <input name="rbCours" type="radio" value="php" />
+            <label>PHP</label>
+            <br>
+        </fieldset>
+
+        <input type="button" value="ByName" id="btValider" />
+
+        <span id="spMessage"><strong>Message</strong></span>
+    </div>
+
+    <script>
+        // ------------ 
+        function byName() {
+            var spMessage = document.getElementById("spMessage");
+            spMessage.innerHTML = "";
+            var elRBs = document.getElementsByName("rbCours");
+            for (var i = 0; i < elRBs.length; i++) {
+                if (elRBs[i].checked == true) {
+                    spMessage.innerHTML = elRBs[i].value;
+                }
+            }
+        }
+
+        var option = document.getElementsByTagName("option");
+
+        // ---------- 
+        function init() {
+            document.getElementById("btValider").onclick = byName;
+        } /// init
+        window.onload = init; 
+    </script>
+
+</body>
+
+</html>

@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>event.html</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <div>
+        <h1>Inscription</h1>
+        <p>
+            <label for="inputPseudo" id="lblPseudo">Pseudo :</label><br>
+            <input type="text" id="inputPseudo" name="inputPseudo" placeholder="Entrez votre Nom" minlength="5" focus />
+        </p>
+        <p>
+            <label for="inputMdp" id="lblMdp">Mot de Passe :</label><br>
+            <input type="password" id="inputMdp" name="inputMdp" placeholder="Entrez votre Mot de Passe" minlength="6" maxlength="12"/>
+            <br>
+            <input type="checkbox" id="visibleMdp" name="visibleMdp" />
+            <label for="visibleMdp" id="lblVisibleMdp">Afficher le mot de passe</label>
+        </p>
+       
+        <p>
+            <input type="button" id="btValider" name="btValider" value="Valider"/>
+        </p>
+        <p id="errorMessage"></p>
+    </div>
+    <script src="event.js"></script>
+</body>
+
+</html>

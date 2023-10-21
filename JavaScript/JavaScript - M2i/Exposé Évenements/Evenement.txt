@@ -1,0 +1,15 @@
+evenement pour changer 
+html
+css
+
+Etape de l'intéraction:
+-récupérer l'adresse où les info se strouvent
+-modifier ou ajouter des infos/mise en page
+
+action :
+
+on.click
+btn.onmouseover
+btn.onfocus
+addEventListener()
+Dans la fonction addEventListener() , nous spécifions deux paramètres - le nom de l'événement pour lequel nous voulons enregistrer ce gestionnaire, et le code qui comprend la fonction du gestionnaire que nous voulons exécuter en réponse

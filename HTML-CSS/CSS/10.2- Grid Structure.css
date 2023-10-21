@@ -1,0 +1,66 @@
+GRID STRUCTURE
+
+				/******************
+				*CRÉER UNE GRILLE *
+				******************/
+(Créer une grille et définir le nombre de lignes et colonnes)
+
+<div class="wrapper">
+   <div class="item1">One</div>
+   <div class="item2">Two</div>
+   <div class="item3">Three</div>
+   <div class="item4">Four</div>
+   <div class="item5">Five</div>
+   <div class="item6">Six</div>
+   <div class="item7">Seven</div>
+   <div class="item8">Eight</div>
+</div>
+
+.wrapper {
+  display: grid;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-rows: 100px 100px;
+  grid-template-areas:
+    "Titre Titre Titre"
+    "Aside Article1 Nav"
+    "Aside Article2 Nav"
+    "Aside Article3 Aside2"
+    "Footer Footer Footer";
+}
+
+				/***************************
+				*DÉFINIR LES ZONE DE GRILLE*
+				****************************/
+(Nommer des Class puis leur attribuer )
+.item1 {
+  grid-area: Titre;
+}
+.item2 {
+  grid-area: Aside;
+}
+.item3 {
+  grid-area: Nav;
+}
+.item4 {
+  grid-area: Aside2;
+}
+.item5 {
+  grid-area: Article1;
+}
+.item6 {
+  grid-area: Article2;
+}
+.item7 {
+  grid-area: Article3;
+}
+.item8 {
+  grid-area: Footer;
+}
+
+
+/// grid-template-columns
+grid-template-columns: repeat(2, 1fr)
+grid-template-columns: repeat(3, 1fr);
+grid-template-columns: repeat(auto-fit, minmax(300px, 1fr));
+
+max-width:100%

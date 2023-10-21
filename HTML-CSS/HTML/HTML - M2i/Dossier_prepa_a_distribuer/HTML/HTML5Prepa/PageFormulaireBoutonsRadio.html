@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <title>PageFormulaireBoutonsRadio.html</title>
+    </head>
+
+    <body>
+        <header>
+            <strong>PageFormulaireBoutonsRadio</strong>
+            <hr>
+        </header>
+
+        <article>
+            <form action="" method="get">
+
+                <label>Pseudo :</label><br>
+                <input type="text" name="pseudo" />
+                <br>
+                <label>Mot de passe :</label>
+                <br>
+                <input type="password" name="motdepasse" />
+                <br>
+                
+                <label>Commentaires :</label><br>
+                <textarea name="commentaires"></textarea>
+                <br> 
+
+                <select name="villes">
+                    <option value="75000">Paris</option>
+                    <option value="69000">Lyon</option>
+                    <option value="13000">Marseille</option>
+                </select>
+                <br>
+
+                <select name="hobbies" multiple="multiple">
+                    <option value="1">Théâtre</option>
+                    <option value="2">Cinéma</option>
+                    <option value="3">Concert</option>
+                    <option value="4">Musée</option>
+                    <option value="5">Sport</option>
+                    <option value="6">Bar</option>
+                    <option value="7">Aucun</option>
+                </select>
+                <br>
+
+                <label>News Letter : 
+                    <input name="news_letter" type="checkbox" checked="checked" />
+                </label>
+                <br><br>
+
+                <fieldset>
+                    <legend>Statut</legend>
+                    <input type="radio" name="gr_statut" value="1" />Etudiant<br>
+                    <label><input type="radio" name="gr_statut" value="2" />Salarié</label><br>
+                    <label><input type="radio" name="gr_statut" value="3" />Entrepreneur</label><br>
+                    <label><input type="radio" name="gr_statut" value="3" />Chômeur</label><br>
+                    <label><input type="radio" name="gr_statut" value="3" />Retraité</label><br>
+                </fieldset>
+                <br>
+                <input type="reset" />
+                <input type="submit" value="Valider" />
+            </form>
+        </article>
+
+        <footer>
+            <hr>
+            <em>@ Cours HTML</em>
+        </footer>
+    </body>
+</html>

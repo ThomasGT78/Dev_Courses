@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<!--
+
+-->
+<html>
+    <head>
+        <title>DataTableWithJSON</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <link type="text/css" href="http://cdn.datatables.net/1.10.22/css/jquery.dataTables.min.css" rel="stylesheet">
+        <script src="../jquery/jquery.js"></script>
+        <script src="http://cdn.datatables.net/1.10.22/js/jquery.dataTables.min.js"></script>
+
+    </head>
+    <body>
+        <h1>DataTableWithJSON</h1>
+        <table border="1" id="table">
+            <thead id="thead">
+                <!--                <tr>
+                                    <th>ville_id</th>
+                                    <th>ville_nom_reel</th>
+                                    <th>ville_code_postal</th>
+                                    <th>ville_code_commune</th>
+                                </tr>-->
+            </thead>
+            <tbody id="tbody">
+                <!--                <tr>
+                                    <td>1</td>
+                                    <td>a</td>
+                                    <td>a</td>
+                                    <td>a</td>
+                                </tr>
+                                <tr>
+                                    <td>2</td>
+                                    <td>b</td>
+                                    <td>b</td>
+                                    <td>b</td>
+                                </tr>-->
+            </tbody>
+        </table>
+
+        <br>
+        <label id="lblMessage"></label>
+
+        <script>
+            $(document).ready(function () {
+                /*
+                 * DataTableWithJSON.html
+                 */
+                let jqXHR = $.get(										// récupération du fichier JSON
+                        "../ressources/json/1000communes.json",			//  Adresse ressource
+                        "json"
+                        ); /// $.get 
+
+
+                jqXHR.done(function (data) {
+                    // data = JSON.parse(data); // Dé-sérialisation (chaîne vers objet)
+                    console.log(data);
+                    let theaders = "<tr><th>" + "ID" + "</th><th>" + "Nom" + "</th><th>" + "Code postal" + "</th><th>" + "Code" + "</th></tr>";		// création de la première ligne Titre du tableau
+                    console.log(theaders);
+                    let communes = "";		// variable qui contiendra les infos d'une ville
+                    let premierAttribut = "ville_id";		// colonne contenant l'id de la ville
+                    for (let i = 0; i < data.length; i++) {		// boucle dans le tableau des villes
+                        communes += "<tr><td>" + data[i][premierAttribut] + "</td><td>" + data[i].ville_nom_reel + "</td><td>" + data[i].ville_code_postal + "</td><td>" + data[i].ville_code_commune + "</td></tr>";	// création des lignes contenant les infos des villes
+                    }
+                    $('#thead').html(theaders);		// ajoute les titres du tableau dans le html
+                    $('#tbody').html(communes);		// ajoute les lignes du tableau dans le html
+					
+                    $('#table').DataTable();		// appel le PlugIn
+                });
+
+
+                jqXHR.fail(function (xhr, statut, erreur) {
+                    console.log("Erreur AJAX : " + xhr.status + "-" + xhr.statusText + " : " + statut);
+                    $("#lblMessage").html(xhr.status + "-" + xhr.statusText);
+                });
+
+            });
+        </script>
+    </body>
+</html>

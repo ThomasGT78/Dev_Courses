@@ -1,0 +1,111 @@
+		----		FLEXBOX		----
+
+"http://stylescss.free.fr/v2-tutoriels/flex-box.php"
+"https://www.w3schools.com/css/css3_flexbox_container.asp"
+
+display: flex;		(Les blocs se placent par défaut côte à côte)
+
+(La Direction)
+flex-direction:		(Permet de positionner les éléments du conteneur dans différentes directions ou encore les inverser)
+		row					(organisés sur une ligne - par défaut)
+		column				(organisés sur une colonne)
+		row-reverse			(organisés sur une ligne, mais en ordre inversé)
+		column-reverse		(organisés sur une colonne, mais en ordre inversé)
+
+(Le Retour à la Ligne)
+flex-wrap : 	()
+		nowrap			(pas de retour à la ligne - par défaut)
+		wrap			(les éléments vont à la ligne lorsqu'il n'y a plus la place)
+		wrap-reverse	(les éléments vont à la ligne, lorsqu'il n'y a plus la place, en sens inverse)
+
+(Combiner flex-direction et flex-wrap)
+flex-flow : <'flex-direction'> || <'flex-wrap'> 
+
+flex-flow: row wrap ;			// de gauche à droite et de haut en bas
+flex-flow:row wrap-reverse ;	// de gauche à droite et de bas en haut
+flex-flow: row-reverse wrap ;	// de droite à gauche et de haut en bas
+flex-flow: row-reverse wrap-reverse;  // de droite à gauche et de haut en bas 
+
+:			---------------------
+			-	AXE PRINCIPAL	-
+			---------------------
+			
+(Aligner sur l'axe principal)			
+Les modifications se font horizontalement si les élément sont organisés par ligne et se font verticalement s'ils sont organisés par colonne
+justify-content:
+		flex-start		(alignés au début - par défaut)
+		flex-end		(alignés à la fin)
+		center			(alignés au centre)
+		space-between	(les éléments sont étirés sur tout l'axe, il y a de l'espace entre eux) 
+		space-around	(les éléments sont étirés sur tout l'axe, mais ils laissent aussi de l'espace sur les extrémités)
+
+:			-------------------------
+			-	  AXE SECONDAIRE	-
+			-------------------------
+			
+(Aligner sur l'axe secondaire)
+Les modifications se font verticalement si les élément sont organisés par ligne et se font horizontalement s'ils sont organisés par colonne
+align-items:
+		stretch			(les éléments sont étirés sur tout l'axe - par défaut)
+		flex-start		(alignés au début)
+		flex-end		(alignés à la fin)
+		center			(alignés au centre)
+		baseline		(alignés sur la ligne de base - semblable à flex-start)
+
+(Répartir plusieurs lignes sur l'axe secondaire)
+Si vous avez plusieurs lignes dans votre Flexbox, vous pouvez choisir comment celles-ci seront réparties
+N'a aucun effet s'il n'y a qu'une seule ligne dans la Flexbox
+
+align-content:
+		stretch				(les éléments s'étirent pour occuper tout l'espace - par défaut)
+		flex-start			(les éléments sont placés au début)
+		flex-end			(les éléments sont placés à la fin)
+		center				(les éléments sont placés au centre)
+		space-between		(les éléments sont séparés avec de l'espace entre eux)
+		space-around		(idem, mais il y a aussi de l'espace au début et à la fin)
+
+------------------------------
+
+(Aligner un seul élément)
+.element: nth-child(2) 		/* On prend le deuxième bloc élément */
+{
+	align-self: flex-end; 	/* Seul ce bloc sera aligné à la fin */
+}
+
+(Réorganiser l'ordre des Éléments )
+Indiquez simplement un nombre, et les éléments seront triés du plus petit au plus grand nombre
+
+.element:nth-child(1)
+{
+    order: 3;
+}
+.element:nth-child(2)
+{
+    order: 1;
+}
+.element:nth-child(3)
+{
+    order: 2;
+}
+
+(Faire Grossir ou Mincir un élément et occuper l'espace restant)
+Cette propriété prend la valeur d’un entier positif pour que l’élément prenne plus de place que les autres
+
+flex-grow: <number>
+flex-shrink: <number>
+
+.element:nth-child(2)
+{
+    flex: 1;			(l'élément prend tout l'espace restant)
+}
+
+--
+
+.element:nth-child(1)
+{
+    flex: 2;			(les 2 éléments se répartissent l'espace restant mais le 1er sera 2 fois plus large que le 2ème)
+}
+.element:nth-child(2)
+{
+    flex: 1;
+}

@@ -1,0 +1,18 @@
+CRÉER UN BOUTON
+
+a {
+    display: block;
+    border: 1px solid #0066ff;
+    margin-left: auto;			/*centrer le block*/
+    margin-right: auto;
+    width: 200px;
+    text-align: center;			/*centrer le texte dans son block*/
+    font-family: Verdana;
+    font-size: 1em;
+    text-transform: uppercase;	/*mettre en majuscule*/
+    text-decoration: none;
+    color: #0066ff;
+    background-color: #a3c8ff;
+    border-radius: 5px;			/*arrondir les coins*/
+    padding: 10px;				/*définir des marges internes entre le texte et la bordure du bouton*/
+}

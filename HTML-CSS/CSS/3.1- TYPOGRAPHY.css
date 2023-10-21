@@ -1,0 +1,84 @@
+FORMAT DU TEXTE
+
+		----		TAILLE		----
+
+(Mesure Absolue)
+font-size : 15px	(pixel)
+font-size : 1cm		(peut être exprimé en "cm" ou "mm" mais moins adapté au écran)
+
+(Mesure Relative)		(Parfait pour s'adapter à différente taille d'écran)
+font-size : 1em		(taille de police par défaut de l'écran utilisé mais évolutive)
+			1rem	(Root em toujours = à la police par défaut)
+			0.8em	(80% de la taille par défaut)
+			1.3em	(130% de la taille par défaut)
+/*Avec des mots clés*/
+font-size : xx-small	(minuscule)
+			x-small		(très petit)
+			small		(petit)
+			medium		(moyen)
+			large		(grand)
+			x-large		(très grand)
+			xx-large	(gigantesque)
+
+
+		----		ITALIQUE et GRAS		----
+
+font-style :	normal		(Normal par défaut; Cela vous permet d'annuler une mise en italique du <em> ou gras du <strong>)
+				italic		(Italique)
+				oblique		(Oblique; les lettres sont penchées, légèrement différent de l'italique)
+				bold		(Gras)
+
+		----		AUTRE		----
+		
+(Décoration du texte)
+text-decoration :	none 		(normal par défaut)
+					underline	(souligné)
+					line-through(barré)
+					overline 	(ligne au-dessus)
+					blink 		(clignotant) (Ne fonctionne pas sur tous les navigateurs,Internet Explorer et Google Chrome, notamment)
+
+text-decoration: underline dotted red 2px;
+				(ligne couleur style épaisseur)	/*prend le dessus pour les éléments parents*/
+
+font-weight:	(Epaisseur du texte)
+		100 to 900	(can be a number value from 100 to 900)
+		normal 		(by default =400)
+		bold		(=700)
+		light		(=300)
+	
+text-transform:	(Met les lettres en minuscule ou majuscule)
+		capitalize		(1st letter Uppercase)
+		uppercase		(Tout en majuscule)
+		lowercase		(Tout en minuscule)
+
+line-height: 	(hauteur de ligne pour modifier l'interligne, quantité d’espace au-dessus et en dessous des éléments inline)
+		1.2			(ratio of the font size =120%)
+		11px		(can be any valid CSS unit such as: pixels, %, em, rem)
+		normal
+		inherit
+		none
+
+(Largeur des Espaces)
+word-spacing: 0.25em	(spacing between words)
+letter-spacing: 0.02em	(spacing between letters)
+
+(Hide content)
+visibility: hidden visible	(laisse l'espace vide)
+display: none;				(supprime l'espace vide)
+
+(Effet d'Ombrage)
+De nombreux paramètres permettent de définir cette ombre : dimensions, effet de flou, taille de l'ombre, couleur, ombre intérieure
+text-shadow:	(Défini une ombre au texte)
+box-shadow:		(Défini une ombre à l'élément)
+		15px 15px 10px 5px #808080 inset
+		 x	  y		f	t	color
+x :		Décalage horizontal de l'ombre (valeur positive ou négative suivie d'une unité de dimension)
+y :		Décalage vertical de l'ombre 
+f :		Définit le rayon du flou, du dégradé) (Une valeur égale à 0 indique une ombre nette)
+t :		Modifie la taille de l'ombre
+			(Les valeurs positives indiquent un agrandissement de la taille de l'ombre)
+			(Les valeurs négatives indiquent une réduction de la taille de l'ombre)
+			(Si t est supérieur à x ou à y l'ombre peut apparaître tout autour de l'élément)
+color : Couleur de l'ombre. La valeur par défaut est currentcolor.
+inset : Indique une ombre à l'intérieur de l'élément lorsqu'il est présent.
+

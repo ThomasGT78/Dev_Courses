@@ -1,0 +1,104 @@
+SÉLECTEURS
+
+Modifier un sélecteur imbriqué dans d'autres sélecteurs
+
+/*HTML*/
+‹div›
+	‹div›
+		‹p›J'aime les tacos !‹/p›
+	‹/div›
+‹/div›
+
+/*CSS*/
+div div p {
+	color: red;
+}
+
+--
+Appliquer des styles CSS à tous les éléments de la page : le sélecteur *
+* {
+    border: 2px solid black;
+}
+
+--
+Sélectionner un enfant direct, 
+/*c'est-à-dire un élément qui est directement imbriqué à l'intérieur d'un autre élément et sans aucun autre élément entre les deux, vous devez utiliser le symbole ... > ... */
+
+div > p {
+    /* votre CSS*/ 
+}
+
+
+		----   ORDRE DE SPÉCIFICATION   ----
+
+p {
+    color: blue;		1 seul sélecteur
+}
+
+div p {					2 sélecteurs sont plus spécifique
+    color: red;
+}
+
+.green {				.class
+    color: green;
+}
+
+#purple {				#id
+    color: purple;
+}
+
+/*Dans HTML*/
+
+Assigner les CLASS:
+‹h1 class="NomDeLaClass"›‹/h1›    
+‹p class="NomDeLaClass"›‹/p›
+
+Assigner un ID:
+‹h1 id="NomIdUnique"›‹/h1›
+
+/*Dans CSS*/
+
+.NomDeLaClass {
+    color: red;
+}
+
+#NomIdUnique {
+    color: red;
+}
+
+/*Dans HTML*/
+<div class="ami" id="meilleur_ami">Romain</div>
+
+/*Dans CSS*/
+.ami {
+	border: 2px dashed #008000;
+}
+
+#meilleur_ami {
+	border: 4px solid #cc0000;
+}
+
+
+		----   PSEUDO-CLASS   ----
+/*Un sélecteur de pseudo-classe est un moyen d'accéder à un élément HTML qui se trouve dans un état particulier*/
+
+sélecteur:pseudo-classe {
+        propriété: valeur;
+    }
+
+Liste des Pseudo-Class:
+a:link {}: 			un lien non cliqué
+a:visited {}: 		un lien qui a été cliqué
+a:hover {}: 		un lien survolé par la souris et non cliqué
+p:first-child {}	appliquer un style uniquement aux éléments qui sont le premier enfant de leur parent
+:nth-child(x){}	sélectionner n'importe quel enfant d'un élément parent (x=place de l'enfant dans la descendance)
+p:nth-child(x){} sélectionne les p "x"ème enfant d'un élément parent
+
+
+
+
+
+
+
+
+

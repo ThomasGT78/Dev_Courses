@@ -1,0 +1,108 @@
+		<!-----------------------------
+		-  v-for  -
+		------------------------------>
+		
+<script>
+// donne à chaque todo un id unique
+let id = 0
+
+export default {
+  data() {
+    return {
+      newTodo: '',
+      todos: [
+        { id: id++, text: 'Apprendre le HTML' },
+        { id: id++, text: 'Apprendre le JavaScript' },
+        { id: id++, text: 'Apprendre Vue' }
+      ]
+    }
+  },
+  methods: {
+    addTodo(newTodo) {
+	  // add new element to the list « todos »
+      this.todos.push({ id: id++ , text: this.newTodo })
+	  // empty the text input for new use
+      this.newTodo = ''
+    },
+    removeTodo(todo) {
+	  // remove element from the list « todos »
+      this.todos = this.todos.filter((element) => element !== todo)
+    }
+  }
+}
+</script>
+
+<template>
+  <form @submit.prevent="addTodo">
+    <input v-model="newTodo">
+    <button>Ajouter une tâche</button>
+  </form>
+  <ul>
+    <li v-for="todo in todos" :key="todo.id">
+      {{ todo.text }}
+      <button @click="removeTodo(todo)">X</button>
+    </li>
+  </ul>
+</template>
+
+
+		<!-----------------------------
+		-  v-for  -
+		------------------------------>
+		
+<script>
+let id = 0
+
+export default {
+  data() {
+    return {
+      newTodo: '',
+      hideCompleted: false,
+      todos: [
+        { id: id++, text: 'Apprendre le HTML', done: true },
+        { id: id++, text: 'Apprendre le JavaScript', done: true },
+        { id: id++, text: 'Apprendre Vue', done: false }
+      ]
+    }
+  },
+  computed: {
+    filteredTodos() {
+      return this.hideCompleted?
+      this.todos.filter((element) => !element.done):
+      this.todos
+    }
+  },
+  methods: {
+    addTodo() {
+      this.todos.push({ id: id++, text: this.newTodo, done: false })
+      this.newTodo = ''
+    },
+    removeTodo(todo) {
+      this.todos = this.todos.filter((t) => t !== todo)
+    }
+  }
+}
+</script>
+
+<template>
+  <form @submit.prevent="addTodo">
+    <input v-model="newTodo">
+    <button>Ajouter une tâche</button>
+  </form>
+  <ul>
+    <li v-for="todo in filteredTodos" :key="todo.id">
+      <input type="checkbox" v-model="todo.done">
+      <span :class="{ done: todo.done }">{{ todo.text }}</span>
+      <button @click="removeTodo(todo)">X</button>
+    </li>
+  </ul>
+  <button @click="hideCompleted = !hideCompleted">
+    {{ hideCompleted ? 'Afficher toutes' : 'Cacher complétées' }}
+  </button>
+</template>
+
+<style>
+.done {
+  text-decoration: line-through;
+}
+</style>

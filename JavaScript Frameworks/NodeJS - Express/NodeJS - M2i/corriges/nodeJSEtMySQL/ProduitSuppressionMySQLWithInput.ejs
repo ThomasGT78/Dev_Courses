@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+        <style>
+            .etiquette{display: inline-block; width: 150px; margin-bottom: 5px;}
+        </style>
+        <title>ProduitSuppressionMySQLWithInput.html</title>
+    </head>
+
+    <body>
+        <h3>Suppression produit with Input(MySQL)</h3>
+        <form method="post" action="/suppressionValidationWithInput">
+            <label class="etiquette">D&eacute;signation</label>
+            <input type="text" name="designation" value="Vichy" />
+            <input type="submit" value="Valider" id="btValider" />
+        </form>
+        <p><%=message %></p>
+        <p><a href="/">Accueil</a></p>
+    </body>
+</html>

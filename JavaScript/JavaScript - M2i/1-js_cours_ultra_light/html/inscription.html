@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <title>authentification.html</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width">
+</head>
+
+<body>
+    <div>
+        <h1>Inscription</h1>
+        <p>
+            <label for="inputPseudo" id="lblPseudo">Pseudo :</label><br>
+            <input type="text" id="inputPseudo" name="inputPseudo" placeholder="Entrez votre Nom" minlength="5" focus />
+        </p>
+        <p>
+            <label for="inputMdp" id="lblMdp">Mot de Passe :</label><br>
+            <input type="password" id="inputMdp" name="inputMdp" placeholder="Entrez votre Mot de Passe" minlength="6" maxlength="12"/>
+            <br>
+            <input type="checkbox" id="visibleMdp" name="visibleMdp" />
+            <label for="visibleMdp" id="lblVisibleMdp">Afficher le mot de passe</label>
+        </p>
+        <p>
+            <label for="inputEmail" id="lblEmail">Email :</label><br>
+            <input type="email" id="inputEmail" name="inputEmail" placeholder="Entrez votre Email" />
+        </p>
+        <p>
+            <label for="inputEmail2" id="lblEmail2">Ressaisissez votre email</label><br>
+            <input type="email2" id="inputEmail2" name="inputEmail2" placeholder="Valider votre Email"/>
+        </p>
+        <p>
+            <label for="villes" id="lblVilles">Villes :</label><br>
+            <select id="villes" name="villes"></select>
+        </p>
+        <p>
+            <label for="birthDate" id="lblBirthDate">Date de Naissances :</label><br>
+            <select id="day" name="day"></select>
+            <select id="month" name="month"></select>
+            <select id="year" name="year"></select>
+        </p>
+        <p>
+            <input type="button" id="btValider" name="btValider" value="Valider"/>
+        </p>
+        <p id="errorMessage"></p>
+    </div>
+    <script src="../js/inscription.js"></script>
+</body>
+
+</html>

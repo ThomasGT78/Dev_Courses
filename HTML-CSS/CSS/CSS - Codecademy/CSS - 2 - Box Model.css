@@ -1,0 +1,32 @@
+BOX MODEL / Image / MEDIA
+
+Border-style:
+https://developer.mozilla.org/en-US/docs/Web/CSS/border-style#Values
+
+height:
+min-height: / max-height:
+
+width:
+min-width: / max-width:
+
+border: 3px solid grey (width style color)
+border-top:	(top/bottom/left/right)
+border-radius: px or %
+
+padding: 6px 11px 4px 9px;(top/right/bottom/left)
+padding: 6px 11px; (top/bottom - left/right)
+padding-top: (top/right/bottom/left)
+
+margin: 6px 11px 4px 9px;(top/right/bottom/left)
+margin: 6px 11px; (top/bottom - left/right)
+margin-top: (top/right/bottom/left)
+
+overflow: scroll hidden visible;
+hidden - content that overflows will be hidden from view
+scroll - a scrollbar will be added to the element’s box
+visible - content will be displayed outside of the element (default value)
+
+box-sizing: content-box border-box;(controls the type of box model);
+border-box (The overall dimensions of the box do not change);
+content-box (Set by default: The dimensions change depending on the margin+padding+content's size)
+

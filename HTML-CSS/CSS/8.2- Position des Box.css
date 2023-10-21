@@ -1,0 +1,85 @@
+POSITION DES BOX (BOÎTES)
+
+		----	DISPLAY		----
+		
+(Les différents types de positionnement des Box)
+display:	block;			(Prend toute la largeur, va sous le précédent: div, p, h1-h5, table)(Par défaut)
+			inline-block;	(se positionne côte-à-côte, sur une même ligne de base «baseline» (en bas) et on peut lui donner des dimensions précises)
+			inline;			(Prend la dimensions du texte qu'il contiennent: a, span, strong, em)
+			flex;			(Permet de créer une «Flexbox» Positionne les Boîtes côte-à-côte)
+			grid			(Comme un élément du type block, organise les éléments qu'il contient sous forme d'une grille)
+			none;			(le contenu disparait de la page et la place qu'il occupait sera libérée)
+		/*différent de:*/
+visibility: hidden; 	(sert aussi à masquer un élément HTML, mais la place occupée par l'élément HTML reste vide et n'est pas disponible)
+
+(modifier l'alignement vertical des éléments dans «inline-block») 		
+vertical-align		
+		baseline		(aligne la base de l'élément avec celle de l'élément parent - par défaut)
+		top				(aligne en haut)
+		middle			(centre verticalement)
+		bottom			(aligne en bas)
+		px, %, em...	(aligne à une certaine distance de la Baseline)
+
+
+		----	ABSOLU / FIXE / RELATIF		----
+		
+http://stylescss.free.fr/v2-properties/position.php
+
+position:	static		(n'affecte pas le flux, valeur par defaut)
+			realtive	(décale l'élément par rapport à sa position d'origine)
+			absolute	(affecte le flux; permet de placer un élément n'importe où sur la page; positionné en absolu par rapport au premier élément 
+						ancêtre lui-même positionné ou à l'élément html)
+			fixed		(restera fixé à sa position dans la fenêtre, même en cas de défilement)
+			sticky		(valeur par défaut, mais ne sort jamais de la page)
+/*absolute, relative, fixed: doivent précisez les valeurs de décalage (ex: top: 5px;)*/
+
+(Le positionnement absolu)
+Il faut dire où l'on veut que le bloc soit positionné sur la page en utilisant 
+	-des valeur numériques positives ou négatives
+	-des unités de dimensions (px, cm, em, %, etc...)
+
+left:	20px	(position par rapport à la gauche de la page)
+right:	3cm		(position par rapport à la droite de la page)
+top:	20em	(position par rapport au haut de la page)
+bottom:	50%		(position par rapport au bas de la page)
+
+Les pourcentages sont évalués par rapport aux dimensions du bloc parent:
+	-left et right sont évalués par rapport à sa largeur,
+	-top et bottom par rapport à sa hauteur.
+
+Les éléments positionnés en absolu sont placés par-dessus le reste des éléments de la page ! Par ailleurs, si vous placez deux éléments en absolu vers le même endroit, ils risquent de se chevaucher. Dans ce cas, utilisez la propriété «z-index» pour indiquer quel élément doit apparaître au-dessus des autres.
+
+Un Block situé dans un autre Block (défini en Relatif, Absolu ou fix) se placera par rapport au coins du Block et non à ceux de la fenêtre
+
+(Le positionnement fixe)
+Fonctionne comme le positionnement absolu mais gardera toujours la même position sur l'écran, même si on descend plus bas dans la page.
+
+(Le positionnement relatif)
+Permet d'effectuer des « ajustements » : l'élément est décalé par rapport à sa position initiale.
+
+
+		----	LAYOUT		----
+		
+(Disposer les éléments en plusieurs couches)
+z-index: 1		(plus le nombre est grand et plus la couche est supérieure)
+
+
+		----	ÉLÉMENT FLOTTANT	----
+
+Permet de faire flotter un élément autour du texte snas respecter les Flux. On dit aussi qu'on fait un « habillage »
+il doit être en premier dans le code HTML, Si vous placez l'image après le paragraphe l'effet ne fonctionnera pas
+float:	left	(Déplace l'immage ou la boîte à gauche)
+		right	(Déplace l'immage ou la boîte à droite)
+		
+(Libérer l'espace à gauche ou à droite d'un élément)
+Déplace le block de manière à ce qu'il n'ai aucun élément à sa gauche, droite ou les deux
+clear : left
+		right
+		both
+
+(Centrer un block)
+Il faut d'aboord donner une largeur au block;
+width: 50%;
+margin: auto;	(permet de centrer automatiquement le block en fonction de la taille du block et la résolution de la page)
+
+

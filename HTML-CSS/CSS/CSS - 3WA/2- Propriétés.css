@@ -1,0 +1,58 @@
+PROPRIÉTÉS CSS
+
+font-family = famille de police
+/*3 Type de police*/
+Serif, Sans-serif, Cursive
+
+/*Essayer d'appliquer plusieurs polices en cas de non-disponibilité*/
+font-family: Tahoma, Verdana, sans-serif;
+
+--
+font-size = taille de police
+px 		pixel
+em		1em= taille de police par défaut de l'écran utilisé
+		(mesure relative)
+		
+--	
+color = couleur 
+#ffc125 	/*Forme hexadecimale*/
+
+--
+text-decoration = Décoration du texte 
+(ligne, couleur, style, épaisseur)
+/*prend le dessus pour les éléments parents*/
+
+text-decoration: underline dotted red;
+text-decoration: none;
+
+--
+div {		/*Délimiter une division*/
+	background-color: #cc0000;
+	height: 100px;
+	width: 100px;
+}
+
+--
+/* CRÉER UNE BORDURE*/
+border:2px solid red;
+
+--
+td { /*Délimiter un tableau*/
+	height: 50px;
+	width: 50px;
+	border: 1px dashed blue;
+}
+
+table {
+	border: 1px solid black;
+}
+
+
+
+
+
+
+
+
+
+

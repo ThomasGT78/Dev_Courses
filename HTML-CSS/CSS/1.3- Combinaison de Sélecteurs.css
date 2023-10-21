@@ -1,0 +1,59 @@
+COMBINAISON DE SÉLECTEURS (CHAINING SELECTORS)
+
+Toutes les combinaisons ici:
+https://www.w3schools.com/cssreF/trysel.asp?selector=h3:only-of-type
+outlinehttps://www.w3.org/Style/css3-selectors-updates/WD-css3-selectors-20010126.fr.html#selectors
+
+(Chaining Selectors) combine plusieurs sélecteurs
+h1.special {	}
+
+--
+
+(Chaining Nested Elements) Modifier un sélecteur imbriqué dans d'autres sélecteurs 
+/*HTML*/
+‹div›
+	‹div›
+		‹p›J'aime les tacos  ‹/p›
+	‹/div›
+‹/div›
+
+/*CSS*/
+div div p {	}
+
+--
+(Sélectionner un enfant même indirect) Tous les élements <p> faisant partie d'un élément <div> 
+div p {	}
+
+(Sélectionner un enfant direct) Tous les élements <p> faisant partie d'un élément <div> parent direct
+div > p {	}
+
+(Multiple Selectors) Modifie plusieurs sélecteurs de la même manière
+h1, 
+.menu  {	}
+
+(Un élément qui en suit un autre) Modifie chaque <p> qui suit un <div>
+div + p {	}
+
+
+(Un élément frère d'un autre) Modifie chaque <p> qui frère avec un <div>
+div ~ p {	}
+
+		----		Élements et Attributs		----
+
+(Un élément qui possède un attribut)
+a[title] {	}		Sélectionne tous les liens <a>  qui possèdent un attribut "title"
+[id] {	}			Sélectionne tous les éléments  qui possèdent un attribut "id"
+
+(Un élément qui possède un attribut avec valeur exacte)
+a[title="name"] {	}		Sélectionne tous les liens <a>  qui possèdent un attribut appelé éxactement "title"
+[id=name] {	  }				Sélectionne tous les éléments  qui possèdent un attribut  appelé éxactement "id"
+
+(Un élément qui possède un attribut qui contient une valeur)
+a[title="name"] {	}		Sélectionne tous les liens <a>  qui possèdent un attribut qui contient "title" (peu importe sa position)
+[id=name] {	  }				Sélectionne tous les éléments  qui possèdent un attribut qui contient "id"
+
+		----		Élements et Actions		----
+
+:focus			Tous les éléments qui ont le focus
+[id]:empty		Tous les attributs [id] vide (input, form...)
+div:hover		Quand tu passes la souris sur les éléments <div>

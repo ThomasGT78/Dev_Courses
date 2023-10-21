@@ -1,0 +1,48 @@
+		-----   DÉCLARER DU CSS   ----
+		
+/*1- Mettre votre CSS entre des balises ‹style›‹/style›, directement dans votre fichier HTML.*/
+
+<style>
+	p 
+	{
+		color: purple;
+	}
+</style>
+
+
+/*2- Directement dans les balises (non recommandé)*/
+
+<p style="color: blue;">Bonjour et bienvenue sur mon site !</p>
+
+
+/*3- Créeer un lien <link> vers votre fichier CSS entre les balises <head> </head> du document html.*/
+
+<head>
+	<title>Créer un lien entre CSS et HTML</title>
+	<link type="text/css" rel="stylesheet" href="stylesheet.css"/>
+</head>
+
+href - must be the address, or path, to the "CSS file"
+type - type of document linked to, set to "text/css"
+rel - relation between the HTML and CSS, set to "stylesheet"
+
+		----   STRUCTURE et SYNTAXE   ----
+
+sélecteur {
+    propriété: valeur;
+}
+/* Commentaire CSS */
+
+p		/*Mise en forme du paragraphe*/
+{
+    font-family: Arial;
+    color: blue;
+    font-size: 24px;
+}
+
+
+
+
+
+
+

@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html>
+<!-- Un tableau dans une liste à puces -->
+
+<head>
+  <title>Test iteration.html</title>
+  <meta charset="UTF-8">
+</head>
+
+<body>
+  <p><strong>Test iteration.html</strong></p>
+
+
+  <script>
+    var boite =
+    {
+      "un": {
+        "unUn": "unUnUn",
+        "unDeux": 121,
+        "unTrois": {
+          "unTroisUn": true,
+          "unTroisdeux": false,
+          "unTroisTrois": {
+            "unTroisTroisUn": "YES",
+            "unTroisTroisDeux": "NO",
+            "unTroisTroisTrois": "MAYBE"
+          }
+        }
+      },
+      "deux": "deuxUn",
+      "trois": {
+        "troisUn": "TroisUnUn",
+        "troisDeux": "TroisDeuxUn",
+        "troisTrois": ["A", "B", "C", "D"]
+      }
+    };
+
+    function boucle() {
+      for (const element in BoiteElement) {
+        console.log(`3: ${element}: ${BoiteElement[element]} => ${typeof BoiteElement[element]}`);
+        if (typeof BoiteElement[element] == "object") {
+          BoiteElement = BoiteElement[element]
+          boucle();
+        }
+      }
+    }
+
+    for (const element in boite) {
+      var BoiteElement = boite[element]
+      console.log(`1: Element: ${element} => ${BoiteElement} => ${typeof BoiteElement}`);
+      if (typeof BoiteElement == "object") {
+        boucle();
+      }
+    } 
+
+
+  </script>
+</body>
+
+</html>

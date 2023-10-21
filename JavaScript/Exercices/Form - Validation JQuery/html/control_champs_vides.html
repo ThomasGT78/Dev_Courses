@@ -1,0 +1,46 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="../icones/favicon.png">
+    <title>VÉRIFIER LES CHAMPS VIDES D'UN FORMULAIRE</title>
+</head>
+
+<body>
+	<h1>VÉRIFIER LES CHAMPS VIDES D'UN FORMULAIRE</h1>
+    <form id="rose">
+        <Fieldset>
+			
+            <p>
+                <label for="user" id="lblUser">User :</label>
+                <input type="text" id="user" name="user" class="obligatoire">
+            </p>
+            <p>
+                <label for="pw" id="lblPw" >PWD :</label>
+                <input type="password" id="pw" name="pw" class="obligatoire">
+            </p>
+            <p>
+                <label for="email" id="lblEmail" >E-Mail :</label>
+                <input type="email" id="email" name="email" class="obligatoire">
+            </p>
+            <p>
+                <label for="tel" id="lblTel">Téléphone :</label>
+                <input type="tel" id="tel" name="tel">
+            </p>
+            <p>
+                <input type="button" id="btValider" value="btValider">
+            </p>
+            <p>
+                <label id="message"></label>
+            </p>
+        </Fieldset>
+    </form>
+
+
+    <script src="../jquery/jquery-3.5.1.js"></script>
+    <script src="../js/control_champs_vides.js" ></script>
+
+</body>
+
+</html>

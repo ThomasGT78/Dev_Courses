@@ -1,0 +1,26 @@
+TABLEAUX
+
+(Coller les bordures entre elles)
+border-collapse
+		collapse	(coller les bordures entre elles)
+		separate	(dissocier les bordures - valeur par défaut)
+
+(Distance entre les bordures de cellules d'un tableau (quand border-collapse = separate)
+border-spacing: 0;
+border-spacing: 5px 1rem;
+
+(changer la position du titre)
+caption-side:
+		top			(le titre sera placé au-dessus du tableau - par défaut)
+		bottom		(le titre sera placé en dessous du tableau)
+
+
+
+vertical-align		(modifier l'alignement vertical du texte des cellules)
+
+FORMULAIRE
+
+On peut modifier des pseudos-format
+:required	changer le style des éléments requis
+:invalid 	changer le style des éléments invalid
+:focus		changer l'apparence d'un champ lorsque le curseur se trouve à l'intérieur

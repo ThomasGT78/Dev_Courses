@@ -1,0 +1,72 @@
+CRÉER DES LIENS
+
+a = anchor element 
+href = référence
+
+- Créer un lien à partir d'un texte
+<a href="lien">Texte du lien</a>
+
+Exemple dans un paragraphe:
+<p>Bonjour. Vous souhaitez visiter <a href="https://openclassrooms.com">OpenClassrooms</a> ?</p>
+<!-- Attention!!!
+Si vous faites un lien vers un site qui comporte une adresse un peu bizarre avec des &, comme 
+http://www.site.com/?data=15&name=mateo21 , 
+vous devrez remplacer tous les « & » par « &amp; » dans votre lien, comme ceci :
+http://www.site.com/?data=15&amp;name=mateo21 .
+Vous ne verrez pas la différence, mais cela est nécessaire pour avoir une page web correctement construite en HTML5.-->
+
+- Ouvrir le lien dans une nouvelle fenêtre
+<a href="lien" target="_blank">nom du lien</a>		Nouvelle page blanche à chaque click
+<a href="lien" target="mon site">nom du lien</a>	Ouvre le lien dans la page appelée "mon site", si la page n'est pas ouverte elle sera créer,
+													si elle est déjà ouverte, le lien sera ouvert dedans
+
+- Afficher une infobulle sur votre lien
+<a href="lien" title="description dans l'infobulle">nom du lien</a>
+
+<!-- Lien Image-->
+
+- Créer un lien à partir d'une image (insérer une image et créer un lien à partir de cette photo)
+<a href="lien"><img src=""/></a>
+
+<a href = "https://scantrad.net/mangas">
+	<img src = "https://cdn.imgbin.com/16/8/24/imgbin-ulquiorra-cifer-orihime-inoue-ichigo-kurosaki-s-suke-aizen-rukia-kuchiki-ichigo-kurosaki-w0Ad9Sm2vJJAQgxf33WnH4rvR.jpg"/>
+</a>
+
+<!-- Lien Interne = Lien Relatif-->
+
+Créer un lien vers un fichier venant:
+- du même dossier
+<a href="nomDuFichier.extension"></a> 
+Exemple:
+<a href="page2.html">Page 2</a>
+
+-d'un sous-dossier ou plusieurs sous-dossier
+<a href="dossier/nomDuFichier.ext"></a> 
+<a href="autreDossier/dossier/nomDuFichier.ext"></a> 
+
+- d'un dossier parent
+<a href="../nomDuFichier.ext"></a> 
+
+<!-- Lien vers une Ancre-->
+
+- Créer un lien vers une ancre (un titre, paragraphe ou autre...) dans la même page
+<h2 id="mon_ancre">Titre</h2>		(ne fonctionne qu'avec un élément identifié par une balise)
+<a href="#mon_ancre">Aller vers l'ancre</a>
+
+Créer un lien vers une ancre dans une autre page
+<a href="autrePage.html#autre_ancre"></a>
+
+<!-- Lien Divers-->
+
+- Créer un lien qui lance un téléchargement
+<a href="monfichier.zip">Télécharger le fichier, ça peut être n'importe quel type de fichier</a>
+
+- Créer un lien qui envoi un email
+<a href="mailto:thomas.garot@gmail.com">Envoyez-moi un e-mail !</a>
+
+target=:
+_top: 		Opens the linked document in the full body of the window
+_blank: 	Opens the linked document in a new window or tab
+_self: 		Opens the linked document in the same frame as it was clicked (this is default)
+_parent: 	Opens the linked document in the parent frame
+framename: 	Opens the linked document in a named frame

@@ -1,0 +1,79 @@
+			<!---------------------------
+			*	LES ÉLÉMENTS D'OPTIONS	*
+			---------------------------->
+
+<!-------------------------------------------
+-	 CHECKBOX INPUT - LES CASES À COCHER	-
+-------------------------------------------->
+	
+<input type="checkbox" name="choix" />
+
+Il faut mettre un label pour chaque checkbox et un «id» pour les lier avec «for»
+<input type="checkbox" name="Choix1" id="Choix1" /> <label for="Choix1">Choix 1</label><br />
+<input type="checkbox" name="Choix2" id="Choix2" /> <label for="Choix2">Choix 2</label><br />
+<input type="checkbox" name="Choix3" id="Choix3" /> <label for="Choix3">Choix 3</label>
+
+Cocher une case par défaut, avec l'attribut «checked»
+<input type="checkbox" name="choix" checked />
+
+Changer la taille d'une checkbox avec CSS
+<style>
+input.grandeCheckbox { 
+	transform : scale(5); 
+}
+</style>
+<!-----------------------------------------------
+-	RADIO BUTTON INPUT - LES ZONES D'OPTIONS	-
+------------------------------------------------>
+
+Permet de faire un seul choix parmi une liste d'un même groupe (avec le même nom)
+<input type="radio" name="name" value="exemple" id="exemple">
+
+Le nom «name» doit être le même pour chaque option du groupe mais la valeur doit être différente
+<input type="radio" name="groupe" value="choix1" id="choix1" /> <label for="choix1">Choix n°1</label>
+<input type="radio" name="groupe" value="choix2" id="choix2" /> <label for="choix2">Choix n°2</label>
+<input type="radio" name="groupe" value="choix3" id="choix3" /> <label for="choix3">Choix n°3</label>
+
+Cocher une case par défaut, avec l'attribut «checked»
+<input type="radio" name="name" value="exemple" id="exemple" checked>
+
+<!-------------------------------------------
+-	DROPDOWN LIST - LES LISTES DÉROULANTES	-
+-------------------------------------------->
+
+<select id="exemple" name="name">
+	<option value="option1">Option1</option>
+	<option value="option2">Option2</option>
+</select>
+
+Pour qu'une option soit sélectionnée par défaut, utilisez l'attribut «selected»
+<option value="option1" selected>Canada</option>
+
+Definir la taille en nombre de ligne de la fenêtre de déroulement
+<select id="exemple" size="3" >
+
+Séction multiple des options possible
+<select id="exemple" multiple>
+
+Grouper vos options avec la balise «optgroup»
+<select name="pays" id="pays">
+	<optgroup label="Europe">
+		<option value="france">France</option>
+		<option value="espagne">Espagne</option>
+	</optgroup>
+	<optgroup label="Asie">
+		<option value="chine">Chine</option>
+		<option value="japon">Japon</option>
+	</optgroup>
+</select>
+
+<!-------------------------------------------
+-	 DATALIST - ZONE DE TEXTE À OPTIONS		-
+-------------------------------------------->
+
+Contient un ensemble d'éléments «option» qui représentent les valeurs possibles
+<input type="text" list="cities" id="city" name="city"/>
+  <datalist id="cities">
+    <option value="Paris"></option>
+    <option value="Tokyo"></option>
+  </datalist>

@@ -1,0 +1,39 @@
+DISPLAY
+
+(Obtenir des positions d'elément via Js et jquery)
+var domRect = element.getBoundingClientRect()
+positionImgTop = $(def).offset().top
+positionImgLeft = $(def).offset().left
+				
+(Hide content)
+visibility: hidden visible	(laisse l'espace vide)
+display: none;				(supprime l'espace vide)
+
+postion:
+	relative
+	absolute
+	fixed
+	sticky
+
+(z-index)
+définit le « z-order » (NdT : « ordre z » n'est pas usité) d'un élément positionné et de ses éléments fils ou de ses éléments flexibles
+un élément couvrira un autre élément si sa valeur de  z-index est supérieure à celle du deuxième élément
+
+(LayOut)
+/* Avec un mot-clé */
+z-index: auto;
+
+/* valeurs entières */
+/* type <integer> */
+z-index: 0;
+z-index: 3;
+z-index: 289;
+  /* On peut avoir des
+   valeurs négatives pour
+   réduire la propriété */
+z-index: -1;
+
+/* Valeurs globales */
+z-index: inherit;
+z-index: initial;
+z-index: unset;

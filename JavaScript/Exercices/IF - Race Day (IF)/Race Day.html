@@ -1,0 +1,42 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="utf-8">
+    <title>JavaScript - Race Day (Codecademy)</title>
+</head>
+<body>
+    <h1>Runner get a number and a time to race</h1>
+
+
+<script>
+let raceNumber = Math.floor(Math.random() * 1000);
+let earlyRegister = true;
+let runnerAge = 23;
+let messageDesk = "";
+
+if (runnerAge >= 18 && earlyRegister){
+  raceNumber += 1000
+}
+//console.log(raceNumber)
+
+if (runnerAge >= 18 && earlyRegister){
+  raceTime = "9h30";
+  checkDesk = true;
+} else if (runnerAge >= 18 && !earlyRegister){
+  raceTime = "11h00";
+  checkDesk = true;
+} else if (runnerAge < 18){
+  raceTime = "12h30";
+  checkDesk = false;
+}
+
+if (checkDesk) {
+  messageDesk = "Please see the registration desk."
+}
+
+console.log(`The runner number ${raceNumber} will run at ${raceTime}! ${messageDesk}`)
+
+</script>
+
+</body>
+</html>

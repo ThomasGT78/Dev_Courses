@@ -1,0 +1,47 @@
+<!DOCTYPE HTML>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <link rel="icon" type="image/png" href="../icones/favicon.png">
+    <title>FlipFlopJQ.html</title>
+</head>
+
+<body>
+    <form id="rose">
+        <Fieldset>
+            <p>
+                <label for="user" id="lblUser">User :</label>
+                <input type="text" id="user" name="user">
+            </p>
+            <p>
+                <label for="pw">PassWord :</label>
+                <input type="password" id="pw" name="pw">
+            </p>
+            <p>
+                <input type="button" id="valider" value="valider">
+            </p>
+            <p>
+                <label id="message"></label>
+            </p>
+        </Fieldset>
+    </form>
+    
+
+    <script src="../jquery/jquery-3.5.1.js"></script>
+    <script>
+        // ------------
+        function init() {
+            $("#valider").on("click", function() {
+                $("#message").html($("#user").val() + "-" + $("#pw").val())
+            })
+            $("#rose").css("backgroundColor"," pink")
+            
+        } /// init
+
+        $(document).ready(init);
+    </script>
+
+</body>
+
+</html>

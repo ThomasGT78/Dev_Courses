@@ -1,0 +1,49 @@
+CHANGEMENT DE FORMAT
+
+-PROPERTY
+/* ceci est un commentaire */
+
+font-family:	cf value(Police du texte) - (The default)
+typeface for all HTML elements is Times New Roman) 
+font-size:		Taille du texte 
+font-weight:	Epaisseur du texte
+font-style:		Normal, italic, bold, oblique
+color:			cf value (Couleur d'écriture)
+opacity:		0 to 1 (0= transparent / 1 = opaque)
+line-height:
+text-transform: uppercase, capitalize
+text-align: center, left, right (text alignment)
+
+
+box-shadow:
+top:
+
+visibility: hidden visible 	(Hide content)
+;
+
+background: (color/size/position) sets the background of an element 
+background-image: url("https://www.example.com/image.jpg");
+
+
+
+-VALUE
+font-family:
+https://www.cssfontstack.com/Web-Fonts
+https://www.cssfontstack.com/
+;
+
+font-style: normal		(le texte sera normal par défaut; Cela vous permet d'annuler une mise en italique du <em> ou gras du <strong>
+			italic		(le texte sera mis en Italique)
+			oblique		(le texte sera passé en oblique; les lettres sont penchées, légèrement différent de l'italique)
+			bold		(le texte sera mis en Gras)
+
+
+color:;
+Calculateur Couleur:
+https://www.hexcolortool.com/?_ga=2.187018792.120076308.1588330208-225111060.1588330208
+;
+Liste de Couleur:
+https://developer.mozilla.org/en-US/docs/Web/CSS/color_value
+;
+
+

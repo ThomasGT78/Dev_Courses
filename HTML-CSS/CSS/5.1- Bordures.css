@@ -1,0 +1,61 @@
+	CRÉER UNE BORDURE
+	
+(Les bordures permettent de décorer ou délimiter des blocks ou des éléments inline)
+
+		----	Définir une bordure en utilisant les 3 paramètres  d'un coup	----
+
+(Appliquer des bordures au 4 côté)
+border :  2px red solid;	(Width  Color  Style)
+
+(Appliquer des bordures différentes en fonction du côté)
+border-top :		(bordure du haut)
+border-bottom :		(bordure du bas)
+border-left :		(bordure de gauche)
+border-right :		(bordure de droite)
+
+
+		----	Définir un seul paramètre d'une bordure	----
+
+(Largeur/Épaisseur de votre bordure)
+border-width :	2px		(valeur en pixels)
+
+(Couleur de votre bordure)
+border-color :	#FF0000	(format de couleur au choix)
+
+(Style de traits de votre bordure)
+border-style : 	none	(pas de bordure - par défaut) 
+				solid	(un trait simple)
+				dotted	(pointillés)
+				dashed	(tirets)
+				double	(bordure double)
+				groove	(en relief)
+				ridge	(autre effet relief)
+				inset	(effet 3D global enfoncé)
+				outset	(effet 3D global surélevé)
+
+		----	Bordure Arrondie	----
+
+(Créer un arrondi sur les coins d'un élément, en px ou %)	
+border-radius: 10px;	(taille de l'arrondi)
+border-radius: 5%;
+
+(Préciser la forme de l'arrondi pour chaque coin)
+border-radius: 10px 5px 10px 5px;		(Haut-Gauche  Haut-Droit  Bas-Droit  Bas-Gauche)
+
+(Courbe elliptique)
+border-radius: 20px / 10px;			(Haut et Bas  /  Gauche et Droite)
+
+
+		----	Ombre d'un élément	----
+		
+(Ombre): /* horizontal(x) | vertical(y) | blur-radius | spread-radius | color */
+box-shadow: 12px 12px 2px 1px black;
+
+/* x | y | color */
+box-shadow: 60px -16px teal;
+
+/* x | y | blur-radius | color */
+box-shadow: 10px 5px 5px black;
+
+/* multiple shadows, separated by commas */
+box-shadow: 3px 3px red, -1em 0 0.4em olive;

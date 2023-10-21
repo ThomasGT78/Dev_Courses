@@ -1,0 +1,90 @@
+	POLICE (FONTS)
+
+(Liste des Polices)
+https://www.cssfontstack.com/Web-Fonts
+https://www.cssfontstack.com/
+https://fonts.google.com/
+https://www.fontsquirrel.com/
+https://www.dafont.com/fr/
+
+(Modifier une Police)
+font-family : "Time New Roman";
+
+/*On peut appliquer plusieurs polices en cas de non-disponibilité*/
+font-family: Tahoma, "Arial Black", sans-serif;		(Fallback Fonts)
+
+/*3 Type de police*/
+Serif			(petite patte de liaison)
+Sans-serif		(sans petite patte de liaison)
+Cursive
+
+/*Voici une liste de polices qui fonctionnent bien sur la plupart des navigateurs*/
+Arial ;
+Arial Black ;
+Comic Sans MS ;
+Courier New ;
+Georgia ;
+Impact ;
+Times New Roman ;
+Trebuchet MS ;
+Verdana.
+
+AJOUTER DES POLICES À SON DOCUMENT POUR QUE TOUS LES UTILISATEURS PUISSENT LIRE LA PAGE AVEC LA POLICE CHOISIE
+
+ 		----	1.	Linking URL in HTML	----
+
+https://fonts.google.com/		(choose the style of your Font and select)
+(On the right side of the page click on "Embed"; appears only if the section "show your selected families" is selected)
+(Copy the link in the <head> of your html document)
+
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+
+
+		----	2.	Linking URL in CSS using	----	
+		
+(enter the link found in "Embed" in the browser and then copy/paste the "Latin" section into style.css)
+https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700
+
+@font-face {
+  font-family: 'Space Mono';
+  font-style: normal;
+  font-weight: 400;
+  src: local('Space Mono'), local('SpaceMono-Regular'), url(https://fonts.gstatic.com/s/spacemono/v6/i7dPIFZifjKcF5UAWdDRYEF8RQ.woff2) format('woff2');
+  unicode-range: U+0000-00FF, U+0131, U+0152-0153, U+02BB-02BC, U+02C6, U+02DA, U+02DC, U+2000-206F, U+2074, U+20AC, U+2122, U+2191, U+2193, U+2212, U+2215, U+FEFF, U+FFFD;
+}
+
+
+ 		----	3. Linking Local Font	----
+
+(Site de téléchargement de Police libre de droit)
+https://www.fontsquirrel.com/		(permet de télécharger des packs prêts à l'emploi pour CSS 3)
+https://www.dafont.com/fr/
+
+(Il existe un moyen d'utiliser n'importe quelle police sur son site; Cela fonctionne bien avec la plupart des navigateurs;
+Mais attention il y a des défauts)
+-il faudra que le navigateur de vos visiteurs télécharge automatiquement le fichier de la police, dont le poids peut atteindre, voire dépasser 1 Mo… 
+-il existe plusieurs formats de fichiers de polices, et ceux-ci ne fonctionnent pas sur tous les navigateurs.
+
+(Définir une nouvelle police)
+@font-face {
+    font-family: 'MaSuperPolice';
+    src: url('MaSuperPolice.eot');
+}
+
+(L'idéal est de proposer plusieurs formats pour la police : le navigateur téléchargera celui qu'il sait lire)
+@font-face {
+    font-family: 'MaSuperPolice';
+    src: url('MaSuperPolice.eot') format('eot'),
+         url('MaSuperPolice.woff') format('woff'),
+         url('MaSuperPolice.ttf') format('truetype'),
+         url('MaSuperPolice.svg') format('svg');
+}
+
+Voici les différents formats de fichiers de polices qui existent et qu'il faut connaître :
+.ttf  (TrueType Font)		(Fonctionne sur IE9 et tous les autres navigateurs)
+.eot  (Embedded OpenType)	(Fonctionne sur Internet Explorer uniquement; toutes versions; Ce format est propriétaire produit par Microsoft)
+.otf  (OpenType Font)		(Ne fonctionne pas sur Internet Explorer)
+.svg  (SVG Font)			(Le seul format reconnu sur les iPhone et iPad pour le moment)
+.woff (Web Open Font Format)(Nouveau format conçu pour le Web qui fonctionne sur IE9 et tous les autres navigateurs)
+
+

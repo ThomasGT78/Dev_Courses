@@ -1,0 +1,11 @@
+Code_postal;Ville
+75000;Paris
+13000;Marseille
+69000;Lyon
+31000;Toulouse
+06000;Nice
+44000;Nantes
+34000;Montpellier
+67000;Strasbourg
+33000;Bordeaux
+59000;Lille

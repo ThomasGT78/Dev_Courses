@@ -1,0 +1,83 @@
+INSÉRER DES MÉDIAS
+
+Les Formats d'image:
+JPG/JPEG	Conçu pour réduire le poids des photos qui peuvent comporter plus de 16 millions de couleurs différentes
+PNG			Adapté à presque tout ce qui n'est pas une photo. Peut être rendu transparent et n'altère pas la qualité de l'image
+			existe en deux versions, en fonction du nombre de couleurs que doit comporter l'image :
+			• PNG 8 bits : 256 couleurs ;
+			• PNG 24 bits : 16 millions de couleurs (autant qu'une image JPEG)
+GIF			Peut être animé, est limité à 256 couleurs
+SVG
+
+- Insérer Image
+<img src="lien"/>		(A utiliser obligatoirement dans un paragraphe ou autre)
+	
+Insérer image + description 		(description obligatoire pour meilleur recherche et lecture vocale)
+<img src="lien" alt="description"/>	
+
+<img src = "https://cdn.imgbin.com/16/8/24/imgbin-ulquiorra-cifer-orihime-inoue-ichigo-kurosaki-s-suke-aizen-rukia-kuchiki-ichigo-kurosaki-w0Ad9Sm2vJJAQgxf33WnH4rvR.jpg" alt="Ulquiorra"/>
+
+Insérer une image de fond (sur CSS)
+background-image: url("image.png");
+
+Créer un lien à partir d'une image (insérer une image et créer un lien à partir de cette image)
+<a href="lien" target="_blank"><img src="lien" alt="description"/></a>
+
+<a href = "https://scantrad.net/mangas">
+	<img src = "https://cdn.imgbin.com/16/8/24/imgbin-ulquiorra-cifer-orihime-inoue-ichigo-kurosaki-s-suke-aizen-rukia-kuchiki-ichigo-kurosaki-w0Ad9Sm2vJJAQgxf33WnH4rvR.jpg" alt="image d'Ulquiorra"/>
+</a>
+
+Afficher une petite photo et de montrer la grande en cliquant
+<a href="dossier/image1.jpeg" alt="Grand format"><img src="dossier/image1_mini" alt="cliquez pour agrandir"/></a>
+
+
+		<!-- Autre Médias-->
+
+- Insérer Audio
+<source src="lien" type="audio/mp3">
+
+- Insérer Video + définir sa taille + commande de controle
+<video src="lien" width="320" height="240" controls></video>
+
+- Insérer Media or File
+<embed src="download.gif"/>
+
+
+		<!-- Balises des Médias-->
+
+<figure></figure>	(encadre différents types de médias ou tout ce qui vient illustrer le texte)
+					(a un rôle sémantique, elle indique que l'image est importante pour la compréhension du texte, utile au référencement)
+<figcaption></figcaption>	(Légende de la <figure></figure>)
+
+<figure>
+    <img src="images/blocnotes.png" alt="Bloc-Notes" />
+    <figcaption>Le logiciel Bloc-Notes</figcaption>
+</figure>
+
+
+<audio></audio>		(encadre les audios)
+<audio controls autoplay loop></audio>
+	controls	Play/pause, volume, fullscreen option
+	width		Modifier la largeur de l'outil de lecture audio
+	autoplay	Automatically playing
+	preload		Indique si la musique peut être préchargée dès le chargement de la page ou non
+		auto		Le navigateur décide s'il doit précharger toute la musique, uniquement les métadonnées ou rien du tout
+		metadata	Charge uniquement les métadonnées (durée, etc.
+		none		Pas de préchargement. Utile si vous ne voulez pas gaspiller de bande passante sur votre site
+	loop		média sera jouée en boucle
+
+<video></video>	
+	controls
+	autoplay
+	loop
+	poster= "image.jpg"	image à afficher à la place de la vidéo tant que celle-ci n'est pas lancée
+	width
+	height
+	preload
+
+Utiliser la balise <source>  à l'intérieur de la balise <video>  pour proposer différents formats. Le navigateur prendra celui qu'il reconnaît
+<video controls poster="sintel.jpg" width="600">
+    <source src="sintel.mp4">
+    <source src="sintel.webm">
+    <source src="sintel.ogv">
+</video>

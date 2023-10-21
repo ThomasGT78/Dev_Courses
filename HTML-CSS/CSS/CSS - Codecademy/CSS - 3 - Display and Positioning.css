@@ -1,0 +1,42 @@
+DISPLAY AND POSITIONONG
+
+position:
+	static 		(default value)
+	relative	(Change the place of the element)
+		top 		(moves the element down)-(%, px, ems)
+		bottom 		(moves the element up)
+		left		(moves the element right)
+		right		(moves the element left)
+	absolute	(change place but other elements will ignore it)
+	fixed		(fix an element to a specific position on 
+				the page regardless of user scrolling)
+	(Units can be specified in )
+
+z-index: 1;		(controls how far “back” or “forward” an element 
+				appear on the web page, when elements overlap)
+	plus la valeur est grande, plus l'élément avance
+	
+	
+display:
+	none		(doesn't show anything and use the space)
+	inline		(wraps tightly around their content)
+	block 		(fill the entire width of the page by default)
+	inline-block (can appear next to each other and we can 
+				specify their dimensions using the width 
+				and height properties)
+	grid		(block-level grid)
+	inline-grid	(inline grid)
+			(Grid can be used to lay out entire web pages)
+				
+	(Inline Level Element List)
+	https://developer.mozilla.org/en-US/docs/Web/HTML/Inline_elements
+	(Bloc Level Element List)
+	https://developer.mozilla.org/en-US/docs/Web/HTML/Block-level_elements
+
+float:
+	left	(move, or float, elements as far left as possible)
+	right	(move elements as far right as possible)
+
+clear:
+	left
+	right

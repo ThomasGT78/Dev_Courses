@@ -1,0 +1,33 @@
+/* Les media queries sont donc des règles qui indiquent quand on doit appliquer des propriétés CSS. Il y a deux façons de les utiliser :
+*/
+
+
+- Charger une feuille de style .css  différente en fonction de la règle dans «head» du doc HTML
+<html>
+    <head>
+        <meta charset="utf-8" />
+        <link rel="stylesheet" href="style.css" /> <!-- Pour tout le monde -->
+        <link rel="stylesheet" media="screen and (max-width: 1280px)" href="petite_resolution.css" /> /* Pour ceux qui ont une résolution inférieure à 1280px */
+        <title>Media queries</title>
+    </head>
+
+- Incorporer le code dans le fichier CSS habituel
+@ media screen and (max-width: 800px) {
+	.main div {
+		width: 50%;
+	}
+	.intro {
+		
+	}
+} 
+/* Smartphones: jusqu'à 425px de large  */
+@media(max-width: 425px){}
+
+/* Tablettes: de 426px à 767px de large */
+@media(min-width: 426px) and (max-width: 767px){}
+
+/* Pc portables: de 768px jusqu’à 1388px de large */
+@media(min-width: 768px) and (max-width: 1388px){}
+
+/* Écrans de bureau: supérieurs à 1388px de large */
+@media(min-width: 1389px){}

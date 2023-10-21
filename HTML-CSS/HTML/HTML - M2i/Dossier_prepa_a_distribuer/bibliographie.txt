@@ -1,0 +1,42 @@
+Cahier d'algorithmique 2ed
+Auteur(s) : Michel Poncy, Denis Vieudrin
+Editeur(s) : Bordas
+Collection : Indice
+Nombre de pages : 48 pages
+Date de parution : 22/08/2014 
+EAN13 : 9782047331682
+4,5 euros
+
+
+Bonnes pratiques des standards du web
+Auteur(s) : Dan Cederholm avec la contribution de Jeffrey Zeldman
+Editeur(s) : Pearson
+Collection : Le Campus
+Nombre de pages : 324 pages
+Date de parution : 13/12/2012 
+EAN13 : 9782744025723
+6 euros
+
+
+Solutions HTML5
+Techniques essentielles pour les développeurs
+Auteur(s) : Marco Casario, Peter Elst, Charles Brown, Nathalie Wormser, Cyril Hanquez
+Editeur(s) : Pearson
+Collection : Le programmeur
+Nombre de pages : 340 pages
+Date de parution : 07/06/2013 
+EAN13 : 9782744025921
+6 euros
+
+
+Programmation - Le langage SQL
+Pratiques de bases et concepts avancés
+Auteur(s) : Frédéric Baurand
+Editeur(s) : Ellipses
+Collection : Technosup
+Nombre de pages : 187 pages
+Date de parution : 25/10/2011 
+EAN13 : 9782729870805
+23 euros
+
+

@@ -1,0 +1,1 @@
+var tableauEnSortie = tableauEnEntree.map(fonction);

@@ -1,0 +1,56 @@
+	<!---------------------------------------
+	-  Format SFC (Single-File Components)  -
+	---------------------------------------->
+
+<script setup>
+import { reactive } from 'vue'
+import { ref } from 'vue'
+
+// reactive()  
+const message1 = reactive({
+  text: 'Coucou Toi !'
+})
+
+// ref()
+const message2 = ref('Coucou Moi !')
+
+</script>
+
+<template>
+  <h1>message1 : {{message1.text}}</h1>
+  <h1>message2 : {{message2}}</h1>
+</template>
+
+
+
+		<!---------------
+		-  Format HTML  -
+		---------------->
+
+<script type="module">
+import { createApp, ref, reactive } from 'vue'
+
+createApp({
+  setup() {
+  
+	// reactive() 
+    const message1 = reactive({
+      text: 'Coucou Toi !'
+    })
+	
+	// ref()
+    const message2 = ref('Coucou Moi !')
+	
+    return {
+      // utilisé dans le template
+      message1,
+      message2
+    }
+  }
+}).mount('#app')
+</script>
+
+<div id="app">
+  <h1>message1 : {{message1.text}}</h1>
+  <h1>message2 : {{message2}}</h1>
+</div>

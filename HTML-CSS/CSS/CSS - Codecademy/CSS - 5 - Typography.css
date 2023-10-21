@@ -1,0 +1,57 @@
+TYPOGRAPHY
+
+font-family: "Times New Roman" (Police du texte)-(The default)
+
+	https://www.cssfontstack.com/Web-Fonts
+	https://www.cssfontstack.com/
+	
+font-family: "Garamond", "Times", serif;	(Fallback Fonts)
+
+Linking Fonts:
+1.	Linking URL in HTML
+https://fonts.google.com/	find the link of your Font
+<link href="https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700&display=swap" rel="stylesheet">
+enter this link into index.html
+
+2.	Linking URL in CSS using	@font-face	
+enter this link in the browser
+https://fonts.googleapis.com/css2?family=Space+Mono:wght@400;700
+and then copy/paste the "Latin" section into style.css
+
+3. Linking Local Font using		@font-face
+https://www.fontsquirrel.com/	(source to download Fonts)
+@font-face {
+  font-family: "Roboto";
+  src: url('./fonts/Roboto.woff2') format('woff2'),
+       url('./fonts/Roboto.woff') format('woff'),
+       url('./fonts/Roboto.tff') format('truetype');
+}
+
+font-weight:	Epaisseur du texte
+	100 to 900	(can be a number value from 100 to 900)
+	normal 		(by default =400)
+	bold		(=700)
+	light		(=300)
+
+font-style:
+	normal		(by default)
+	italic
+
+text-transform:
+	capitalize	(1st letter Uppercase)
+	uppercase		
+	lowercase 
+	
+text-align:		(text alignment)
+	center
+	left
+	right
+
+line-height: 	(modifies the leading of text)
+	1.2			(ratio of the font size)
+	11px		(can be any valid CSS unit such as:
+				pixels, percents, ems, or rems)
+
+word-spacing: 0.25em	(spacing between words)
+
+letter-spacing: 0.02em	(spacing between letters)

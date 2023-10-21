@@ -1,0 +1,48 @@
+@font-face {
+    font-family: 'Mukta';
+    src: url('fonts/Mukta/Mukta-Bold.ttf') format('truetype'),
+         url('fonts/Mukta/Mukta-ExtraBold.ttf') format('truetype'),
+         url('fonts/Mukta/Mukta-ExtraLight.ttf') format('truetype'),
+         url('fonts/Mukta/Mukta-Light.ttf') format('truetype'),
+         url('fonts/Mukta/Mukta-Medium.ttf') format('truetype'),
+         url('fonts/Mukta/Mukta-Regular.ttf') format('truetype'),
+         url('fonts/Mukta/Mukta-SemiBold.ttf') format('truetype');
+}
+
+* {
+    font-family: "Mukta";
+}
+
+header {
+    display: flex;
+    background-color: #fc5d72;
+    text-align: center;
+    align-items: center;
+    width: 20%;
+    height: 80px;
+    min-width: 50px;
+    max-width: 300px;
+}
+
+#photoId {
+    display: flex;
+    width: 20%;
+}
+
+.intro {
+    display: flex;
+    background-color: #dcd1f1;
+    width: 60%;
+}
+
+aside {
+    display: flex;
+    flex-direction: column;
+    clear: left;
+    background-color: #F7F7F7;
+    text-align: justify;
+    width: 20%;
+    min-width: 50px;
+    max-width: 300px;
+    padding: 5px;
+}

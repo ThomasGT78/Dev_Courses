@@ -1,0 +1,31 @@
+HTML
+
+http://fr.html.net/tutorials/html/
+
+
+
+SQL
+
+http://sqlpro.developpez.com/cours/sqlaz/fondements/
+
+http://sqlpro.developpez.com/cours/sqlaz/ddl/
+
+http://sqlpro.developpez.com/cours/sqlaz/dml/
+
+http://sqlpro.developpez.com/cours/sqlaz/select/
+
+
+
+
+ALGO
+
+http://www.pise.info/algo/codage.htm
+Simple et efficace.
+
+http://www.ac-nancy-metz.fr/eco-gestion/eric_crepin/algo/exercices/presentation.htm
+De nombreux exercices.
+
+http://lwh.free.fr/
+Simple et illustré.
+
+

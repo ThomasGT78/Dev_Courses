@@ -1,0 +1,35 @@
+<html>
+<!-- Création d'un composant avec une variable ou une constante -->
+    <head>
+        <title>HelloReactWithJSX.html</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <script src="../libs/react.development.js"></script>
+        <script src="../libs/react-dom.development.js"></script>
+        <!-- En local ça bogue il faudrait compiler !!! -->
+        <!--<script src="../libs/babel.min.js"></script>-->
+        <script src="https://unpkg.com/babel-standalone@6/babel.min.js"></script>
+        <link rel="icon" type="image/png" href="../icones/favicon.png">
+    </head>
+    <style>
+        .BW {
+            background-color: black;
+            color: white;
+            
+        }
+    </style>
+
+    <body>
+        <p>Ouvrez la console (F12)</p>
+        <div id="app"></div>
+        <!-- La nouvelle balise script -->
+        <script type="text/babel">
+            // Création du composant React avec une variable/constante
+            const p = <p className="BW">Hello React With JSX</p>;
+            // Affichage du composant React
+            ReactDOM.render(p, document.getElementById("app"));
+
+        </script>
+    </body>
+
+</html>

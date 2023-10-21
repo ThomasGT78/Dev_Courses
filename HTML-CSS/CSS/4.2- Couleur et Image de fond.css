@@ -1,0 +1,42 @@
+COULEUR ET IMAGE DE FOND
+
+(on peut appliquer un fond à n'importe quel élément - un titre; un paragraphe; certains mots d'un paragraphe; etc...)
+
+(Insérer une image de fond)
+background-image:	url("http://…")
+					url("dossier/image.png")
+
+(Fixer le fond)
+background-attachment  :	scroll		(l'image de fond défile avec le texte) (par défaut).
+							fixed		(l'image de fond reste fixe)
+
+(Répétition du fond)
+(Par défaut l'image de fond est répétée en mosaïque; Vous pouvez changer cela avec cette propriété)
+background-repeat  :	repeat		(le fond sera répété en mosaïque (par défaut)
+						no-repeat	(le fond ne sera pas répété; L'image sera donc unique sur la page)
+						repeat-x	(le fond sera répété uniquement sur la première ligne, horizontalement)
+						repeat-y	(le fond sera répété uniquement sur la première colonne, verticalement)
+
+(Position du fond)
+(Indiquer où doit se trouver l'image de fond; Intéressante que si elle est combinée avec "background-repeat: no-repeat")
+background-position: 	30px 50px;	(à 30 pixels de la gauche et à 50 pixels du haut)
+						top			(en haut)
+						bottom		(en bas)
+						left		(à gauche)
+						right		(à droite)
+						center		(centré)
+						top right	(les posistions peuvent être combinés)
+
+(Combiner toutes les propriétés dans une seule)
+(l'ordre des valeurs n'a pas d'importance - vous n'êtes pas obligé de mettre toutes les valeurs)
+background: url("image.png") fixed no-repeat top right;
+
+(Plusieurs images de fond)
+(Il est possible de donner plusieurs images de fond à un élément. Il suffit de séparer les déclarations par une virgule)
+(La première image de cette liste sera placée par-dessus les autres; Attention l'ordre de déclaration des images a son importance)
+background: url("soleil.png") fixed no-repeat top right, url("neige.png") fixed;
+
+
+
+
+

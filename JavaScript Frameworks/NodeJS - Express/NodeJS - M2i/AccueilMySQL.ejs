@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>AccueilMySQL.html</title>
+        <meta http-equiv="content-type" content="text/html; charset=utf-8" />
+        <meta name="viewport" content="width=device-width">
+		<link rel="stylesheet" href="css/style.css" />
+		<style>
+			#fin{color: red};
+			body{background-color: black !important;}
+		</style>
+		<script src="/js/jquery.js"></script>
+    </head>
+
+    <body>
+        <h3>Accueil MySQL</h3>
+		<p id="salutation"></p>
+		<div id="fin"></div>
+        <a href="/catalogue">Catalogue</a>
+        <br>
+        <a href="/ajout">Ajout</a>
+        <br>
+        <a href="/suppressionInput">Suppression With Input</a>
+        <br>
+        <a href="/suppressionSelect">Suppression with Select</a>
+        <p><%=message %></p>
+		
+		
+		<script>
+			let salutation = "Bonjour avec jQuery";
+			let element = $('<p>');
+			element.text("FIN DE jQuery"); 
+			$("#fin").append(element);
+			
+			$("#salutation").html(salutation);
+		</script>
+		
+    </body>
+</html>

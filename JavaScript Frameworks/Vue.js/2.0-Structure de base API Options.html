@@ -1,0 +1,47 @@
+	<!---------------------------------------
+	-  Format SFC (Single-File Components)  -
+	---------------------------------------->
+
+<script>
+export default {
+  data(){
+    return {
+      message: 'Coucou Toi !',
+	  count: 0,
+	  titleClass: 'title'
+    }
+  },
+  methods: {
+    increment() {
+      this.count++
+    }
+  }
+}
+</script>
+
+<template>
+  <h1 v-bind:class="titleClass ">{{message}}</h1>
+  <button v-on:click="increment">count à: {{ count }}</button>
+</template>
+
+
+
+		<!---------------
+		-  Format HTML  -
+		---------------->
+
+<script type="module">
+import { createApp } from 'vue'
+
+createApp({
+  data() {
+    return {
+      message: 'Coucou Toi !'
+    }
+  }
+}).mount('#app')
+</script>
+
+<div id="app">
+  <h1>{{message}}</h1>
+</div>

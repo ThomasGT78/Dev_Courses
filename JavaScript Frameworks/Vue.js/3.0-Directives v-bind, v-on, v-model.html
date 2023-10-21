@@ -1,0 +1,90 @@
+		<!---------------------------
+		-  v-bind / v-on / v-model  -
+		---------------------------->
+		
+		<!--------------
+		-  v-bind (:)  -
+		--------------->
+Lie un attribut à une valeur dynamique
+<div v-bind:id="dynamicId"></div>
+<div :id="dynamicId"></div>
+
+		
+		<!------------
+		-  v-on (@)  -
+		------------->
+Écoute les événements DOM en utilisant la directive
+<button v-on:click="increment">{{ count }}</button>
+<button @click="increment">{{ count }}</button>
+
+<script>
+export default {
+  data() {
+    return {
+      count: 0
+    }
+  },
+  methods: {
+    increment() {
+      // met à jour le state du component
+      this.count++
+    }
+  }
+}
+</script>
+
+<template>
+  <!-- rendez ce bouton fonctionnel -->
+  <button v-on:click="increment">count à: {{ count }}</button>
+</template>
+
+
+		<!---------------------------
+		-  v-bind + v-on = v-model  -
+		---------------------------->
+
+// v-model
+Synchronise automatiquement la valeur de l'<input> avec le state lié, donc plus besoin du gestionnaire d'événements 
+=> on supprime « @input="onInput" » et la méthod liée dans le script
+<input v-model="text">
+
+<!-- EXEMPLE v-bind + v-on:  -->
+
+<script>
+export default {
+  data() {
+    return {
+      text: ''
+    }
+  },
+  methods: {
+    onInput(e) {
+	  // une directive v-on recoit un évènement natif du DOM comme argument.
+      this.text = e.target.value
+    }
+  }
+}
+</script>
+
+<template>
+  <input :value="text" @input="onInput" placeholder="Tapez ici">
+  <p>{{ text }}</p>
+</template>
+
+
+<!--  EXEMPLE v-model:  -->
+
+<script>
+export default {
+  data() {
+    return {
+      text: ''
+    }
+  }
+}
+</script>
+
+<template>
+  <input v-model="text" placeholder="Tapez ici">
+  <p>{{ text }}</p>
+</template>

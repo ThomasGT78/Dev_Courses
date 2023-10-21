@@ -1,0 +1,29 @@
+POSITIONNEMENT DES ÉLÉMENTS
+
+display:	block;			(Prend toute la largeur, sous le précédent: div, p, h1-h5, table)
+			inline-block;	(comme block, mais peut être côte-à-côte)
+			inline;			(Prend la dimensions du texte qu'il contiennent: a, span, strong, em)
+			none;			(le contenu disparait de la page et la place qu'il occupait sera libérée)
+		/*différent de:*/
+visibility: hidden; 	(sert aussi à masquer un élément HTML,
+						mais la place occupée par l'élément HTML reste vide et n'est pas disponible)	
+
+margin: auto;	(centrer automatiquement)
+border:
+padding:
+
+float:	left / right	(ne respectent pas les FLUX)
+
+position:	static		(n'affecte pas le flux, valeur par defaut)
+			realtive	(décale par rapport à la position origin)
+			absolute	(affecte le flux,positionné en absolu par rapport au premier élément ancêtre lui-même positionné ou à l'élément html)
+			fixed		(restera fixé à sa position, même en cas de défilement)
+/*absolute, relative, fixed: doivent précisez les valeurs de décalage (ex: top: 5px;)*/
+
+clear:	left 		(se déplace en dessous de tout élé)
+		right 
+		both
+
+z-index: 1 	(dispose les éléments en plusieurs couches, plus le nombre est grand et plus la couche est supérieure)
+
+box-sizing:	border-box (Pour que width soit égal à la largeur de l'ensemble)

@@ -1,0 +1,40 @@
+
+
+/* Style de base pour la barre de navigation */
+.nav-flex-between {
+    background-color: #333; /* Couleur de fond */
+    padding: 10px 0; /* Espacement intérieur en haut et en bas */
+}
+
+.nav-bar {
+    list-style-type: none; /* Supprime les puces de la liste */
+    margin: 0;
+    padding: 0;
+    display: flex;
+    justify-content: space-around; /* Répartit les éléments de la liste sur toute la largeur */
+}
+
+.nav-link {
+    margin: 0;
+}
+
+.nav-link a {
+    text-decoration: none; /* Supprime la soulignement des liens */
+    color: #ccc; /* Couleur du texte */
+    transition: color 0.3s; /* Transition de couleur au survol */
+}
+
+.nav-link a:hover {
+    color: #fff; /* Couleur du texte au survol */
+}
+
+/* Stylisation spécifique pour chaque lien */
+.nav-start a {
+    font-weight: bold; /* Texte en gras */
+}
+
+/* Style pour le lien actif (optionnel) */
+.nav-link.active a {
+    color: #fff; /* Couleur du texte pour le lien actif */
+    border-bottom: 2px solid #fff; /* Ajoute une bordure en bas pour le lien actif */
+}

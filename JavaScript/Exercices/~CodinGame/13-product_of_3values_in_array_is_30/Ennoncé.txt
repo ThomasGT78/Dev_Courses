@@ -1,0 +1,1 @@
+Code une fonction qui détermine s'il existe 3 entier dont le produit fait 30 dans le tableau

@@ -1,0 +1,20 @@
+.redText {
+    color: red;
+}
+
+.greenText {
+    color: green;
+}
+
+.blackText {
+    color: black;
+    background-color: white;
+}
+
+#btReset{
+    background-color: aquamarine;
+}
+
+.hidden {
+    display: none;
+}

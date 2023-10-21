@@ -1,0 +1,67 @@
+<!DOCTYPE html>
+<!--
+Classe1.html
+-->
+<html>
+    <head>
+        <title>Classe1.html</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width">
+    </head>
+    <body>
+        <div>
+            <h1>Classe1.html</h1>
+            <h2>Ouvrez la console !!!</h2>
+
+            <p id="prenom"></p>
+            <p id="nom"></p>
+        </div>
+
+        <script>
+            class Personne {
+                constructor(nom, prenom) {
+                    this.nom = nom;
+                    this.prenom = prenom;
+                }
+                getNom() {
+                    return this.nom;
+                }
+                getPrenom() {
+                    return this.prenom;
+                }
+
+                setNom(nom) {
+                    this.nom = nom;
+                }
+                setPrenom(prenom) {
+                    this.prenom = prenom;
+                }
+            } /// class Personne
+
+            /*
+             * MAIN
+             */
+            // CALL CONSTRUCTOR
+            let personne = new Personne("Buguet", "Pascal");
+            console.log(personne);
+            /*
+             * GET
+             */
+            // Appel de la méthode log() sur l’objet personne
+            let nom = personne.getNom();
+            let prenom = personne.getPrenom();
+            document.getElementById("nom").innerHTML = nom;
+            document.getElementById("prenom").innerHTML = prenom;
+
+            /*
+             * SET
+             */
+            personne.setPrenom("Annabelle");
+            personne.setNom("Fassiola");
+            nom = personne.getNom();
+            prenom = personne.getPrenom();
+            document.getElementById("nom").innerHTML = nom;
+            document.getElementById("prenom").innerHTML = prenom;
+        </script>
+    </body>
+</html>
