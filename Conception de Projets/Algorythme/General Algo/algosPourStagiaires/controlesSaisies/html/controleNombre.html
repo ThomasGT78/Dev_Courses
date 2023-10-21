@@ -1,0 +1,29 @@
+<!DOCTYPE html>
+<!--
+Un nombre est compose de 1 caractere au minumum
+Les caracteres autorises sont [0123456789.+-]
+Un seul ., un seul + au début, un seul - au début
+Mais il y a isNaN
+-->
+<html>
+    <head>
+        <title>controleNombre</title>
+
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta charset="utf-8" />
+
+        <script src="../../../js/controlesChaines.js"></script>
+        <script src="../js/controleNombre.js"></script>
+    </head>
+
+    <body>
+        <h3>controleNombre</h3>
+        <div>
+            <label>Un nombre ?</label>
+            <input type="text" name="itNombre" id="itNombre" value="3.14" />
+            <input type="button" value="OK" name="btOK" id="btOK" />
+            <br>
+            <label id="lblMessage"></label>
+        </div>
+    </body>
+</html>

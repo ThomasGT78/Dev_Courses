@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Taille</title>
+
+</head>
+
+<body>
+    <div id=taille></div>
+
+    <script>
+        var meter;
+        var foot;
+        var inch;
+
+        meter = parseFloat(prompt(`Entrez la taille mesurée en cm à convertir`));
+        foot = parseInt(meter / 30.48); 
+        inch = parseInt((meter % 30.48) / 2.54 * 100) / 100;
+
+
+        document.getElementById("taille").innerHTML =
+            `<h2>${meter}cm = ${foot} Feet and ${inch} Inches</h2>`;
+    </script>
+</body>
+
+</html>

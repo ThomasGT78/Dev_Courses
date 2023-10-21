@@ -1,0 +1,47 @@
+<!DOCTYPE html>
+<html lang="fr">
+    <head>
+        <title>TransformationsNumeriques</title>
+
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta charset="utf-8" />
+
+        <script src="../../../js/nombres.js"></script>
+        <script src="../../../js/tableaux.js"></script>
+        <script src="../js/TransformationsNumeriques.js"></script>
+    </head>
+
+    <body>
+        <div>
+            <table>
+                <thead></thead>
+                <tbody>
+                    <tr>
+                        <td>Décimal !</td>
+                        <td><input type="text"   id="itDecimal" value="3" /></td>
+                    </tr>
+                    <tr>
+                        <td>Binaire!</td>
+                        <td><input type="text"   id="itBinaire" value="10" /></td>
+                    </tr>
+                    <tr>
+                        <td>Hexa!</td>
+                        <td><input type="text"   id="itHexa" value="F" /></td>
+                    </tr>
+
+                    <tr>
+                        <td><input type="button" id="btBinaire2decimal" value="Binaire2Decimal" /></td>
+                        <td><input type="button" id="btDecimal2binaire" value="Decimal2Binaire" /></td>
+                    </tr>
+                    <tr>
+                        <td><input type="button" id="btHexa2decimal" value="Hexa2Decimal" /></td>
+                        <td><input type="button" id="btDecimal2hexa" value="Decimal2Hexa" /></td>
+                    </tr>
+                </tbody>
+            </table>
+
+            <p id="pResultats"></p>
+            <label id="lblMessage"></label>
+        </div>
+    </body>
+</html>

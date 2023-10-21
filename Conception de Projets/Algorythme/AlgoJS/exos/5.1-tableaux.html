@@ -1,0 +1,45 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tableau</title>
+
+</head>
+
+<body>
+    
+    <script>
+        // calcul de moyenn Classic
+        var note1 = 17;
+        var note2 = 15;
+        var note3 = 17;
+
+        var moyenne1 = (note1 + note2 + note3) / 3;
+        console.log(moyenne1)
+
+        // Calcul de moyenne dans un tableau
+        var notes = [17,17,12];
+        notes.push(20);             //rajoute un élément à la fin du tableau (best practice)
+        note [notes.length] = 17;   //rajoute un élément à la fin du tableau
+        var total = 0;
+        for (var i = 0; i < notes.length ; i++) { // = (var index in notes)
+            total += notes[i]
+        }
+        moyenneT = total / notes.length
+
+        console.log(moyenneT)
+
+        //For ... In
+        for (var index in notes) {      //index peut prendre n'importe quel nom
+                total += notes[i]       //se rapporte à la clé
+            }
+
+        //For ... Of
+        for (var item in notes) {       //item peut prendre n'importe quel nom
+                total += notes[i]       //se rapporte à la valeur
+            }
+    </script>
+</body>
+
+</html>

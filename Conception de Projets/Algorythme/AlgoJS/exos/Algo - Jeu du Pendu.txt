@@ -1,0 +1,51 @@
+JEU DU PENDU
+
+Choisir un MOT 
+Ecrire un nombre de tiret = au nombre de lettre du mot choisis
+i=0 (n° de la partie du schéma à dessiner)
+InterrogerJoueur =>
+	Ecouter la REPONSE
+		Si la REPONSE est une lettre
+			effectuer fonction VerifLettre
+		Else
+			Si la REPONSE est un mot 
+				effectuer la fonction VerifMot
+			sinon
+				Interroger de nouveau la personne
+
+VerifLettre =>
+	n = 1
+	VerifLettreN =>
+		si lettre n < Nb de lettre dans mot
+			Vérifier si reponse = lettre n
+				Si oui
+					Ecrire la lettre au dessus du tiret n et y ajouter la valeur TRUE
+					n = n+1
+					VerifLettreN
+				Sinon
+					n = n+1
+					VerifLettreN
+		Sinon
+			si nb de lettre trouvé ce tour = 0
+				dessiner image i
+				si i = 11		(11 est le nb de dessin nécessaire pour terminer le pendu)
+					Le joueur a perdu
+				Sinon
+					i = i+1
+					InterrogerJoueur
+			sinon
+				si toute les lettres = TRUE
+					le Joueur à Gagné
+				sinon
+					InterrogerJoueur
+
+VerifMot =>
+	si REPONSE = MOT
+		le joueur a Gagné
+	sinon
+		dessiner image i
+		si i = 11		(11 est le nb de dessin nécessaire pour terminer le pendu)
+			Le joueur a perdu
+		Sinon
+			i = i+1
+			InterrogerJoueur

@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Troll</title>
+
+</head>
+
+<body>
+    <div id=tva></div>
+
+    <script>
+        let action = prompt(`Vous rencontrez un Troll dans la forêt...\n 
+            Que voulez-vous faire?\n
+            Fuir: taper 1\n
+            Combattre: tapez 2\n
+            Se cacher: tapez 3`);
+
+        switch (action) {
+            case '1':
+                let fuir = prompt(`Êtes-vous Rapide?\n
+                    OUI: taper 1\n
+                    NON: tapez 2`);
+                        switch (fuir) {
+                            case '1': alert(`Vous vous sauvez de justesse`)
+                            case '2': alert(`Le troll vous rattrape et vous dévore`)
+                            default: alert(`OUI (1) ou NON?(2)`);
+                        };
+                    
+            case '2':
+                let combattre = prompt(`Êtes-vous Fort?\n
+                    OUI: taper 1\n
+                    NON: tapez 2`);
+                        switch (combattre) {
+                            case '1': alert(`Vous massacrez ce pauvre troll`)
+                            case '2': alert(`Le troll vous assome et vous dévore`)
+                            default: alert(`OUI (1) ou NON?(2)`);
+                        };
+            case '3':
+                let cacher = prompt(`Êtes-vous Furtif?\n
+                    OUI : taper 1\n
+                    NON: tapez 2`);
+                        switch (cacher) {
+                            case '1': alert(`Le troll ne vous voit pas et passe son chemin`)
+                            case '2': alert(`Le troll vous trouve et vous dévore`)
+                            default: alert(`OUI (1) ou NON?(2)`);
+                        };
+
+            default: alert (`Choisissez l'action 1 (Fuir), 2 (Combattre) ou 3 (Se cacher)`)
+        }
+
+    </script>
+</body>
+
+</html>

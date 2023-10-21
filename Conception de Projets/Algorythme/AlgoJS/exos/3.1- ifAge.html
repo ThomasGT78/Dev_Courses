@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Age</title>
+
+</head>
+
+<body>
+    <div id=age></div>
+    
+    <script>
+        /**********************************************
+        *   Test de validité de la saisie d'un âge    *
+        **********************************************/
+
+        let age = parseInt(prompt(`quel est votre âge?`))
+        
+        /*!age = toutes les valeurs évaluées fausses:
+            chaine de charctère vide
+            null
+            undefined
+            0
+            NaN
+        */
+        if (!age) {
+            console.log(`La valeur doit être un âge`)
+        }
+        else if (age <= 0) {
+            console.log(`L'âge doit être supérieur à 0`)
+        }
+        else if (age > 250){
+            console.log(`vous êtes trop vieux pour être humain`)
+        }
+        else if (age >= 18) {
+            console.log (`vous avez ${age} ans, vous êtes donc Majeur!`)
+        } else {
+            console.log (`vous avez ${ age } ans, vous êtes donc Mineur!`)
+            }
+    </script>
+</body>
+
+</html>

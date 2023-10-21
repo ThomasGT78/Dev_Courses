@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Tableau</title>
+
+</head>
+
+<body>
+
+    <script>
+        
+        var notes = [17, 17, 12, 13, 6, 18, 3, 12];
+        let higherNote = 0;
+
+        for (var index in notes) { 
+            //défini la note la plus haute
+            if (notes[index] >= higherNote){
+                higherNote = notes[index]
+            }
+            // Stop la boucle si la note maximale est atteinte (il faut la connaitre)
+            if (higherNote == 20){
+                break
+            }
+        }
+       console.log(higherNote);
+        
+
+        for (var note of notes) { 
+            //défini la note la plus haute
+            if (note >= higherNote){
+                higherNote = note]
+            }
+            // Stop la boucle si la note maximale est atteinte (il faut la connaitre)
+            if (higherNote == 20){
+                break
+            }
+        }
+       console.log(higherNote);
+    </script>
+</body>
+
+</html>

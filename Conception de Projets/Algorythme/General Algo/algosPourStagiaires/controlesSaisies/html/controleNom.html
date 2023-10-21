@@ -1,0 +1,27 @@
+<!DOCTYPE html>
+<!--
+Un nom est compose de 2 caracteres au minumum
+Les caracteres autorises sont [A-Za-z' -éèêëàâäùüîïöô ...]
+-->
+<html>
+    <head>
+        <title>controleNom</title>
+
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta charset="utf-8" />
+
+        <script src="../../../js/controlesChaines.js"></script>
+        <script src="../js/controleNom.js"></script>
+    </head>
+
+    <body>
+        <h3>controleNom - Que des lettres, des espaces, ...</h3>
+        <div>
+            <label>Votre nom ?</label>
+            <input type="text" name="itNom" id="itNom" value="Louis-Napoléon Bonaparte" size="50"/>
+            <input type="button" value="OK" name="btOK" id="btOK" />
+            <br>
+            <label id="lblMessage"></label>
+        </div>
+    </body>
+</html>

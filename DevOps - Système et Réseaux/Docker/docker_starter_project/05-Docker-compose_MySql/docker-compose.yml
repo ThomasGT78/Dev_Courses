@@ -1,0 +1,33 @@
+version: "3.3"
+services:
+  db: # Name of the first service
+    image: mysql:5.7 # Use MySQL 5.7 image from Docker Hub
+    volumes: 
+      - db_data:/var/lib/mysql # Permet de stocker l'ensemble du contenu du dossier /var/lib/mysql dans un disque persistant pour garder les donnéés en local
+    restart: always # redémarre automatiquement le conteneur si il s'arrête
+    environment:  # définit les variables d'environnement
+      MYSQL_ROOT_PASSWORD: somewordpress
+      MYSQL_DATABASE: wordpress
+      MYSQL_USER: wordpress
+      MYSQL_PASSWORD: wordpress
+
+  wordpress: # Name of the second service
+    depends_on: # Indique que le conteneur wordpress dépend du conteneur mysql
+      - db # Nom du conteneur sur lequel il dépend
+    image: wordpress:latest # Utilise l'image wordpress la plus récente
+    ports:
+      - "8000:80" # Expose le port 80 du conteneur vers le port 8080 de l'hôte
+    restart: always # redémarre automatiquement le conteneur si il s'arrête
+    environment: # définit les variables d'environnement
+      WORDPRESS_DB_HOST: db:3306 # Connect WordPress to the database using the service name for the database container
+      WORDPRESS_DB_USER: wordpress
+      WORDPRESS_DB_PASSWORD: wordpress
+      WORDPRESS_DB_NAME: wordpress
+
+volumes: # Mount volumes
+   db_data: {} # Create a named volume called db_data 
+
+
+## COMMANDS TERMINAL
+# start both services:
+#=>  docker-compose up -d

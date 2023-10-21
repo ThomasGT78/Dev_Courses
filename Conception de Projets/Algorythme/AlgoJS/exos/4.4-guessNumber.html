@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Guess Number</title>
+
+</head>
+
+<body>
+    <div id= "deviner"></div>
+    <script>
+        let toGuess = parseInt(prompt(`Quelle nombre est à deviner? (choisis un nombre entre 1 et 10)`));
+        let tryNumber;
+    
+
+        do {
+            tryNumber = parseInt(prompt(`Devine le chiffre entre 1 et 10 ?`));
+            if (tryNumber < toGuess) {
+                alert (`${tryNumber} C'est trop bas !!!`)
+                document.getElementById(deviner).innerHTML = `<p>${tryNumber} C'est trop bas !!!</p>`
+            } else if (tryNumber > toGuess) {
+                alert(`${tryNumber} C'est trop haut !!!`)
+                document.getElementById(deviner).innerHTML = `<p>${tryNumber} C'est trop haut !!!</p>`
+            } else if (tryNumber == toGuess) {
+                alert(`${tryNumber} C'est CORRECT !!!`)
+                document.getElementById(deviner).innerHTML = `<p>${tryNumber} Bravo !!!</p>`
+            }
+        } while (tryNumber !== toGuess)
+
+
+       
+    </script>
+</body>
+
+</html>

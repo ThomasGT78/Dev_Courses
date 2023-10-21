@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Concatenation_form.html</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h3>Concatenation_form</h3>
+        <div>
+            <label>Prénom : </label>
+            <input type="text" id="itPrenom" />
+            <label>Nom : </label>
+            <input type="text" id="itNom" />
+            <button id="btValider">Valider</button>
+            <p id="pResultats"></p>
+        </div>
+        <script>
+            // Code JavaScript
+            var itPrenom = document.getElementById("itPrenom");
+            var itNom = document.getElementById("itNom");
+            var btValider = document.getElementById("btValider");
+            var pResultats = document.getElementById("pResultats");
+
+            // Gestion du click sur le bouton
+            // Par association du click à une fonction anonyme
+            btValider.onclick = function () {
+                // Récupération de la valeur saisie
+                var prenom = itPrenom.value;
+                var nom = itNom.value;
+                // Calcul
+                var prenomEtNom = prenom + " " + nom;
+                // Affichage de résultats
+                pResultats.innerHTML = prenomEtNom;
+            };
+        </script>
+    </body>
+</html>

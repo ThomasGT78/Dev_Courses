@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Troll</title>
+
+</head>
+
+<body>
+    <div id=tva></div>
+
+    <script>
+        let action = prompt(`Vous rencontrez un Troll dans la forêt...\n 
+            Que voulez-vous faire?\n
+            Fuir: taper 1\n
+            Combattre: tapez 2\n
+            Se cacher: tapez 3`);
+
+        if (action == 1) {
+            let fuir = prompt(`Êtes-vous Rapide?\n
+                    OUI: taper 1\n
+                    NON: tapez 2`);
+            if (fuir == 1) {
+                alert(`Vous vous sauvez de justesse`)
+            } else if (fuir ==2) {
+                alert(`Le troll vous rattrape et vous dévore`)
+            } else {
+                alert (`Vous avez fait planter le jeux, BRAVO!\n Actualisez la page pour recommencer le jeu`)
+            }
+        } else if (action == 2) {
+            let combattre = prompt(`Êtes-vous Fort?\n
+                    OUI: taper 1\n
+                    NON: tapez 2`);
+            if (combattre == 1) {
+                alert(`Vous massacrez ce pauvre troll`)
+            } else if (fuir == 2) {
+                alert(`Le troll vous assome et vous dévore`)
+            } else {
+                alert(`Vous avez fait planter le jeux, BRAVO!\n Actualisez la page pour recommencer le jeu`)
+            }
+        } else if (action == 3) {
+            let cacher = prompt(`Êtes-vous Furtif?\n
+                    OUI : taper 1\n
+                    NON: tapez 2`);
+            if (cacher == 1) {
+                alert(`Le troll ne vous voit pas et passe son chemin`)
+            } else if (cacher == 2) {
+                alert(`Le troll vous trouve et vous dévore`)
+            } else {
+                alert(`Vous avez fait planter le jeux, BRAVO!\n Actualisez la page pour recommencer le jeu`)
+            }
+        } else {
+            alert(`Vous avez fait planter le jeux, BRAVO!\n Actualisez la page pour recommencer le jeu`)
+        }
+
+    </script>
+</body>
+
+</html>

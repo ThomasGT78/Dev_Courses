@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>FOR_pas_de_2</title>
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta charset="utf-8" />
+    </head>
+    <body>
+        <label id="pAffichage"></label>
+        <script>
+            // Déclaration des variables
+            var texte = ""; // Chaîne initialisée à chaîne vide
+
+            // Chiffres impairs
+            for (var i = 1; i <= 9; i = i + 2) {
+                texte = texte + i + "-"; // Concatenation de la valeur du compteur et d'un -
+            }
+
+            // --- Affichage
+            document.getElementById("pAffichage").innerHTML = texte;
+        </script>
+    </body>
+</html>

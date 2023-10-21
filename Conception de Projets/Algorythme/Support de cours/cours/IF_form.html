@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<!-- Un IF simple : 
+SI la valeur saisie est >= valeur alors ... SINON ... 
+-->
+<html>
+    <head>
+        <title>IF_form.HTML</title>
+
+        <meta name="viewport" content="user-scalable=no, width=device-width, initial-scale=1.0, maximum-scale=1.0" />
+        <meta charset="utf-8" />
+    </head>
+
+    <body>
+        <div>
+            <label>Votre âge ?</label>
+            <input type="text" id="itAge" value="18" />
+            <input type="button" id="btOK" value="OK" />
+            <label id="lblMessage"></label>
+        </div>
+
+        <script>
+            // Quand on clique sur le bouton btOK 
+            var itAge = document.getElementById("itAge");
+            var btOK = document.getElementById("btOK");
+            var lblMessage = document.getElementById("lblMessage");
+            btOK.onclick = function () {
+                // On recupere la valeur saisie dans la variable nommee age 
+                var age = itAge.value;
+                // On declare et on initialise a chaine vide la variable nommee etat 
+                var etat = "";
+                // Si l'age est superieur ou egal a 18 
+                if (age >= 18) {
+                    etat = "Majeur";
+                }
+                // Si l'age est inferieur a 18 
+                else {
+                    etat = "Mineur";
+                }
+                // On affiche l'etat 
+                lblMessage.innerHTML = etat;
+            };
+        </script>
+    </body>
+</html>

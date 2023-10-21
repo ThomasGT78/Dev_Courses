@@ -1,0 +1,2 @@
+une fille fait des additions et je dois vérifier le résultat donné en renvoyant l'indice du chiffre où il y a une erreur (unités = 0, dizaines = 1, etc...)
+

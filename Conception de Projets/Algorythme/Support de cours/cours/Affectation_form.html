@@ -1,0 +1,32 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Affectation_form.html</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h3>Affectation_form</h3>
+        <div>
+            <label>Saisissez !</label>
+            <input type="text" id="itSaisie" />
+            <button id="btValider">Valider</button>
+            <p id="pResultats"></p>
+        </div>
+        <script>
+            // Code JavaScript
+            var elementDeSaisie = document.getElementById("itSaisie");
+            var elementDAffichage = document.getElementById("pResultats");
+            var bouton = document.getElementById("btValider");
+
+            // Gestion du click sur le bouton
+            // Par association du click à une fonction anonyme
+            bouton.onclick = function () {
+                // Récupération de la valeur saisie
+                var valeurSaisie = elementDeSaisie.value;
+                // Affichage de résultats
+                elementDAffichage.innerHTML = valeurSaisie;
+            };
+        </script>
+    </body>
+</html>

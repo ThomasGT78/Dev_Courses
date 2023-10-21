@@ -1,0 +1,38 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>Addition_form.html</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h3>Addition_form</h3>
+        <div>
+            <label>A </label>
+            <input type="text" id="itA" />
+            <label> + B </label>
+            <input type="text" id="itB" />
+            <button id="btAdd"> = </button>
+            <label id="labelResultat"></label>
+        </div>
+        <script>
+            // Code JavaScript
+            var itA = document.getElementById("itA");
+            var itB = document.getElementById("itB");
+            var btAdd = document.getElementById("btAdd");
+            var labelResultat = document.getElementById("labelResultat");
+
+            // Gestion du click sur le bouton
+            // Par association du click à une fonction anonyme
+            btAdd.onclick = function () {
+                // Récupération de la valeur saisie
+                var a = parseInt(itA.value);
+                var b = parseInt(itB.value);
+                // Calcul
+                var r = a + b;
+                // Affichage de résultats
+                labelResultat.innerHTML = r;
+            };
+        </script>
+    </body>
+</html>

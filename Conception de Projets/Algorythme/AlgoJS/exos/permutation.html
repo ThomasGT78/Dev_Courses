@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<!--
+permutation.html
+-->
+<html>
+    <head>
+        <title>permutation.html</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div>
+            <input type="text" name="a" id="a" value="Café" />
+            <input type="text" name="b" id="b" value="Chocolat" />
+            <input type="button" value="Permutation" name="btPermutation" id="btPermutation" />
+        </div>
+
+        <script>
+            // Script JavaScript
+            // JS est sensible à la casse
+            // https://developer.mozilla.org/fr/docs/Web/JavaScript
+            // Afficher à la console d'un navigateur (F12)
+            console.log("Hello JS");
+            // Créer une variable JS de type OBJECT et récupérer un élément HTML
+            // un objet = attributs + méthodes = variables + fonctions
+            // document est un objet qui correspond à la page HTML
+            // et getElementById() est une fonction, une méthode de l'obet document
+            // Les méthodes et les variables sont écrites en camelCase
+            // En MySQL on a écrit en snake_case
+            // type est un attribut de a
+            // name est un attribut de a
+            // id est un attribut de a
+            // value est un attribut de a
+            var a = document.getElementById("a");
+            var b = document.getElementById("b");
+            var btPermutation = document.getElementById("btPermutation");
+
+            btPermutation.onclick = function () {
+                /*
+                 * INPUTS
+                 */
+                // Récupère la value de a
+                var aValue = a.value;
+                console.log(aValue);
+                var bValue = b.value;
+                console.log(bValue);
+
+                /*
+                 * TRT
+                 */
+                // PERMUTATION
+                var inter = aValue;
+                console.log(inter);
+                aValue = bValue;
+                bValue = inter;
+
+                /*
+                 * OUTPUTS
+                 */
+                // Affichage à la console
+                console.log("a : " + aValue + " - b: " + bValue);
+
+                // Affichage dans l'IHM (Interface Homme-Machine)
+                a.value = aValue;
+                b.value = bValue;
+            };
+
+        </script>
+
+    </body>
+</html>

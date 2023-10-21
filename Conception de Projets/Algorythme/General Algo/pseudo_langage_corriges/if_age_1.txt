@@ -1,0 +1,11 @@
+VAR
+	age : ENTIER
+DEBUT
+	ECRIRE "Saisir âge : "
+	LIRE age
+	SI age >= 18 ALORS
+		ECRIRE "Majeur"
+	SINON
+		ECRIRE "Mineur"
+	FIN-SI
+FIN

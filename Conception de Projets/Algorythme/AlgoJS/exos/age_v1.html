@@ -1,0 +1,55 @@
+<!DOCTYPE html>
+<!--
+age_v1.html
+-->
+<html>
+    <head>
+        <title>age_v1.html</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+
+    <body>
+        <div>
+            <h1>age_v1.html</h1>
+            <input type="text" name="itAge" id="itAge" value="18" />
+            <input type="button" value="Valider" name="btValider" id="btValider" />
+            <label id="lblResultat">Résultat</label>
+            <br>
+            <img src="../images/julia_roberts_robe_noire.jpg" alt="Photo" />
+ 
+        </div>
+
+        <script>
+            var itAge = document.getElementById("itAge");
+            var btValider = document.getElementById("btValider");
+            var lblResultat = document.getElementById("lblResultat");
+
+            btValider.onclick = function () {
+                /*
+                 * Variables locales
+                 */
+                var message = "";
+                /*
+                 * INPUTS
+                 */
+                var age = parseInt(itAge.value);
+
+                /*
+                 * TRT
+                 */
+                if (age >= 18) {
+                    message = "Majeur";
+                } else {
+                    message = "Mineur";
+                }
+
+                /*
+                 * OUTPUTS
+                 */
+                // Affichage dans l'IHM (Interface Homme-Machine)
+                lblResultat.innerHTML = message;
+            };
+        </script>
+    </body>
+</html>

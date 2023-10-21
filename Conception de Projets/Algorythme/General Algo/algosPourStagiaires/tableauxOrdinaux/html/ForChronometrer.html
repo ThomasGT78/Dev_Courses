@@ -1,0 +1,56 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>Chronometrer</title>
+
+    <meta charset="UTF-8">
+</head>
+
+<body>
+    <div>
+        <label id="lblDebut"></label>
+        <br/>
+        <label id="lblFin"></label>
+        <br/>
+        <label id="lblDuree"></label>
+        <br/>
+        <label id="lblSomme"></label>
+    </div>
+
+    <script>
+        var t = new Array();
+        for(var i=0; i<100000; i++) {
+            t.push(i);
+        }
+        // --- L'heure en millisecondes depuis le 1/1/1970
+        var debut = new Date().getTime();
+
+        var somme = 0;
+
+//        for(var i=0; i<100000; i++) { // 8 milli
+//            somme += t[i];
+//        }
+
+        var compte = t.length; // Mais c'est une propriete pas une fonction
+        for(var i=0; i<compte; i++) { // 8 milli
+            somme += t[i];
+        }
+
+//        for(var i=0; i<t.length; i++) { // 8 milli
+//            somme += t[i];
+//        }
+
+//        for(var cle in t)  { // 8 milli
+//            somme += t[cle];
+//        }
+
+        var fin = new Date().getTime();
+        var dureeMS = fin - debut;
+
+        document.getElementById("lblDebut").innerHTML = debut;
+        document.getElementById("lblFin").innerHTML   = fin;
+        document.getElementById("lblDuree").innerHTML = dureeMS;
+        document.getElementById("lblSomme").innerHTML = somme;
+    </script>
+</body>
+</html>

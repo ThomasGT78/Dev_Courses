@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>TVA</title>
+    
+</head>
+
+<body>
+    <div id=tva></div>
+
+    <script>
+        var montantHT;
+        var tva;
+        var montantTTC;
+
+        montantHT = parseFloat(prompt("Entrez le montant HT"));
+        var tauxTVA = parseFloat(prompt("Entrez le taux de TVA en %"));
+        tva = montantHT * tauxTVA / 100;
+        montantTTC = tva + montantHT;
+
+        document.getElementById("tva").innerHTML =
+            `<p>Le montant TTC est ${montantTTC} €</p>`
+    </script>
+</body>
+
+</html>

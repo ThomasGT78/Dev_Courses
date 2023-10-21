@@ -1,0 +1,41 @@
+CONNEXION
+alwaysdatam2i
+
+m2icdidl@gmail.com
+mdp12345
+
+alwaysdatam2i MYSQL
+mysql-m2icdi.alwaysdata.net
+m2icdi
+mdp12345
+m2icdi_cours
+phpMyAdmin : m2icdi/mdp12345
+
+alwaysdatam2i FTP
+ftp-m2icdi.alwaysdata.net
+m2icdi
+mdp12345
+
+mongoDB
+mongodb-m2icdi.alwaysdata.net
+m2icdi_pb
+Mdp12345#
+m2icdi_cours
+
+SITES :
+http://m2icdi.alwaysdata.net/jQueryTP/
+ou
+http://m2icdi.alwaysdata.net/jQueryTP/html/Accueil.html
+
+
+INSTALLATION WP
+
+Dans votre navigateur tapez: 
+http://127.0.0.1/wp_blog_1/
+Dans votre navigateur tapez: 
+http://m2icdi.alwaysdata.net/m2icdi_cuisine/
+
+ADM :
+http://m2icdi.alwaysdata.net/m2icdi_cuisine/wp-admin/
+SITE :
+http://m2icdi.alwaysdata.net/m2icdi_cuisine/ 

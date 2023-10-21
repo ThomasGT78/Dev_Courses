@@ -1,0 +1,36 @@
+/* jsAlgo.css */
+
+*{font-size: large;}
+#menu{ float: left; padding: 1%;}
+#cadre{ float: left; width: 700px; height: 500px;}
+
+table{border-collapse: collapse;}
+caption, th, td{border: 1px solid black;}
+td{padding: 3px;}
+
+.fondRouge{background-color: red;}
+.fondVert{background-color: greenyellow;}
+.fondGris{background-color: silver;}
+
+.texteRouge{color: red;}
+
+#menu ul {list-style: none; margin: 0; padding: 0;}
+#menu ul li {margin: 0; padding: 0;}
+#menu ul li a {color: black;}
+#menu ul li a.tp{color: red;}
+#menu ul li.titre{list-style: square;}
+
+input[type="button"]{width: 250px;}
+/*label{display: block; width: 150px;}*/
+
+.variableRouge{background-color: red;}
+.variableJaune{background-color: yellow;}
+.variableVerte{background-color: yellowgreen;}
+
+p{
+/*    padding-top: 0.1em;
+    padding-bottom: 0.1em;*/
+    
+    padding-top: 3px;
+    padding-bottom: 3px;
+}

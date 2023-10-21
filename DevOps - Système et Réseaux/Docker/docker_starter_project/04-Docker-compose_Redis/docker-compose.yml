@@ -1,0 +1,25 @@
+version: "3"
+services:
+  redis:
+    image: redis
+  application:
+    image: dockerfacile/app
+    depends_on:
+      - redis   # Nom du conteneur sur lequel il dépend
+    ports:
+      - 5000:5000
+    restart: always   # redémarre automatiquement le conteneur si il s'arrête
+    environment:  # définit les variables d'environnement
+      - starwars=1
+
+
+### COMMANDS TERMINAL
+
+## Start both services:
+#=>  docker-compose up -d
+
+## Stop both services:
+#=> docker-compose stop
+
+## Start using the app at this URL:
+#=> http://localhost:5000/

@@ -1,0 +1,31 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Boucle FOR</title>
+
+</head>
+
+<body>
+    <select id = "expirationDate"></select>
+    <script>
+
+        // Année d'expiration
+        var currentYear = new Date().getFullYear();
+        var year;
+        for (var i = 0; i <= 10; i++){
+            year = currentYear + i;
+            document.getElementById("expirationDate").innerHTML += `<option>${year}</option>`
+         }
+
+         //Tout charger dans une variable toute les itération d'abbord puis les affiché d'un coup
+         var option = "";
+         for (var i = 0; i <= 10; i++) {
+            option += `<option>${year}</option>`
+         }
+         document.getElementById("expirationDate").innerHTML = option;
+    </script>
+</body>
+
+</html>

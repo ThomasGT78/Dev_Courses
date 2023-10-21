@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Degrés</title>
+
+</head>
+
+<body>
+    <div id=degres></div>
+
+    <script>
+        var celsius;
+        var fahrenheit;
+        
+        celsius = parseFloat(prompt(`Entrez le nombre de degrés celsius à convertir`));
+        fahrenheit = (celsius * (9/5)) + 32;
+		// fahrenheit = (celsius / (5/9)) + 32;
+		// fahrenheit = (celsius * 1,8) + 32;
+		
+		// celsius = (fahrenheit -32) / (5/9);
+		// celsius = (fahrenheit -32) * (9/5);
+		// celsius = (fahrenheit -32) / (1.8);
+        document.getElementById("degres").innerHTML = 
+        `${celsius}°C = ${fahrenheit}°F`
+    </script>
+</body>
+
+</html>

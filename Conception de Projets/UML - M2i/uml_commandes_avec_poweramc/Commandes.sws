@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<?PowerDesigner signature="Workspace" version="15.1.0.2850"?>
+<!-- Veuillez ne pas modifier ce fichier -->
+
+<Workspace>
+	<Local Expanded="Yes">
+		<Model Expanded="Yes" ID="{2AA588B6-0194-4BB2-A92A-DB891E5DA3A5}" Name="DCL_Commandes" Type="{18112060-1A4B-11D1-83D9-444553540000}" URL="Commandes.moo"/>
+		<Model Expanded="Yes" ID="{B5832E17-BC16-4425-A4B3-7D52A8610FDE}" Name="MPD_Commandes" Selected="Yes" Type="{CDE44E21-9669-11D1-9914-006097355D9B}" URL="MPD_Commandes.mpd"/>
+	</Local>
+	<BrowserModule Name="Référentiel"/>
+</Workspace>

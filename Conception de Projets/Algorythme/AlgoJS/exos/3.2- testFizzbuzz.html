@@ -1,0 +1,82 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>FizzBuzz</title>
+
+</head>
+
+<body>
+    <div id=tva></div>
+
+    <script>
+        
+        let nombre = parseInt(prompt('Entrez un nombre'))
+        /******************
+        *   Solution 1    *
+        ******************/
+
+        if ((nombre%3) == 0){
+            if ((nombre % 5) == 0) {
+                alert('fizzbuzz')
+            } else {
+                alert('fizz')
+            }
+        } else if ((nombre % 5) == 0){
+            alert(`buzz`)
+        } else {
+            alert(nombre)
+        }
+    </script>
+    <script>
+        /******************
+        *   Solution 2    *
+        ******************/
+
+        if ((nombre % 3) == 0) && ((nombre % 5) == 0) {
+            alert('fizzbuzz')
+        } else if ((nombre % 3) == 0){
+            alert('fizz')
+        } else if ((nombre % 5) == 0) {
+            alert(`buzz`)
+        } else {
+            alert(nombre)
+        }
+    </script>
+    <script>
+        /******************
+        *   Solution 3    *
+        ******************/
+
+        if ((nombre % 15) == 0) {
+            alert('fizzbuzz')
+        } else if ((nombre % 3) == 0) {
+            alert('fizz')
+        } else if ((nombre % 5) == 0) {
+            alert(`buzz`)
+        } else {
+            alert(nombre)
+        }
+    </script>
+    <script>
+        /******************
+        *   Solution 4    *
+        ******************/
+        var result = "";
+
+        if (n%3 == 0) {
+            result += "fizz"
+        }
+        if (n % 5 == 0) {
+            result += "buzz"
+        }
+        if (result == "") {
+            result = n;
+        }
+
+        alert(result)
+    </script>
+</body>
+
+</html>

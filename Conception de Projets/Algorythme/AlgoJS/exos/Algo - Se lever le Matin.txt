@@ -1,0 +1,42 @@
+
+
+Programmer alarme 1
+Programmer alarme 2
+Programmer alarme 3
+
+Fonction Se Lever =>
+	S'assoir dans son lit
+	Se mettre debout
+	mettre ses chaussons
+	prendre ses habils
+	aller dans la salle de bain
+	Executer Fonction Douche
+	
+Fonction Douche =>
+	se déshabiller
+	rentrer dans la douche
+	prendre sa douche
+	se sécher
+	sortir de la douche
+	sécher ses pieds
+	s'habiller
+	Executer fonction Petit dèj
+
+Fonction Petit dèj =>
+	
+
+alarme 1 sonne:
+	si encore envie de dormir
+		rester coucher et attendre alarme 2
+	else 
+		executer fonction Se Lever
+
+alarme 2 sonne:
+	si encore envie de dormir
+		rester coucher et attendre alarme 3
+	else 
+		executer fonction Se Lever
+
+alarme 3 sonne:
+	executer fonction Se Lever
+	

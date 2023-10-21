@@ -1,0 +1,60 @@
+<!DOCTYPE html>
+<html lang="fr">
+
+<head>
+    <meta charset="UTF-8" />
+    <title>Troll</title>
+
+</head>
+
+<body>
+    <div id=tva></div>
+
+    <script>
+        let action = prompt(`Vous rencontrez un Troll dans la forêt...\n 
+            Que voulez-vous faire?\n
+            Fuir: taper 1\n
+            Combattre: tapez 2\n
+            Se cacher: tapez 3`);
+
+        if (action == 1) {
+            let fuir = confirm(`Êtes-vous Rapide?\n
+                    OUI = OK\n
+                    NON = Annuler`);
+            if (fuir) {
+                alert(`Vous vous sauvez de justesse`)
+            } else {
+                alert(`Le troll vous rattrape et vous dévore`)
+            }
+
+        } else if (action == 2) {
+            let combattre = confirm(`Êtes-vous Rapide?\n
+                    OUI = OK\n
+                    NON = Annuler`);
+            if (combattre) {
+                alert(`Vous massacrez ce pauvre troll`)
+            } else {
+                alert(`Le troll vous assome et vous dévore`)
+            }
+            
+        } else if (action == 3) {
+            let cacher = confirm(`Êtes-vous Rapide?\n
+                    OUI = OK\n
+                    NON = Annuler`);
+            if (cacher) {
+                alert(`Le troll ne vous voit pas et passe son chemin`)
+            } else {
+                alert(`Le troll vous trouve et vous dévore`)
+            }
+            
+        } else {
+            alert(`Vous avez fait planter le jeux, BRAVO!\n Actualisez la page pour recommencer le jeu`)
+        }
+
+
+
+
+    </script>
+</body>
+
+</html>

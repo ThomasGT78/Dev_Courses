@@ -1,0 +1,28 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <title>MODELE_ALGO_AVEC_FORMULAIRE</title>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    </head>
+    <body>
+        <h3>Modele de page pour l'algo avec un formulaire</h3>
+        <div>
+            <label>Saisissez !</label>
+            <input type="text" id="itSaisie" />
+            <button id="btValider">Valider</button>
+            <p id="pResultats"></p>
+        </div>
+        <script>
+            // Code JavaScript
+            var elementDeSaisie = document.getElementById("itSaisie");
+            var elementDAffichage = document.getElementById("pResultats");
+            var bouton = document.getElementById("btValider");
+
+            bouton.onclick = function () {
+                // Affichage de résultats
+                elementDAffichage.innerHTML = elementDeSaisie.value;
+            };
+        </script>
+    </body>
+</html>
