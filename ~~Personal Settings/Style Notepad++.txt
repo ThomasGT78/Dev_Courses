@@ -1,0 +1,29 @@
+		/**  STYLE NOTEPAD++  **/
+
+// Where to find the styler files used by notepad++
+C:\Users\thoma\AppData\Roaming\Notepad++
+cd %APPDATA%\Notepad++
+
+
+
+TESTING SYNTAXIQUE COLOR
+
+/// Comment line doc
+/**  Comment Doc  **/
+// Comment line
+# preprocessor
+/* Comment */
+`String raw`
+'Character'
+"String"
+@"verbatim"
+
+>
+>>
+>>>
+=> 
+
+23
+let
+Object
+alert
