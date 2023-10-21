@@ -1,0 +1,53 @@
+formats xml et json
+
+http://www.floatrates.com/daily/eur.json
+
+http://www.floatrates.com/daily/eur.xml
+
+
+STRUCTURE DU XML :
+<item>
+	<title>1 EUR = 1.20989265 USD</title>
+	<link>http://www.floatrates.com/eur/usd/</link>
+	<description>1 Euro = 1.20989265 U.S. Dollar</description>
+	<pubDate>Sun, 29 Apr 2018 00:00:01 GMT</pubDate>
+	<baseCurrency>EUR</baseCurrency>
+	<baseName>Euro</baseName>
+	<targetCurrency>USD</targetCurrency>
+	<targetName>U.S. Dollar</targetName>
+	<exchangeRate>1.20989265</exchangeRate>
+</item>
+
+
+
+STRUCTURE DU JSON :
+{
+  "usd": {
+    "code": "USD",
+    "alphaCode": "USD",
+    "numericCode": "840",
+    "name": "U.S. Dollar",
+    "rate": 1.2098926529168,
+    "date": "Sun, 29 Apr 2018 00:00:01 GMT"
+  },
+  "gbp": {
+    "code": "GBP",
+    "alphaCode": "GBP",
+    "numericCode": "826",
+    "name": "U.K. Pound Sterling",
+    "rate": 0.87546345658227,
+    "date": "Sun, 29 Apr 2018 00:00:01 GMT"
+  },
+    "czk": {
+    "code": "CZK",
+    "alphaCode": "CZK",
+    "numericCode": "203",
+    "name": "Czech Koruna",
+    "rate": 25.521198284905,
+    "date": "Sun, 29 Apr 2018 00:00:01 GMT"
+  },
+
+
+
+
+
