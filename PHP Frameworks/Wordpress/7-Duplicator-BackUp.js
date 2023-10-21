@@ -1,0 +1,1 @@
+WordPress migration and backups are much easier with Duplicator! Clone, backup, move and transfer an entire site from one location to another.

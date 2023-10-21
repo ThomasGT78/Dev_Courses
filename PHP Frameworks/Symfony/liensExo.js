@@ -1,0 +1,7 @@
+"http://localhost:8000/hello/tom/33"
+"http://localhost:8000/contact/tom@gmail.com"
+"http://localhost:8000/list/5"
+"http://localhost:8000/calc/add/2/8"
+"http://localhost:8000/helloTwig/tom/33"
+"http://localhost:8000/contactTwig/tom@gmail.com"
+"http://localhost:8000/listTwig/5"
