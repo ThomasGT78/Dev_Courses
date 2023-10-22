@@ -1,3 +1,5 @@
+// Activate dead key
+
 Ctrl + Alt + L			=> 	£		
 Ctrl + Alt + Y			=> 	¥		
 Ctrl + Alt + E			=> 	€		
